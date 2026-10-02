@@ -1,0 +1,5 @@
+scenario_id,physical_environment,virtual_environment,geometry_class,purpose,evidence_status
+R1-G01,"10x10 empty rectangle","14x14 empty rectangle","open convex","low-complexity substitute","declared substitute"
+R1-G02,"10x10 boundary + vertical wall x=4 y=1..6","14x14 empty rectangle","single occluder","occlusion sensitivity","declared substitute"
+R1-G03,"10x10 boundary + walls x=4 y=1..6 and x=6 y=4..9","14x14 empty rectangle","two occluders","higher-complexity sensitivity","declared substitute"
+R1-G04,"12x8 boundary + central wall x=6 y=2..6","14x14 empty rectangle","rectangular asymmetric","aspect-ratio sensitivity","declared substitute"
