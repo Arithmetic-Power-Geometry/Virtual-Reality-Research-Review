@@ -1,0 +1,11 @@
+seed_id,covers_taxonomy,covers_history,covers_algorithms,covers_direct_comparisons,covers_metrics,covers_hardware,covers_populations,covers_confounds,covers_contradictions,covers_reproducibility,covers_code_data,covers_cross_domain_gaps,covers_benchmarkability,notes
+SR001,1,0,0,1,1,0,0,0,0,0,0,0,0,"strong avatar/agent comparison precedent"
+SR002,1,0,0,1,1,0,0,0,0,0,0,0,0,"strong measurement-instrument precedent"
+SR003,1,0,1,0,0,1,0,0,0,0,0,0,0,"security/privacy taxonomy"
+SR004,1,1,0,1,1,1,1,1,1,1,0,0,0,"education evidence-quality warning"
+SR005,0,0,0,1,1,0,1,1,0,0,0,0,0,"comparison-confounding audit precedent"
+SR006,1,1,0,0,0,0,0,0,0,0,0,0,0,"macro scientometric landscape"
+SR007,1,0,0,1,1,1,0,0,0,0,0,0,0,"visual-quality/user-experience synthesis"
+SR008,0,0,0,1,1,0,1,1,1,0,0,0,0,"quantitative clinical synthesis precedent"
+SR009,1,1,0,1,1,1,1,0,0,0,0,0,0,"application-specific systematic comparison"
+SR010,1,1,0,0,1,1,1,0,0,0,0,0,0,"human-factor aftereffects scope"
