@@ -1,0 +1,5 @@
+scene_id,type,width_m,height_m,segments,role,status
+GEO01,convex_rectangle,4,4,"boundary only","analytic area/ray validation",active
+GEO02,convex_rectangle,6,4,"boundary only","non-square analytic validation",active
+GEO03,rectangle_internal_wall,4,4,"boundary + vertical segment x=2.5 y=1..3","occlusion validation",active
+GEO04,rectangle_internal_wall,6,4,"boundary + vertical segment x=3 y=1..3","determinism validation",active
