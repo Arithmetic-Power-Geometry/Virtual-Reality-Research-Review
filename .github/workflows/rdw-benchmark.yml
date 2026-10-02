@@ -1,0 +1,30 @@
+name: RDW baseline benchmark
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'benchmarks/redirected_walking/**'
+      - '.github/workflows/rdw-benchmark.yml'
+
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: benchmarks/redirected_walking
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test deterministic benchmark
+        run: |
+          python -m pip install pytest
+          pytest -q
+      - name: Generate baseline results
+        run: python rdw_benchmark.py --config config.json --output results.csv
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rdw-baseline-results
+          path: benchmarks/redirected_walking/results.csv
