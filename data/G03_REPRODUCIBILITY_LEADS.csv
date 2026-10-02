@@ -1,0 +1,2 @@
+lead_id,related_controller,resource,relationship,status,allowed_use,notes
+RLEAD001,LIT-RDW-004;LIT-RDW-005,"https://github.com/pasumi/pasumi","third-party public repository citing ARC and Vis.-Poly.","discovered_not_audited","reference only","do not treat as official implementation; inspect license and correspondence before reuse"
