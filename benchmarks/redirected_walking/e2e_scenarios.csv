@@ -1,0 +1,4 @@
+scenario_id,physical_environment,virtual_environment,start_physical,start_virtual,virtual_heading,step_m,steps,purpose,status
+E2E01,"10x10 rectangle","10x10 rectangle","(5,5,0)","(5,5,0)",0,0.05,10,"symmetric deterministic replay",regression_only
+E2E02,"4x4 rectangle","10x10 rectangle","(3.4,2,0)","(5,5,0)",0,0.05,1,"reset-trigger regression",regression_only
+E2E03,"4x4 rectangle","10x10 rectangle","(2,2,0)","(5,5,0)",0,0.05,1,"no-reset center check",regression_only
