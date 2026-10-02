@@ -24,7 +24,14 @@ jobs:
           pytest -q
       - name: Generate baseline results
         run: python rdw_benchmark.py --config config.json --output results.csv
+      - name: Generate machine-readable summary
+        run: python summarize.py results.csv --out summary.json
+      - name: Hash generated files
+        run: sha256sum results.csv summary.json > SHA256SUMS.txt
       - uses: actions/upload-artifact@v4
         with:
           name: rdw-baseline-results
-          path: benchmarks/redirected_walking/results.csv
+          path: |
+            benchmarks/redirected_walking/results.csv
+            benchmarks/redirected_walking/summary.json
+            benchmarks/redirected_walking/SHA256SUMS.txt
