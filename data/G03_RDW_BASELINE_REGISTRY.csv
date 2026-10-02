@@ -1,0 +1,4 @@
+baseline_id,name,type,literature_claim,implementation_status,eligible_for_paper_performance_claim,notes
+B000,No redirection,engineering control,"none",implemented,yes,"negative/control baseline"
+B001,Center steering,engineering baseline,"none",implemented,no,"transparent scaffold; not a named literature reproduction"
+B002,Boundary-aware steering,engineering baseline,"none",implemented,no,"transparent scaffold; not a named literature reproduction"
