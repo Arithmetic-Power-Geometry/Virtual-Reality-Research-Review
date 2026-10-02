@@ -1,0 +1,1 @@
+algorithm_id,year,title,doi_or_url,technical_family,problem,input,output,algorithm_family,baseline_ids,dataset_environment,hardware,sensors,software,train_test_protocol,primary_metric,secondary_metrics,runtime_latency,compute_memory,human_outcomes,uncertainty_effect_size,code_url,data_url,reproducibility_status,limitations,comparability_group,gap_ids,verification_status,notes
