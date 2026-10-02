@@ -1,0 +1,5 @@
+controller_record,status,required_evidence,implementation_gate
+LIT-RDW-001,pending,"primary paper; exact equations/pseudocode; parameter values; physical-space assumptions; reset definition; evaluation protocol","do not implement until verified"
+LIT-RDW-002,pending,"primary paper; exact equations/pseudocode; parameter values; physical-space assumptions; reset definition; evaluation protocol","do not implement until verified"
+LIT-RDW-003,pending,"primary paper; exact equations/pseudocode; parameter values; physical-space assumptions; reset definition; evaluation protocol","do not implement until verified"
+LIT-RDW-004,pending,"primary paper; exact equations/pseudocode; parameter values; physical-space assumptions; reset definition; evaluation protocol","do not implement until verified"
