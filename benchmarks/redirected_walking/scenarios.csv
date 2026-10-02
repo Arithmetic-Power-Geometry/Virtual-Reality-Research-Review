@@ -1,0 +1,4 @@
+scenario_id,space_shape,width_m,length_m,obstacles,user_count,path_family,path_length_or_duration,turn_distribution,speed_model,seed_set,notes
+S01,rectangle,TBD,TBD,none,1,straight-plus-turns,TBD,TBD,TBD,fixed,"baseline open room"
+S02,square,TBD,TBD,none,1,random-waypoint/TBD,TBD,TBD,TBD,fixed,"generalization scenario"
+S03,rectangle,TBD,TBD,static,1,TBD,TBD,TBD,TBD,fixed,"obstacle-aware scenario if supported by comparable methods"
