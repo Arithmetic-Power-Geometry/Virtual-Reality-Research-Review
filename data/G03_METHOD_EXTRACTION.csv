@@ -1,0 +1,12 @@
+controller_id,component,verified_definition,parameter_or_rule,status,source
+LIT-RDW-005,visibility polygon,"compute visibility polygon independently at current physical and virtual configurations","observer position is polygon kernel; heading not used in initial polygon construction",verified,"Williams et al. 2021 Sec. 3.3.1"
+LIT-RDW-005,slices,"partition visibility polygon into triangular slices formed from kernel and consecutive polygon vertices","handle colinear vertices by advancing to next non-colinear vertex",verified,"Williams et al. 2021 Sec. 3.3.1"
+LIT-RDW-005,active virtual slice,"select virtual slice corresponding to region toward which user is walking","exact boundary/tie behavior requires continued extraction",partial,"Williams et al. 2021 Algorithm 1"
+LIT-RDW-005,physical target slice,"select physical slice most similar to active virtual slice","published overview uses slice area; exact tie/normalization rules require extraction",partial,"Williams et al. 2021 Fig. 4"
+LIT-RDW-005,frame controller,"compute physical and virtual visibility polygons; active virtual slice; most similar physical slice; redirection gains","frame-level Algorithm 1 verified",verified,"Williams et al. 2021 Algorithm 1"
+LIT-RDW-005,gains,"rotation translation and curvature gains derive from slice alignment and physical heading","exact gain thresholds and formulas not yet frozen",pending,"Williams et al. 2021"
+LIT-RDW-005,reset,"paper evaluates reset counts against physical obstacles","exact reset trigger and reorientation procedure not yet frozen",pending,"Williams et al. 2021 experiments"
+LIT-RDW-004,objective,"match proximity to obstacles in physical and virtual environments","arbitrary layouts; no user parameter tuning beyond layouts reported",verified,"Williams et al. 2021 ARC"
+LIT-RDW-004,complexity metric,"Complexity Ratio characterizes relative navigational complexity","exact formula pending extraction",partial,"Williams et al. 2021 ARC"
+LIT-RDW-007,objective,"optimization-driven alignment plus APF and integrated variants","single-variable objective optimizes physical/virtual alignment",partial,"Wu et al. 2023"
+LIT-RDW-008,objective,"sample walkable space and select target using APF-value/distance score","target direction determines RDW gains",partial,"APF-S2T 2024"
