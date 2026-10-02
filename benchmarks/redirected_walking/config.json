@@ -1,0 +1,18 @@
+{
+  "version": "0.1.0",
+  "dt_seconds": 0.05,
+  "default_speed_mps": 1.2,
+  "default_seed": 121,
+  "spaces": [
+    {"id": "square_4", "width_m": 4.0, "length_m": 4.0},
+    {"id": "square_6", "width_m": 6.0, "length_m": 6.0},
+    {"id": "rect_4x8", "width_m": 4.0, "length_m": 8.0}
+  ],
+  "trajectory": {
+    "duration_seconds": 120,
+    "turn_interval_seconds": 5,
+    "turn_degrees": [-90, -45, 0, 45, 90]
+  },
+  "boundary_margin_m": 0.25,
+  "controllers": ["none", "center", "boundary"]
+}
