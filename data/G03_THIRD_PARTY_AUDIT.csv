@@ -1,0 +1,2 @@
+lead_id,repository,language,default_branch,license_metadata,cites_arc,cites_vispoly,status,reuse_policy
+RLEAD001,pasumi/pasumi,C++,master,"none reported by GitHub",yes,yes,"public third-party implementation; provenance not established as official author code","inspect only; do not copy code without license clarification"
