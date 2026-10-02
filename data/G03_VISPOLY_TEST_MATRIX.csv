@@ -1,0 +1,8 @@
+test_id,component,property,expected,status
+VP-T01,slice construction,"square visibility polygon yields four nondegenerate triangular slices","4 slices each area 1","implemented"
+VP-T02,active slice,"selected slice is closest in angular direction to walking heading","angularly nearest","implemented"
+VP-T03,eligibility,"physical slice bisector must lie within 90 degrees of physical heading","strict abs offset < pi/2","implemented"
+VP-T04,matching,"eligible physical slice minimizes absolute area difference","closest area","implemented"
+VP-T05,translation gain,"average-length ratio obeys published clamp","0.86 to 1.26","implemented"
+VP-T06,rotation gain,"turn toward optimal direction uses 1.24; away uses 0.67","1.24 / 0.67","implemented"
+VP-T07,curvature,"curvature radius is 7.5 m with sign toward optimal direction","7.5 m and signed direction","implemented"
