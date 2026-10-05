@@ -45,3 +45,8 @@ Azmandian2014Enhanced,An Enhanced Steering Algorithm for Redirected Walking in V
 Peck2011RFED,An Evaluation of Navigational Ability Comparing Redirected Free Exploration with Distractors to Walking-in-Place and Joystick Locomotion Interfaces,2011,10.1109/VR.2011.5759437,PubMed Central,VERIFIED,P1/P2 predictive RDW
 Sun2018Saccadic,Towards Virtual Reality Infinite Walking: Dynamic Saccadic Redirection,2018,10.1145/3197517.3201294,ACM,VERIFIED,P1/P2 alternative redirection
 Thomas2020ReactiveAlignment,Reactive Alignment of Virtual and Physical Environments Using Redirected Walking,2020,10.1109/VRW50115.2020.00071,DBLP,VERIFIED,P2 reactive alignment
+Hirt2022Chaotic,The Chaotic Behavior of Redirection-Revisiting Simulations in Redirected Walking,2022,10.1109/VR51125.2022.00072,JCST 2024 survey/IEEE metadata,VERIFIED,P2 simulation sensitivity
+Martinez2022Trends,Research Trends in Virtual Reality Locomotion Techniques,2022,10.1109/VR51125.2022.00046,JCST 2024 survey/IEEE metadata,VERIFIED,P1 locomotion trends
+Prinz2023Taxonomies,A Systematic Literature Review of Virtual Reality Locomotion Taxonomies,2023,10.1109/TVCG.2022.3206915,JCST 2024 survey/IEEE metadata,VERIFIED,P1 locomotion taxonomy
+Paris2022LimitedSpace,Evaluating the Impact of Limited Physical Space on the Navigation Performance of Two Locomotion Methods in Immersive Virtual Environments,2022,10.1109/VR51125.2022.00104,JCST 2024 survey/IEEE metadata,VERIFIED,P1/P2 physical-space effect
+Tseng2022DarkSide,The Dark Side of Perceptual Manipulations in Virtual Reality,2022,10.1145/3491102.3517728,JCST 2024 survey/ACM metadata,VERIFIED,P1 ethics/perceptual manipulation
