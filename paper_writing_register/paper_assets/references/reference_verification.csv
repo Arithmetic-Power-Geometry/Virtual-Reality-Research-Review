@@ -75,3 +75,7 @@ Hodgson2011SpatialInterference,Redirected Walking to Explore Virtual Environment
 Messinger2019TrackingArea,Effects of Tracking Area Shape and Size on Artificial Potential Field Redirected Walking,2019,10.1109/VR.2019.8797818,primary paper PDF plus IEEE VR record,VERIFIED,P1/P2 APF geometry sensitivity
 Lee2019S2OT,Real-time Optimal Planning for Redirected Walking Using Deep Q-Learning,2019,10.1109/VR.2019.8798121,Yonsei institutional bibliographic record plus IEEE VR record,VERIFIED,P1/P2 predictive learned controller
 Cha2018LSTMPath,Path Prediction Using LSTM Network for Redirected Walking,2018,10.1109/VR.2018.8446442,Yonsei institutional bibliographic record,VERIFIED,P1/P2 path-prediction evidence
+Kennedy1993SSQ,Simulator Sickness Questionnaire: An Enhanced Method for Quantifying Simulator Sickness,1993,10.1207/s15327108ijap0303_3,DOI/publisher metadata,VERIFIED,P1 A09/A16 simulator-sickness measurement
+Usoh2000Presence,Using Presence Questionnaires in Reality,2000,10.1162/105474600566989,MIT Press DOI metadata,VERIFIED,P1 A08/A16 presence measurement validity
+Witmer1998Presence,Measuring Presence in Virtual Environments: A Presence Questionnaire,1998,10.1162/105474698565686,MIT Press DOI metadata,VERIFIED,P1 A08/A16 presence questionnaire
+Schubert2001IPQ,The Experience of Presence: Factor Analytic Insights,2001,10.1162/105474601300343603,MIT Press DOI metadata,VERIFIED,P1 A08/A16 presence factor structure
