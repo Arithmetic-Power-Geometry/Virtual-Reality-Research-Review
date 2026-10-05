@@ -152,3 +152,7 @@ Huang2023DBA,DBA: Direction-Based Authentication in Virtual Reality,2023,10.1109
 EyeVEIL2019,EyeVEIL: Degrading Iris Authentication in Eye Tracking Headsets,2019,10.1145/3314111.3319816,ACM ETRA metadata cited in verified VR security survey,VERIFIED,P1 A03/A14 eye-tracking authentication attack
 Almeida2024SpatialAudio,Spatial Audio in Virtual Reality: A Systematic Review,2024,10.1145/3625008.3625042,ACM SVR metadata,VERIFIED,P1 A07 spatial-audio systematic review
 Frisoli2024WearableHaptics,Wearable Haptics for Virtual Reality and Beyond,2024,10.1038/s44287-024-00089-8,Nature Reviews Electrical Engineering metadata,VERIFIED,P1 A06 wearable-haptics review
+Wang2023FoveatedSurvey,Foveated Rendering: A State-of-the-Art Survey,2023,10.1007/s41095-022-0306-4,Springer primary review metadata,VERIFIED,P1 A02 foveated-rendering synthesis
+Kim2024IndividualizedFoveated,Individualized Foveated Rendering with Eye-Tracking Head-Mounted Display,2024,10.1007/s10055-023-00931-8,Springer primary article metadata,VERIFIED,P1 A02/A03 eye-tracked individualized foveated rendering
+Shi2024HapticSensing,Haptic Sensing and Feedback Techniques toward Virtual Reality,2024,10.34133/research.0333,PubMed/PMC primary review metadata,VERIFIED,P1 A06 haptic sensing and feedback hardware
+Azher2024HapticSurgery,Findings Favor Haptics Feedback in Virtual Simulation Surgical Education: An Updated Systematic and Scoping Review,2024,10.1177/15533506241238263,PubMed/SAGE metadata,VERIFIED,P1 A06/A18/A19 haptics in VR surgical training
