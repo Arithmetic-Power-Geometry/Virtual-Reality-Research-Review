@@ -1,0 +1,10 @@
+{
+  "workflow_run":37268780131,
+  "head_sha":"dd4ecee2ae67cebab0856a1bbe190d76eb2c4462",
+  "artifact_id":11328322863,
+  "artifact_digest":"sha256:2d7a1a14f49de7a8f9a6f2d8f04f20810d3bfc2fe5777195c5542f5b3024516e",
+  "seed_start":1001,"seed_count":100,"scene_count":4,"expected_runs":400,
+  "target_virtual_distance_m":350.0,"paired_design":true,"common_virtual_path_per_seed":true,
+  "path_family":"navigation-aware-clearance-grid","elapsed_seconds":1664.035991191864,
+  "claim_boundary":"R1 declared benchmark; not R2/R3 direct reproduction"
+}
