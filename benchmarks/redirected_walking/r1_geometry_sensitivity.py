@@ -17,7 +17,8 @@ def scenes():
 def virtual_scene(): return rectangle_segments(14,14)
 
 def start_for(scene_id):
-    return (2,2,0) if scene_id!="R1-G04" else (2,4,0)
+    # Same valid physical start across all substitute geometries preserves pairing.
+    return (2,2,0)
 
 def run(seed,scene_id,waypoints=8,max_resets=100):
     p=scenes()[scene_id]; v=virtual_scene(); x,y,h=start_for(scene_id)
@@ -25,8 +26,10 @@ def run(seed,scene_id,waypoints=8,max_resets=100):
     for d,turn in generate_relative_waypoints(seed,waypoints):
         walks,turns=timed_motion(d,turn)
         for tv in turns:
-            try: _,gr,_,_=__import__("vispoly_sim").controller_gains(s,p,v,1 if tv>=0 else -1)
-            except ValueError: gr=1.
+            try:
+                _,gr,_,_=__import__("vispoly_sim").controller_gains(s,p,v,1 if tv>=0 else -1)
+            except ValueError:
+                return row(seed,scene_id,s,distance,steps,"controller_failure")
             s.ph+=tv*gr; s.vh+=tv; steps+=1
         for dv in walks:
             if needs_reset(s,p):
@@ -64,7 +67,7 @@ def write(outdir):
         with open(p,"w",newline="") as f:
             w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(data)
     manifest={"seeds":[121,122,123,124,125,126,127,128,129,130],"waypoints_per_seed":8,
-              "paired_design":True,"scenes":list(scenes()),"interpretation":"R1 protocol-compatible geometry sensitivity; not direct published numerical replication"}
+              "paired_design":True,"scenes":list(scenes()),"common_physical_start":[2,2,0],"interpretation":"R1 protocol-compatible short geometry sensitivity; not published-scale and not direct numerical replication"}
     mp=os.path.join(outdir,"r1_manifest.json"); files.append(mp)
     with open(mp,"w") as f: json.dump(manifest,f,indent=2,sort_keys=True)
     hashes={os.path.basename(p):hashlib.sha256(open(p,"rb").read()).hexdigest() for p in files}
