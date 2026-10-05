@@ -5,9 +5,9 @@ N02-FULL,PASS,Corrected 100 paired seeds x 4 scenes x 350m,CORE RESULT,run 37268
 N03,PASS,Analyze full R1 results,REQUIRED,paired geometry effects frozen; Table N03 + Figure N03 source/spec registered
 N04,QUALIFIED_PASS,S2C full comparator,CORE RESULT,run 37323011397; 378/400 complete; failures retained; G03 crossover signal survives; N05 next
 N05,PASS,Faithful comparator-set construction,COMPLETE,Vis-Poly S2C P2R executable; APF-S2T primary equations extracted but numerical admission blocked on unresolved discretization
-N06,BLOCKED_CORRECTION,Three-controller paired benchmark matrix,REQUIRED,Raw workflow forensics found prior N02/N05 manuscript summaries inconsistent with original artifacts; corrected table frozen; regenerate N03-N06 before N07 inference
-N07,BLOCKED_PREINFERENCE,Paired controller analysis,REQUIRED,Await corrected upstream N03-N06 assets after raw-artifact reconciliation
-N08,PENDING,Statistical analysis,CORE RESULT,paired effects + CI/uncertainty + tests
+N06,CORRECTED,Three-controller paired benchmark matrix,COMPLETE,Raw workflow correction propagated; authoritative complete counts Vis-Poly 384 S2C 378 P2R 381
+N07,PASS,Paired controller analysis,COMPLETE,Corrected raw-row paired effects and completion discordance frozen; no universal controller winner
+N08,PASS,Confirmatory statistics,COMPLETE,Wilcoxon plus Holm/BH plus exact completion tests and Friedman omnibus frozen
 N09,PENDING,Computational-cost analysis,REQUIRED,cost artifact + table
 N10,PENDING,C4 gap decision,NOVELTY GATE,gap decision record
 N11,CONDITIONAL,Novel method only if C4 passes,CONDITIONAL,algorithm specification + implementation
