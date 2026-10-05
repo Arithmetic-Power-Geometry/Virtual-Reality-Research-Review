@@ -10,3 +10,7 @@ Williams2021ARC,ARC: Alignment-based Redirection Controller for Redirected Walki
 Williams2021VisibilityPolygons,Redirected Walking in Static and Dynamic Scenes Using Visibility Polygons,2021,10.1109/TVCG.2021.3106432,PubMed + author manuscript,VERIFIED,P2 primary reproduced method
 Azmandian2022Adaptive,Adaptive Redirection: A Context-Aware Redirected Walking Meta-Strategy,2022,10.1109/TVCG.2022.3150500,PubMed,VERIFIED,P1/P2 meta-strategy
 Hirt2024PredictiveMultiuser,Predictive Multiuser Redirected Walking Using Artificial Potential Fields,2024,10.3389/frvir.2024.1259429,Frontiers,VERIFIED,P1 method landscape
+Li2022RDWReview,A Comprehensive Review of Redirected Walking Techniques: Taxonomy Methods and Future Directions,2022,10.1007/s11390-022-2266-7,JCST/SciOpen,VERIFIED,P1/P2 prior review
+Fan2023RDWReview,Redirected Walking for Exploring Immersive Virtual Spaces With HMD: A Comprehensive Review and Recent Advances,2023,10.1109/TVCG.2022.3179269,PubMed,VERIFIED,P1/P2 closest TVCG review
+Chen2024APFS2T,APF-S2T: Steering to Target Redirection Walking Based on Artificial Potential Fields,2024,10.1109/TVCG.2024.3372052,PubMed/NYCU,VERIFIED,P2 recent comparator
+Wang2026DGMRDW,DGM-RDW: Redirected Walking With Dynamic Geometric Mapping Between Environments,2026,10.1109/TVCG.2026.3660749,PubMed,VERIFIED,P2 novelty boundary
