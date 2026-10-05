@@ -29,8 +29,8 @@ def run(seed,scene_id,waypoints=8,max_resets=100,diagnostics=None):
         for tv in turns:
             try:
                 _,gr,_,_=__import__("vispoly_sim").controller_gains(s,p,v,1 if tv>=0 else -1)
-            except ValueError:
-                return row(seed,scene_id,s,distance,steps,"controller_failure")
+            except ValueError as e:
+                return failure_row(seed,scene_id,s,distance,steps,"controller_failure",waypoint_index,"turn",str(e),p,v,diagnostics)
             s.ph=turning_step(s.ph,tv,gr); s.vh+=tv; steps+=1
         for dv in walks:
             in_trigger=needs_reset(s,p)
@@ -41,7 +41,7 @@ def run(seed,scene_id,waypoints=8,max_resets=100,diagnostics=None):
             elif not in_trigger:
                 reset_armed=True
             try: s,_=step_walk(s,dv,p,v)
-            except ValueError: return row(seed,scene_id,s,distance,steps,"geometry_failure")
+            except ValueError as e: return failure_row(seed,scene_id,s,distance,steps,"geometry_failure",waypoint_index,"walk",str(e),p,v,diagnostics)
             distance+=dv; steps+=1
     return row(seed,scene_id,s,distance,steps,"complete")
 
@@ -60,8 +60,8 @@ def row(seed,scene_id,s,distance,steps,status):
     return {"seed":seed,"scene_id":scene_id,"resets":s.resets,"distance_m":distance,"steps":steps,"status":status,
             "resets_per_100m":(100*s.resets/distance if distance else None)}
 
-def experiment(seeds=range(121,131),waypoints=8):
-    return [run(seed,sid,waypoints) for seed in seeds for sid in scenes()]
+def experiment(seeds=range(121,131),waypoints=8,diagnostics=None):
+    return [run(seed,sid,waypoints,diagnostics=diagnostics) for seed in seeds for sid in scenes()]
 
 def summarize(rows):
     out=[]
