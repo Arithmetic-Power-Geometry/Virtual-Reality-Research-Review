@@ -5,6 +5,7 @@ from geometry2d import rectangle_segments
 from vispoly_sim import State, needs_reset, step_walk
 from arc_reset_execute import execute_arc_reset
 from waypoint_paths import generate_relative_waypoints, timed_motion
+from rdw_motion import turning_step
 
 def scenes():
     return {
@@ -30,7 +31,7 @@ def run(seed,scene_id,waypoints=8,max_resets=100):
                 _,gr,_,_=__import__("vispoly_sim").controller_gains(s,p,v,1 if tv>=0 else -1)
             except ValueError:
                 return row(seed,scene_id,s,distance,steps,"controller_failure")
-            s.ph+=tv*gr; s.vh+=tv; steps+=1
+            s.ph=turning_step(s.ph,tv,gr); s.vh+=tv; steps+=1
         for dv in walks:
             if needs_reset(s,p):
                 if s.resets>=max_resets: return row(seed,scene_id,s,distance,steps,"reset_cap")
@@ -50,11 +51,16 @@ def experiment(seeds=range(121,131),waypoints=8):
 def summarize(rows):
     out=[]
     for sid in scenes():
-        x=[r for r in rows if r["scene_id"]==sid and r["status"]=="complete"]
-        rates=[r["resets_per_100m"] for r in x]
-        out.append({"scene_id":sid,"n":len(x),"mean_resets_per_100m":statistics.mean(rates) if rates else None,
-                    "sd_resets_per_100m":statistics.stdev(rates) if len(rates)>1 else 0.0,
-                    "total_distance_m":sum(r["distance_m"] for r in x)})
+        allx=[r for r in rows if r["scene_id"]==sid]
+        complete=[r for r in allx if r["status"]=="complete"]
+        rates=[r["resets_per_100m"] for r in complete]
+        status_counts={s:sum(r["status"]==s for r in allx) for s in sorted({r["status"] for r in allx})}
+        out.append({"scene_id":sid,"n_total":len(allx),"n_complete":len(complete),
+                    "completion_rate":len(complete)/len(allx) if allx else 0.0,
+                    "mean_resets_per_100m_complete":statistics.mean(rates) if rates else None,
+                    "sd_resets_per_100m_complete":statistics.stdev(rates) if len(rates)>1 else 0.0,
+                    "total_distance_m_all":sum(r["distance_m"] for r in allx),
+                    "status_counts":json.dumps(status_counts,sort_keys=True)})
     return out
 
 def write(outdir):
@@ -62,7 +68,7 @@ def write(outdir):
     files=[]
     for name,data,fields in [
       ("r1_geometry_runs.csv",rows,["seed","scene_id","resets","distance_m","steps","status","resets_per_100m"]),
-      ("r1_geometry_summary.csv",sums,["scene_id","n","mean_resets_per_100m","sd_resets_per_100m","total_distance_m"])]:
+      ("r1_geometry_summary.csv",sums,["scene_id","n_total","n_complete","completion_rate","mean_resets_per_100m_complete","sd_resets_per_100m_complete","total_distance_m_all","status_counts"])]:
         p=os.path.join(outdir,name); files.append(p)
         with open(p,"w",newline="") as f:
             w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(data)
