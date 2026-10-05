@@ -4,8 +4,8 @@ N02,PASS,Navigation-aware R1 short gate after reviewer PASS,BLOCKER,frozen run 3
 N02-FULL,PASS,Corrected 100 paired seeds x 4 scenes x 350m,CORE RESULT,run 37268780131; 400/400 complete; zero failures; artifact/hash audit PASS
 N03,PASS,Analyze full R1 results,REQUIRED,paired geometry effects frozen; Table N03 + Figure N03 source/spec registered
 N04,QUALIFIED_PASS,S2C full comparator,CORE RESULT,run 37323011397; 378/400 complete; failures retained; G03 crossover signal survives; N05 next
-N05,PARTIAL_PASS,Faithful comparator-set construction,REQUIRED,P2R full 400/400 PASS; three-controller descriptive table frozen; one modern comparator extraction remains before N06
-N06,PENDING,Controller x geometry x seed experiment,CORE RESULT,paired experiment matrix + hashes
+N05,PASS,Faithful comparator-set construction,COMPLETE,Vis-Poly S2C P2R executable; APF-S2T primary equations extracted but numerical admission blocked on unresolved discretization
+N06,READY,Three-controller paired benchmark matrix,REQUIRED,1200 controller-scene-seed cells defined; 1178 complete; frozen pre-inference design; N07 raw paired analysis next
 N07,PENDING,Ranking and failure-regime analysis,CORE RESULT,crossover/stability/failure artifacts
 N08,PENDING,Statistical analysis,CORE RESULT,paired effects + CI/uncertainty + tests
 N09,PENDING,Computational-cost analysis,REQUIRED,cost artifact + table
