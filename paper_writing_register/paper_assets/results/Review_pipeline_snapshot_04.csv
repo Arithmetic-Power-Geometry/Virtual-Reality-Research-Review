@@ -1,0 +1,12 @@
+stage,count,status,notes
+verified_candidate_library,158,IN_PROGRESS,"Verified bibliography expanded; 4 newest records not yet ingested into formal register"
+formal_register_ingested,154,COMPLETE_AT_SNAPSHOT,"154 records in current review register"
+records_after_deduplication,153,COMPLETE_AT_SNAPSHOT,"One exact DOI duplicate linked to canonical record"
+title_abstract_include,149,COMPLETE_AT_SNAPSHOT,"Directly in-scope"
+title_abstract_supporting,4,COMPLETE_AT_SNAPSHOT,"Supporting method/infrastructure"
+full_text_priority_batch_assessed,7,COMPLETE,"Adaptive/predictive RDW novelty-prior-art batch"
+full_text_eligible_priority_batch,7,COMPLETE,"All seven priority records eligible"
+full_text_remaining,146,IN_PROGRESS,"Remaining canonical records pending staged assessment"
+study_families_resolved,0,PENDING,"After broader full-text assessment"
+citation_chasing_complete,0,PENDING,"Not yet complete"
+final_included_studies,NA,PENDING,"Not valid until corpus freeze"
