@@ -1,0 +1,4 @@
+finding_id,stage,severity,issue,evidence,decision,paper_use
+RF-RDW-001,N02,CRITICAL,"static path validity rule under bounded/cluttered VE is under-specified","Vis-Poly 2021 + Azmandian 2015 + RDWT source + instrumented failures","block R2/R3; declare any R1 admission rule","reproducibility limitation / benchmark-design motivation"
+RF-RDW-002,N02,HIGH,"earlier harness used turn-then-walk instead of RDWT walk-then-turn","RDWT VirtualPathGenerator.cs source","corrected and regression-tested","methods provenance"
+RF-RDW-003,N02,HIGH,"path-model choice may materially affect controller performance","Vis-Poly 2021 explicitly identifies path-model impact as open question","promote path model to experimental factor","discussion / future benchmark factor"
