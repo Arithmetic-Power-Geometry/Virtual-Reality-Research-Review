@@ -14,3 +14,9 @@ Li2022RDWReview,A Comprehensive Review of Redirected Walking Techniques: Taxonom
 Fan2023RDWReview,Redirected Walking for Exploring Immersive Virtual Spaces With HMD: A Comprehensive Review and Recent Advances,2023,10.1109/TVCG.2022.3179269,PubMed,VERIFIED,P1/P2 closest TVCG review
 Chen2024APFS2T,APF-S2T: Steering to Target Redirection Walking Based on Artificial Potential Fields,2024,10.1109/TVCG.2024.3372052,PubMed/NYCU,VERIFIED,P2 recent comparator
 Wang2026DGMRDW,DGM-RDW: Redirected Walking With Dynamic Geometric Mapping Between Environments,2026,10.1109/TVCG.2026.3660749,PubMed,VERIFIED,P2 novelty boundary
+Nilsson2018FifteenYears,15 Years of Research on Redirected Walking in Immersive Virtual Environments,2018,10.1109/MCG.2018.111125628,PubMed/Aalborg University,VERIFIED,P1/P2 historical review
+Hodgson2013FourApproaches,Comparing Four Approaches to Generalized Redirected Walking: Simulation and Live User Data,2013,10.1109/TVCG.2013.28,JCST review reference/PMC,VERIFIED,P2 comparison methodology
+Steinicke2008Sensitivity,Analyses of Human Sensitivity to Redirected Walking,2008,10.1145/1450579.1450611,JCST review reference,VERIFIED,P2 gain foundations
+Bolling2019ShrinkingCircles,Shrinking Circles: Adaptation to Increased Curvature Gain in Redirected Walking,2019,10.1109/TVCG.2019.2899228,PubMed/University Hamburg,VERIFIED,P1/P2 curvature evidence
+Liu2024SpatialConstraints,Overcoming Spatial Constraints in VR: A Survey of Redirected Walking Techniques,2024,10.1007/s11390-024-4585-3,JCST/SciOpen,VERIFIED,P1/P2 newest RDW survey
+MayorMarquez2025MTRW,A Virtual Reality Perceptual Study of Multi-Technique Redirected Walking Method,2025,10.1109/TETC.2024.3471249,IEEE Xplore/UPM,VERIFIED,P1/P2 perceptual evaluation
