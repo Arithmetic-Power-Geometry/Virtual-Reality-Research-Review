@@ -18,4 +18,4 @@ N15,PENDING,Reference and reporting freeze,PAPER 1 GATE,frozen bibliography + ev
 N16,PENDING,Final artifact freeze,WRITING GATE,release-ready artifact set
 N17,PENDING,Start manuscript writing,FINAL,submission-ready TVCG manuscript(s)
 A01-A21,IN_PROGRESS,Broad VR evidence mining,REQUIRED,154 verified references; remaining major gaps concentrated in A02 A06 A07 A13 A17; formal review pipeline now active
-REVIEW-PIPELINE,IN_PROGRESS,Formal systematic-review chain,REQUIRED,Full-text priority batch 7/153 assessed eligible; next expand to A02 A06 A07 A13 A17 and ingest 4 newest references
+REVIEW-PIPELINE,IN_PROGRESS,Formal systematic-review chain,REQUIRED,158 verified; 157 canonical; 17 eligible + 1 supporting full-text priority records assessed; 139 remain
