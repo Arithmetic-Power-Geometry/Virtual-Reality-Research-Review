@@ -1,22 +1,22 @@
 workstream,topic,verified_sources_mapped,status,next_target
-A01,foundations/taxonomy,5,adequate_for_draft,3-5 more recent synthesis sources
+A01,foundations/taxonomy,5,adequate_for_draft,3-5 more
 A02,displays/rendering/foveation,3,major_gap,5-7 more
-A03,tracking/sensing,4,major_gap,4-6 more
+A03,tracking/sensing,5,moderate_gap,4-6 more
 A04,interaction/input,5,moderate_gap,4-6 more
-A05,locomotion/navigation/RDW,45,strong,freeze except novelty-audit needs
+A05,locomotion/navigation/RDW,45,strong,freeze except N10 prior-art checks
 A06,haptics,4,major_gap,4-6 more
 A07,spatial audio/multisensory,4,major_gap,4-6 more
 A08,presence/embodiment,15,strong,2-4 more
-A09,cybersickness/comfort,4,major_gap,6-8 more
+A09,cybersickness/comfort,8,moderate,3-5 more
 A10,avatars/virtual humans,5,moderate_gap,4-6 more
 A11,intelligent/embodied agents/AI-LLM VR,11,stronger,3-5 more
 A12,social/multiuser,8,moderate,3-5 more
 A13,networking/streaming/edge/cloud,3,major_gap,6-8 more
-A14,privacy/security/auth,3,major_gap,6-8 more
+A14,privacy/security/auth,6,moderate,3-5 more
 A15,accessibility,5,moderate_gap,4-6 more
-A16,evaluation/questionnaires/statistics,8,moderate,3-5 more
+A16,evaluation/questionnaires/statistics,10,stronger,2-4 more
 A17,software/toolkits/datasets/reproducibility,3,major_gap,6-8 more
-A18,healthcare,8,moderate,3-5 more
-A19,education/training,12,stronger,2-4 more
+A18,healthcare,9,stronger,2-4 more
+A19,education/training,13,stronger,2-4 more
 A20,industrial/digital twins/etc,6,moderate,3-5 more
-A21,contradiction/comparison/reproducibility/gap auditor,4,major_gap,6-8 methodology/quality sources
+A21,contradiction/comparison/reproducibility/gap auditor,6,moderate,4-6 methodology sources
