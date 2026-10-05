@@ -1,7 +1,7 @@
 """Paired R1 geometry-sensitivity experiment for the Vis.-Poly reproduction candidate."""
 from __future__ import annotations
 import csv, hashlib, json, math, os, statistics
-from geometry2d import rectangle_segments
+from geometry2d import rectangle_segments, nearest_segment_clearance
 from vispoly_sim import State, needs_reset, step_walk
 from arc_reset_execute import execute_arc_reset
 from waypoint_paths import generate_relative_waypoints, timed_motion
@@ -21,10 +21,10 @@ def start_for(scene_id):
     # Same valid physical start across all substitute geometries preserves pairing.
     return (2,2,0)
 
-def run(seed,scene_id,waypoints=8,max_resets=100):
+def run(seed,scene_id,waypoints=8,max_resets=100,diagnostics=None):
     p=scenes()[scene_id]; v=virtual_scene(); x,y,h=start_for(scene_id)
     s=State(x,y,h,7,7,0,0); distance=0.; steps=0; reset_armed=True
-    for d,turn in generate_relative_waypoints(seed,waypoints):
+    for waypoint_index,(d,turn) in enumerate(generate_relative_waypoints(seed,waypoints)):
         walks,turns=timed_motion(d,turn)
         for tv in turns:
             try:
@@ -44,6 +44,17 @@ def run(seed,scene_id,waypoints=8,max_resets=100):
             except ValueError: return row(seed,scene_id,s,distance,steps,"geometry_failure")
             distance+=dv; steps+=1
     return row(seed,scene_id,s,distance,steps,"complete")
+
+
+def failure_row(seed,scene_id,s,distance,steps,status,waypoint_index,phase,reason,p,v,diagnostics):
+    pd,_,_=nearest_segment_clearance((s.px,s.py),p)
+    vd,_,_=nearest_segment_clearance((s.vx,s.vy),v)
+    detail={"seed":seed,"scene_id":scene_id,"status":status,"waypoint_index":waypoint_index,
+            "phase":phase,"reason":reason,"steps":steps,"distance_m":distance,"resets":s.resets,
+            "px":s.px,"py":s.py,"ph":s.ph,"vx":s.vx,"vy":s.vy,"vh":s.vh,
+            "physical_clearance_m":pd,"virtual_clearance_m":vd}
+    if diagnostics is not None: diagnostics.append(detail)
+    return row(seed,scene_id,s,distance,steps,status)
 
 def row(seed,scene_id,s,distance,steps,status):
     return {"seed":seed,"scene_id":scene_id,"resets":s.resets,"distance_m":distance,"steps":steps,"status":status,
@@ -68,7 +79,7 @@ def summarize(rows):
     return out
 
 def write(outdir):
-    os.makedirs(outdir,exist_ok=True); rows=experiment(); sums=summarize(rows)
+    os.makedirs(outdir,exist_ok=True); diagnostics=[]; rows=experiment(diagnostics=diagnostics); sums=summarize(rows)
     files=[]
     for name,data,fields in [
       ("r1_geometry_runs.csv",rows,["seed","scene_id","resets","distance_m","steps","status","resets_per_100m"]),
@@ -76,7 +87,7 @@ def write(outdir):
         p=os.path.join(outdir,name); files.append(p)
         with open(p,"w",newline="") as f:
             w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(data)
-    manifest={"seeds":[121,122,123,124,125,126,127,128,129,130],"waypoints_per_seed":8,
+    dp=os.path.join(outdir,"r1_failures.json"); files.append(dp)\n    with open(dp,"w") as f: json.dump(diagnostics,f,indent=2,sort_keys=True)\n    manifest={"seeds":[121,122,123,124,125,126,127,128,129,130],"waypoints_per_seed":8,
               "paired_design":True,"scenes":list(scenes()),"common_physical_start":[2,2,0],"interpretation":"R1 protocol-compatible short geometry sensitivity; not published-scale and not direct numerical replication"}
     mp=os.path.join(outdir,"r1_manifest.json"); files.append(mp)
     with open(mp,"w") as f: json.dump(manifest,f,indent=2,sort_keys=True)
