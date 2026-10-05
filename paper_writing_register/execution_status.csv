@@ -1,6 +1,6 @@
 sequence,status,task,gate,next_output
-N01,NEXT,Pre-R1 semantic correctness audit,BLOCKER,semantic audit + patches/tests
-N02,PENDING,Run and freeze R1 geometry sensitivity,BLOCKER,raw CSV + summary + manifest + hashes + provenance
+N01,REVIEW_CORRECTED_AWAITING_CI,Pre-R1 semantic correctness audit + adversarial reviewer gate,BLOCKER,confirm published-environment CI green; freeze N01 provenance
+N02,PENDING,Run and freeze R1 geometry sensitivity after reviewer PASS,BLOCKER,raw CSV + summary + manifest + hashes + provenance
 N03,PENDING,Analyze R1 results,REQUIRED,paired metrics + uncertainty + analysis
 N04,PENDING,Implement first faithful comparator,BLOCKER,parameter ledger + code + tests
 N05,PENDING,Implement additional compatible baselines,REQUIRED,4-6 compatible controller families where feasible
