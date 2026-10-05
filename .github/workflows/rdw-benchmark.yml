@@ -40,4 +40,5 @@ jobs:
             benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_geometry_runs.csv
             benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_geometry_summary.csv
             benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_manifest.json
+            benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_failures.json
             benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/SHA256SUMS.json
