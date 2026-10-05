@@ -1,0 +1,13 @@
+citation_key,paper,workstream,intended_use,verification_status
+Azmandian2022SimulationValidation,P2,A05,"justify simulation evaluation and state validity boundary",VERIFIED
+Liu2024RDWSurvey,P1;P2,A05,"RDW taxonomy, evaluation landscape, recent methods",VERIFIED
+Li2022RDWReview,P1;P2,A05,"RDW taxonomy and research gaps",VERIFIED
+Hodgson2014Constrained,P2,A05,"environment-dependent algorithm performance motivation",VERIFIED
+Hirt2022Chaotic,P2,A05,"simulation sensitivity/revisiting motivation",VERIFIED
+Prinz2023Taxonomies,P1,A05,"VR locomotion taxonomy synthesis",VERIFIED
+Martinez2022Trends,P1,A05,"locomotion research-trend synthesis",VERIFIED
+Paris2022LimitedSpace,P1;P2,A05,"effect of limited physical space",VERIFIED
+Tseng2022DarkSide,P1,A08;A09,"ethical/perceptual manipulation context",VERIFIED
+Williams2021VisPoly,P2,A05,"primary Vis.-Poly method and evaluation",VERIFIED
+Williams2021ARC,P2,A05,"ARC reset primary method",VERIFIED
+Azmandian2016NavMesh,P2,A05,"navigation-aware path design precedent",VERIFIED
