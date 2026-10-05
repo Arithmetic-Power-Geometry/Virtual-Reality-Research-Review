@@ -7,7 +7,7 @@ experiments; not yet a performance reproduction.
 from __future__ import annotations
 import math
 from dataclasses import dataclass
-from geometry2d import visibility_polygon, nearest_hit, Segment
+from geometry2d import visibility_polygon, nearest_hit, nearest_segment_clearance, Segment
 from vispoly_controller import build_slices, active_slice, most_similar_slice, gain_selection
 from rdw_motion import walking_step
 from arc_reset import reset_triggered
@@ -39,7 +39,10 @@ def step_walk(state:State,virtual_distance:float,physical_segments:list[Segment]
     return State(nx,ny,nh,nvx,nvy,state.vh,state.resets),{"gt":gt,"gr":gr,"radius":radius,"curvature_sign":sgn}
 
 def needs_reset(state:State,physical_segments:list[Segment],trigger_m:float=0.7):
-    return reset_triggered(clearance((state.px,state.py),state.ph,physical_segments),trigger_m)
+    # Published simulator: radius-0.5 m user incurs reset within 0.2 m of ANY
+    # physical obstacle. Center-to-obstacle clearance threshold is thus 0.7 m.
+    d,_,_=nearest_segment_clearance((state.px,state.py),physical_segments)
+    return reset_triggered(d,trigger_m)
 
 def replay(state:State,distances:list[float],physical_segments:list[Segment],virtual_segments:list[Segment]):
     rows=[]
