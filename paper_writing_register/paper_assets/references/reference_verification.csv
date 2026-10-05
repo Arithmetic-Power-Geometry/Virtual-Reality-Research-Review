@@ -32,3 +32,7 @@ Thomas2022IKPaths,Inverse Kinematics Assistance for the Creation of Redirected W
 Zank2016EyeTracking,Eye Tracking for Locomotion Prediction in Redirected Walking,2016,10.1109/3DUI.2016.7460030,3DUI metadata/ETH,VERIFIED,P2 locomotion prediction
 Azmandian2017TwoUser,An Evaluation of Strategies for Two User Redirected Walking in Shared Physical Spaces,2017,10.1109/VR.2017.7892235,University of Minnesota/DBLP,VERIFIED,P1/P2 multi-user RDW
 Zhang2023OutOfPlaceReset,One-Step Out-of-Place Resetting for Redirected Walking in VR,2023,10.1109/TVCG.2022.3158609,PubMed/University of Otago,VERIFIED,P2 reset methods
+Gandrud2016Destination,Predicting Destination Using Head Orientation and Gaze Direction During Locomotion in VR,2016,10.1145/2931002.2931010,University of Minnesota/ACM metadata,VERIFIED,P2 locomotion prediction
+Bremer2021FuturePosition,Predicting Future Position From Natural Walking and Eye Movements with Machine Learning,2021,10.1109/AIVR52153.2021.00013,DBLP/University of Muenster,VERIFIED,P2 locomotion prediction
+Stein2022EyeLSTM,Eye Tracking-based LSTM for Locomotion Prediction in VR,2022,10.1109/VR51125.2022.00069,DBLP/Springer reference metadata,VERIFIED,P2 locomotion prediction
+You2022StrafingGain,Strafing Gain: Redirecting Users One Diagonal Step at a Time,2022,10.1109/ISMAR55827.2022.00077,University of Minnesota/DBLP,VERIFIED,P2 gain literature
