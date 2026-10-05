@@ -50,3 +50,7 @@ Martinez2022Trends,Research Trends in Virtual Reality Locomotion Techniques,2022
 Prinz2023Taxonomies,A Systematic Literature Review of Virtual Reality Locomotion Taxonomies,2023,10.1109/TVCG.2022.3206915,JCST 2024 survey/IEEE metadata,VERIFIED,P1 locomotion taxonomy
 Paris2022LimitedSpace,Evaluating the Impact of Limited Physical Space on the Navigation Performance of Two Locomotion Methods in Immersive Virtual Environments,2022,10.1109/VR51125.2022.00104,JCST 2024 survey/IEEE metadata,VERIFIED,P1/P2 physical-space effect
 Tseng2022DarkSide,The Dark Side of Perceptual Manipulations in Virtual Reality,2022,10.1145/3491102.3517728,JCST 2024 survey/ACM metadata,VERIFIED,P1 ethics/perceptual manipulation
+Langbehn2017RoomScale,Application of Redirected Walking in Room-Scale VR,2017,10.1109/VR.2017.7892373,HAW Hamburg repository + DBLP,VERIFIED,P1/P2 room-scale RDW
+Lutfallah2024Unknown,Redirected Walking for Exploration of Unknown Environments,2024,10.3389/frvir.2023.1259816,Frontiers primary article,VERIFIED,P1/P2 unknown-environment RDW
+Ri2025Interaction,Redirected Walking Method Considering the Interaction Between Users,2025,10.3389/frvir.2025.1304780,Frontiers primary article,VERIFIED,P1/P2 multi-user interaction RDW
+Lee2025SequentialCurvature,Identification of the Difference Threshold for Sequential Curvature Gain Variations of Redirected Walking,2025,10.1007/s10055-025-01099-z,Springer Virtual Reality primary article,VERIFIED,P1/P2 curvature-gain perception
