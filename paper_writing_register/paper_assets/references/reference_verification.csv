@@ -1,0 +1,12 @@
+citekey,title,year,doi,verification_source,status,paper_use
+Razzaque2001RedirectedWalking,Redirected Walking,2001,10.2312/egs.20011036,Eurographics Digital Library,VERIFIED,P1/P2 background
+Steinicke2010DetectionThresholds,Estimation of Detection Thresholds for Redirected Walking Techniques,2010,10.1109/TVCG.2009.62,Springer reference metadata + DOI,VERIFIED,P1/P2 gain background
+Peck2010ImprovedRedirection,Improved Redirection with Distractors: A Large-Scale-Real-Walking Locomotion Interface and its Effect on Navigation in Virtual Environments,2010,10.1109/VR.2010.5444816,PubMed/PMC,VERIFIED,P1/P2 background
+Grechkin2016Thresholds,Revisiting Detection Thresholds for Redirected Walking: Combining Translation and Curvature Gains,2016,10.1145/2931002.2931018,ACM Digital Library,VERIFIED,P2 gain semantics
+Thomas2019P2R,A General Reactive Algorithm for Redirected Walking Using Artificial Potential Functions,2019,10.1109/VR.2019.8797983,University of Minnesota/DBLP,VERIFIED,P2 comparator
+Bachmann2019APF,Multi-User Redirected Walking and Resetting Using Artificial Potential Fields,2019,10.1109/TVCG.2019.2898764,PubMed,VERIFIED,P1/P2 method landscape
+Strauss2020RL,A Steering Algorithm for Redirected Walking Using Reinforcement Learning,2020,10.1109/TVCG.2020.2973060,PubMed,VERIFIED,P1/P2 separate learned stratum
+Williams2021ARC,ARC: Alignment-based Redirection Controller for Redirected Walking in Complex Environments,2021,10.1109/TVCG.2021.3067781,PubMed,VERIFIED,P2 comparator/reset
+Williams2021VisibilityPolygons,Redirected Walking in Static and Dynamic Scenes Using Visibility Polygons,2021,10.1109/TVCG.2021.3106432,PubMed + author manuscript,VERIFIED,P2 primary reproduced method
+Azmandian2022Adaptive,Adaptive Redirection: A Context-Aware Redirected Walking Meta-Strategy,2022,10.1109/TVCG.2022.3150500,PubMed,VERIFIED,P1/P2 meta-strategy
+Hirt2024PredictiveMultiuser,Predictive Multiuser Redirected Walking Using Artificial Potential Fields,2024,10.3389/frvir.2024.1259429,Frontiers,VERIFIED,P1 method landscape
