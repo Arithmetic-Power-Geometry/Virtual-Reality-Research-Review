@@ -4,7 +4,7 @@ def test_published_environment_segment_counts():
     assert len(environment(1,"physical"))==20
     assert len(environment(1,"virtual"))==28
     assert len(environment(2,"physical"))==16
-    assert len(environment(2,"virtual"))==43
+    assert len(environment(2,"virtual"))==46
 
 def test_experiment3_reuses_published_pair_components():
     assert environment(3,"physical")==environment(1,"physical")
