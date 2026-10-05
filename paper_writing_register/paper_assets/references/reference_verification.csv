@@ -40,3 +40,8 @@ Suma2012Taxonomy,A Taxonomy for Deploying Redirection Techniques in Immersive Vi
 Suma2012ImpossibleSpaces,Impossible Spaces: Maximizing Natural Walking in Virtual Environments with Self-Overlapping Architecture,2012,10.1109/TVCG.2012.47,PubMed/University of Minnesota,VERIFIED,P1/P2 spatial redirection
 Suma2011ChangeBlindness,Leveraging Change Blindness for Redirection in Virtual Environments,2011,10.1109/VR.2011.5759455,Author lab/JCST survey metadata,VERIFIED,P1/P2 redirection
 Vasylevska2013FlexibleSpaces,Flexible Spaces: Dynamic Layout Generation for Infinite Walking in Virtual Environments,2013,10.1109/3DUI.2013.6550194,JCST survey DOI metadata,VERIFIED,P1/P2 dynamic layout
+Hodgson2014Constrained,Performance of Redirected Walking Algorithms in a Constrained Virtual World,2014,10.1109/TVCG.2014.34,IEEE Xplore,VERIFIED,P2 comparator/context
+Azmandian2014Enhanced,An Enhanced Steering Algorithm for Redirected Walking in Virtual Environments,2014,10.1109/VR.2014.6802053,University of Minnesota/author PDF,VERIFIED,P2 predictive/path-aware steering
+Peck2011RFED,An Evaluation of Navigational Ability Comparing Redirected Free Exploration with Distractors to Walking-in-Place and Joystick Locomotion Interfaces,2011,10.1109/VR.2011.5759437,PubMed Central,VERIFIED,P1/P2 predictive RDW
+Sun2018Saccadic,Towards Virtual Reality Infinite Walking: Dynamic Saccadic Redirection,2018,10.1145/3197517.3201294,ACM,VERIFIED,P1/P2 alternative redirection
+Thomas2020ReactiveAlignment,Reactive Alignment of Virtual and Physical Environments Using Redirected Walking,2020,10.1109/VRW50115.2020.00071,DBLP,VERIFIED,P2 reactive alignment
