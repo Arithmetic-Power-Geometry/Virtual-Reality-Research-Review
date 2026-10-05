@@ -2,7 +2,7 @@ sequence,status,task,gate,next_output
 N01,PASS,Pre-R1 semantic correctness audit + adversarial reviewer gate,BLOCKER,frozen: run 37263870923; 46 tests passed
 N02,PASS,Navigation-aware R1 short gate after reviewer PASS,BLOCKER,frozen run 37266460103; 40/40 complete; zero failures; proceed to N02-FULL 100x~350m
 N02-FULL,RUNNING,Run published-scale-length R1 benchmark: 100 paired seeds x ~350m,CORE RESULT,workflow 37267086735; preflight PASS; full job running; do not promote until artifact/hash/reviewer inspection
-N03,PENDING,Analyze full R1 results,REQUIRED,paired metrics + uncertainty + geometry effect analysis
+N03,READY_BLOCKED,Analyze full R1 results,REQUIRED,analysis code CI PASS run 37268111093; execute only after N02-FULL artifact reviewer PASS
 N04,PENDING,Implement first faithful comparator,BLOCKER,parameter ledger + code + tests
 N05,PENDING,Implement additional compatible baselines,REQUIRED,4-6 compatible controller families where feasible
 N06,PENDING,Controller x geometry x seed experiment,CORE RESULT,paired experiment matrix + hashes
