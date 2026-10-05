@@ -24,7 +24,7 @@ def test_sampling_bounds_and_walk_then_turn_chain():
 
 def test_rejection_is_reported_not_hidden():
     _,m=generate_admitted_path(121,100,V)
-    assert m["rejected_candidates"]>=0
+    assert m["rejected_paths"]>=0
     assert m["tier"]=="R1-BENCHMARK-not-R2-or-R3"
 
 def test_internal_obstacle_is_respected():
