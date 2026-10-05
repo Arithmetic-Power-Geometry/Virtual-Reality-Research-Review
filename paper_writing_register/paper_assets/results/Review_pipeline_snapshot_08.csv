@@ -1,0 +1,10 @@
+metric,value,interpretation
+verified_reference_records,168,DOI/title/year verified in reference ledger
+canonical_review_records,167,one exact DOI duplicate remains linked to canonical record
+eligible_full_text_records,56,assessed eligible for principal synthesis
+supporting_assessed_records,1,assessed supporting/context record
+pending_full_text_records,110,canonical records still awaiting staged full-text assessment
+new_records_assessed_this_snapshot,7,accessibility privacy and education evidence batch
+bibliography_target_lower,180,practical saturation checkpoint not quota
+bibliography_target_upper,220,upper working range only if evidence adds value
+prisma_status,NOT_FROZEN,final PRISMA invalid until all canonical full-text decisions and citation chasing close
