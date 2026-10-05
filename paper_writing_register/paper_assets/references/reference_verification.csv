@@ -72,3 +72,6 @@ MilgramKishino1994Taxonomy,A Taxonomy of Mixed Reality Visual Displays,1994,,IEI
 Steuer1992Telepresence,Defining Virtual Reality: Dimensions Determining Telepresence,1992,10.1111/j.1460-2466.1992.tb00812.x,Wiley DOI metadata,VERIFIED,P1 telepresence foundation
 Sutherland1968Ultimate,A Head-Mounted Three Dimensional Display,1968,10.1145/1476589.1476686,ACM DOI metadata,VERIFIED,P1 HMD foundation
 Hodgson2011SpatialInterference,Redirected Walking to Explore Virtual Environments: Assessing the Potential for Spatial Interference,2011,10.1145/2043603.2043604,ACM Transactions on Applied Perception primary PDF metadata,VERIFIED,P1/P2 spatial-memory and interference evidence
+Messinger2019TrackingArea,Effects of Tracking Area Shape and Size on Artificial Potential Field Redirected Walking,2019,10.1109/VR.2019.8797818,primary paper PDF plus IEEE VR record,VERIFIED,P1/P2 APF geometry sensitivity
+Lee2019S2OT,Real-time Optimal Planning for Redirected Walking Using Deep Q-Learning,2019,10.1109/VR.2019.8798121,Yonsei institutional bibliographic record plus IEEE VR record,VERIFIED,P1/P2 predictive learned controller
+Cha2018LSTMPath,Path Prediction Using LSTM Network for Redirected Walking,2018,10.1109/VR.2018.8446442,Yonsei institutional bibliographic record,VERIFIED,P1/P2 path-prediction evidence
