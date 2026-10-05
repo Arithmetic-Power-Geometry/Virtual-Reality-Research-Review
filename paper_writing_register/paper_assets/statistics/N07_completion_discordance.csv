@@ -1,0 +1,13 @@
+scene,controller_a,controller_b,both_complete,a_only_complete,b_only_complete,both_incomplete
+R1-G01,Vis-Poly,S2C,92,0,8,0
+R1-G01,Vis-Poly,P2R,92,0,8,0
+R1-G01,S2C,P2R,100,0,0,0
+R1-G02,Vis-Poly,S2C,96,3,1,0
+R1-G02,Vis-Poly,P2R,99,0,1,0
+R1-G02,S2C,P2R,97,0,3,0
+R1-G03,Vis-Poly,S2C,80,14,6,0
+R1-G03,Vis-Poly,P2R,76,18,5,1
+R1-G03,S2C,P2R,67,19,14,0
+R1-G04,Vis-Poly,S2C,94,5,1,0
+R1-G04,Vis-Poly,P2R,99,0,1,0
+R1-G04,S2C,P2R,95,0,5,0
