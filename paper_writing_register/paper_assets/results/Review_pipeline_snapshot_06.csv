@@ -1,0 +1,10 @@
+stage,count,status,notes
+verified_candidate_library,161,COMPLETE,"All currently verified references represented in bibliography and formal register"
+records_after_deduplication,160,COMPLETE,"One exact DOI duplicate retained in audit trail"
+title_abstract_screening,160,COMPLETE,"No unresolved canonical title/abstract decisions"
+full_text_eligible_assessed,29,IN_PROGRESS,"Priority + cross-workstream batches assessed"
+full_text_supporting_assessed,1,IN_PROGRESS,"Infrastructure/supporting evidence"
+full_text_pending,130,IN_PROGRESS,"Remaining canonical records pending staged assessment"
+study_families_defined,10,IN_PROGRESS,"Initial family map active"
+citation_chasing_status,ACTIVE,IN_PROGRESS,"Family-hub backward chasing initialized"
+final_included_studies,NA,PENDING,"Not valid until corpus freeze"
