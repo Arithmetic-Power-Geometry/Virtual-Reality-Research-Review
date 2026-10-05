@@ -1,0 +1,5 @@
+scene_id,n_total,n_complete,completion_rate,mean_resets_per_100m_complete,sd_resets_per_100m_complete,total_distance_m_all,status_counts
+R1-G01,10,6,0.6,16.341218913564905,5.4784618867979775,281.86889446846595,"{""complete"": 6, ""controller_failure"": 1, ""geometry_failure"": 3}"
+R1-G02,10,8,0.8,19.86968557624364,3.6980374823047932,300.1535130580231,"{""complete"": 8, ""geometry_failure"": 2}"
+R1-G03,10,8,0.8,25.13051015434742,3.22678132781545,308.69114737894705,"{""complete"": 8, ""controller_failure"": 1, ""geometry_failure"": 1}"
+R1-G04,10,8,0.8,23.14615686644593,5.717510220502781,308.6183844362567,"{""complete"": 8, ""controller_failure"": 1, ""geometry_failure"": 1}"
