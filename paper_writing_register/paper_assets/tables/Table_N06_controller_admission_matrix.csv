@@ -1,0 +1,5 @@
+controller,source_stage,total_conditions,complete,incomplete,completion_rate,role
+Vis-Poly,N02,400,400,0,1.000,executable_common_R1
+S2C,N04,400,378,22,0.945,executable_common_R1
+P2R,N05,400,400,0,1.000,executable_common_R1
+APF-S2T,N05 literature gate,NA,NA,NA,NA,modern_literature_comparator_blocked_exact_discretization
