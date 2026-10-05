@@ -78,3 +78,11 @@ EfficientVRRendering2025,P1,A02;A13,"foveated stereo cloud and low-power renderi
 Yi2024IDDVR,P1,A15;A18,"design/accessibility considerations for intellectual and developmental disabilities",VERIFIED
 Deriba2024VirtualLabAccessibility,P1,A15;A19,"accessibility assessment in virtual laboratories",VERIFIED
 Voultsiou2025SpecialEducation,P1,A11;A15;A19,"AI VR LLM special-education inclusion and accessibility evidence",VERIFIED
+Bouraqia2025QoEStreaming,P1,A13,"QoE adaptive streaming edge/cloud and 6G immersive delivery",VERIFIED
+EdgeFoveatedTelepresence2023,P1,A02;A13,"edge-assisted foveated compression and 360 telepresence streaming",VERIFIED
+OnlineVR2026,P1,A17,"open-source onlineVR toolbox remote deployment and reproducibility",VERIFIED
+Lawson2024Confounded,P1,A16;A19;A21,"confounding control equivalence and reproducibility of IVR comparisons",VERIFIED
+Karcher2025QualityMethods,P1,A16;A19;A21,"quality criteria and reporting methods in VR/AR education",VERIFIED
+Wang2026AIVRReview,P1,A11,"AI-for-VR technical synthesis",VERIFIED
+HealthSciencesVR2025,P1,A17;A18;A21,"hardware/software reporting gaps and reproducibility in health sciences VR",VERIFIED
+EyeTrackingBroad2023,P1,A03,"eye-tracking applications challenges and hardware limitations",VERIFIED
