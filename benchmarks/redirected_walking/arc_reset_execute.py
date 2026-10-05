@@ -9,16 +9,21 @@ from __future__ import annotations
 import math
 from arc_reset import select_arc_reset_direction
 from vispoly_sim import State, clearance
+from geometry2d import nearest_segment_clearance
 
 def nearest_obstacle_normal(state:State,segments):
-    # Clean-room numerical estimate: choose the sampled ray with minimum clearance
-    samples=360
-    vals=[]
-    for i in range(samples):
-        th=2*math.pi*i/samples
-        vals.append((clearance((state.px,state.py),th,segments),th))
-    _,toward=min(vals)
-    return (-math.cos(toward),-math.sin(toward))
+    """Exact nearest-face away vector from segment geometry.
+
+    ARC requires the normal of the closest obstacle face that triggers reset.
+    For our segment representation, the vector from the closest point on that
+    face toward the user is the required away-facing normal. Endpoint ties are
+    deterministic but remain a declared geometric convention.
+    """
+    _,_,q=nearest_segment_clearance((state.px,state.py),segments)
+    if q is None: raise ValueError("no physical obstacle segments")
+    dx=state.px-q[0]; dy=state.py-q[1]; n=math.hypot(dx,dy)
+    if n<=1e-12: raise ValueError("user lies on obstacle segment; normal undefined")
+    return dx/n,dy/n
 
 def execute_arc_reset(state:State,physical_segments,virtual_segments,samples:int=20):
     normal=nearest_obstacle_normal(state,physical_segments)
