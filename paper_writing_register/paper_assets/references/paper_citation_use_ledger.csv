@@ -33,3 +33,7 @@ Hodgson2011SpatialInterference,P1;P2,A05;A08,"spatial-interference and memory bo
 Messinger2019TrackingArea,P1;P2,A05,"tracking-area shape/size effects for APF-RDW and geometry-conditioned performance",VERIFIED
 Lee2019S2OT,P1;P2,A05;A11,"deep-Q predictive steering comparator stratum",VERIFIED
 Cha2018LSTMPath,P1;P2,A05;A11,"LSTM virtual-path prediction as predictive-RDW input",VERIFIED
+Kennedy1993SSQ,P1,A09;A16,"simulator-sickness measurement foundation",VERIFIED
+Usoh2000Presence,P1,A08;A16,"presence-questionnaire validity and interpretation",VERIFIED
+Witmer1998Presence,P1,A08;A16,"Presence Questionnaire measurement foundation",VERIFIED
+Schubert2001IPQ,P1,A08;A16,"presence factor structure and questionnaire evidence",VERIFIED
