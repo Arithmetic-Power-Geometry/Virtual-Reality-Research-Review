@@ -9,7 +9,7 @@ N06,CORRECTED,Three-controller paired benchmark matrix,COMPLETE,Raw workflow cor
 N07,PASS,Paired controller analysis,COMPLETE,Corrected raw-row paired effects and completion discordance frozen; no universal controller winner
 N08,PASS,Confirmatory statistics,COMPLETE,Wilcoxon plus Holm/BH plus exact completion tests and Friedman omnibus frozen
 N09,PASS,Computational-cost analysis,COMPLETE,Controller microbenchmark and structural complexity frozen; wall-clock claim limited to common runner
-N10,C3_STRONG_C4_PENDING,Novelty/C4 gate,REQUIRED,Empirical controller-by-geometry separation established but controller switching/adaptation has prior art; sharper joint failure-reset-cost gap required
+N10,C3_STRONG_C4_PENDING,Novelty/C4 gate,REQUIRED,Generic geometry-conditioned switching ruled out by Adaptive Redirection and SRC; sharper joint failure-reset-cost regime gap under literature exhaustion
 N11,CONDITIONAL,Novel method only if C4 passes,CONDITIONAL,algorithm specification + implementation
 N12,CONDITIONAL,Novel-method evaluation,CONDITIONAL,baselines + ablation + robustness + cost
 N13,PENDING,Finish A01-A21 study extraction,PAPER 1 GATE,final evidence tables
@@ -17,3 +17,4 @@ N14,PENDING,Complete contradiction/reproducibility/gap maps,PAPER 1 GATE,final m
 N15,PENDING,Reference and reporting freeze,PAPER 1 GATE,frozen bibliography + evidence matrix
 N16,PENDING,Final artifact freeze,WRITING GATE,release-ready artifact set
 N17,PENDING,Start manuscript writing,FINAL,submission-ready TVCG manuscript(s)
+A01-A21,IN_PROGRESS,Broad VR evidence mining,REQUIRED,115 verified references; A05/A08 strong; A02/A03/A13/A17/A21 remain critical gaps; targeted expansion active
