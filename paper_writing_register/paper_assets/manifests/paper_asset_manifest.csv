@@ -26,3 +26,5 @@ PA-024,P2,statistics,N03 paired scene differences,validated,paper_writing_regist
 PA-025,P2,table,Table N03 geometry sensitivity,validated,paper_writing_register/paper_assets/tables/Table_N03_geometry_sensitivity.csv,660657ffa5f8dd148dfb4b2d026f28153caaeeaa,N03,"manuscript-facing table"
 PA-026,P2,figure,Figure N03 source data,validated,paper_writing_register/paper_assets/figures/Figure_N03_geometry_sensitivity_data.csv,87f81d1c46f66311fc824c8a403f78f81f26c753,N03,"machine-readable figure source"
 PA-027,P2,figure,Figure N03 specification,validated,paper_writing_register/paper_assets/figures/Figure_N03_geometry_sensitivity_SPEC.md,bd6cf4fd5d69eed02e6b760c51ceda94a64c7a1b,N03,"caption and claim boundary"
+PA-028,P2,results,N04 S2C short comparator diagnostic,validated,paper_writing_register/paper_assets/results/N04_S2C_short_summary.csv,b2baeeca665431038aa7fbb8cf0be2be5d8704bb,N04,"80/80 complete; ranking crossover diagnostic only"
+PA-029,P2,provenance,N04 S2C short comparator PASS,validated,paper_writing_register/paper_assets/provenance/N04_S2C_SHORT_PASS.md,89ad1642bc46cc426384eb0f260f90736e1ad60c,N04,"full-scale comparison still required"
