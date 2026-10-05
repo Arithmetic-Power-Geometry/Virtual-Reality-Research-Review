@@ -1,0 +1,11 @@
+stage,count,status,notes
+verified_candidate_library,154,COMPLETE,"Verified bibliography records"
+records_after_deduplication,153,COMPLETE,"One exact DOI duplicate linked to canonical record"
+title_abstract_include,149,COMPLETE,"127 pass-1 includes plus 22 resolved in-scope records"
+title_abstract_supporting,4,COMPLETE,"Supporting method/infrastructure evidence; not primary VR-study count"
+title_abstract_excluded_duplicate,1,COMPLETE,"Duplicate record only"
+title_abstract_uncertain,0,COMPLETE,"All pass-1 uncertain records resolved"
+full_text_assessed,0,PENDING,"Next formal gate"
+study_families_resolved,0,PENDING,"After full-text assessment"
+citation_chasing_complete,0,PENDING,"Backward/forward chasing not yet complete"
+final_included_studies,NA,PENDING,"Not valid until corpus freeze"
