@@ -44,7 +44,7 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run 100-seed paired R1 experiment
-        run: python r1_full_experiment.py --seed-start 1001 --seed-count ${{ inputs.seed_count }} --target-m ${{ inputs.target_m }} --outdir artifacts/r1_full
+        run: python r1_full_experiment.py --seed-start 1001 --seed-count 100 --target-m 350 --outdir artifacts/r1_full
       - uses: actions/upload-artifact@v4
         with:
           name: n02-full-r1-results
