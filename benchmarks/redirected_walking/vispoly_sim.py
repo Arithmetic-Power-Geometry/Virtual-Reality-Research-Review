@@ -54,3 +54,8 @@ def replay(state:State,distances:list[float],physical_segments:list[Segment],vir
         state,g=step_walk(state,d,physical_segments,virtual_segments)
         rows.append({"step":i,"event":"walk","px":state.px,"py":state.py,**g})
     return state,rows
+
+
+def swept_segment_safe(a,b,physical_segments,margin_m=0.2):
+    """Physical integration safety invariant; not an ARC reset threshold."""
+    return segment_is_valid(a,b,physical_segments,margin_m)
