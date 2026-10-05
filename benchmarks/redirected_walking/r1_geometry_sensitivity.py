@@ -26,12 +26,8 @@ def run(seed,scene_id,waypoints=8,max_resets=100,diagnostics=None):
     s=State(x,y,h,7,7,0,0); distance=0.; steps=0; reset_armed=True
     for waypoint_index,(d,turn) in enumerate(generate_relative_waypoints(seed,waypoints)):
         walks,turns=timed_motion(d,turn)
-        for tv in turns:
-            try:
-                _,gr,_,_=__import__("vispoly_sim").controller_gains(s,p,v,1 if tv>=0 else -1)
-            except ValueError as e:
-                return failure_row(seed,scene_id,s,distance,steps,"controller_failure",waypoint_index,"turn",str(e),p,v,diagnostics)
-            s.ph=turning_step(s.ph,tv,gr); s.vh+=tv; steps+=1
+        # Azmandian/RDWT path semantics: WALK THEN TURN. The sampled rotation
+        # changes the forward direction for the following segment.
         for dv in walks:
             in_trigger=needs_reset(s,p)
             if reset_armed and in_trigger:
@@ -40,9 +36,17 @@ def run(seed,scene_id,waypoints=8,max_resets=100,diagnostics=None):
                 reset_armed=False
             elif not in_trigger:
                 reset_armed=True
-            try: s,_=step_walk(s,dv,p,v)
-            except ValueError as e: return failure_row(seed,scene_id,s,distance,steps,"geometry_failure",waypoint_index,"walk",str(e),p,v,diagnostics)
+            try:
+                s,_=step_walk(s,dv,p,v)
+            except ValueError as e:
+                return failure_row(seed,scene_id,s,distance,steps,"geometry_failure",waypoint_index,"walk",str(e),p,v,diagnostics)
             distance+=dv; steps+=1
+        for tv in turns:
+            try:
+                _,gr,_,_=__import__("vispoly_sim").controller_gains(s,p,v,1 if tv>=0 else -1)
+            except ValueError as e:
+                return failure_row(seed,scene_id,s,distance,steps,"controller_failure",waypoint_index,"turn",str(e),p,v,diagnostics)
+            s.ph=turning_step(s.ph,tv,gr); s.vh+=tv; steps+=1
     return row(seed,scene_id,s,distance,steps,"complete")
 
 
