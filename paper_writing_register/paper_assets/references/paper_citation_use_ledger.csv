@@ -46,3 +46,10 @@ Kim2024WIP,P1,A05,"locomotion technique evaluation and user-experience evidence"
 Sensorimotor2025MR,P1,A04;A08,"interaction design constraints and presence/agency outcomes",VERIFIED
 InteractionAware2026Telepresence,P1,A11;A12,"AI-assisted shared-scene synthesis and telepresence",VERIFIED
 PredictiveVR2026Teleoperation,P1,A04;A11;A20,"predictive interaction and simulation-assisted teleoperation",VERIFIED
+TowardMultiuser2023,P1;P2,A05;A12,"multiuser RDW experimentation and framework evidence",VERIFIED
+Hung2026TeleportReorientation,P1;P2,A05,"hybrid teleportation-RDW and reset strategy",VERIFIED
+Li2025WalkabilityEntropy,P1;P2,A05;A11,"DRL spatial walkability controller",VERIFIED
+Li2025PredictiveReset,P1;P2,A05,"predictive reset based on virtual-real density",VERIFIED
+Lee2025MultimodalReset,P1,A05;A07,"multimodal reset UI effectiveness",VERIFIED
+Lee2026PortalReset,P1;P2,A05,"non-Euclidean portal reset alternative",VERIFIED
+Hypki2026Adaptation,P1,A05;A08,"long-term sensorimotor adaptation under RDW",VERIFIED
