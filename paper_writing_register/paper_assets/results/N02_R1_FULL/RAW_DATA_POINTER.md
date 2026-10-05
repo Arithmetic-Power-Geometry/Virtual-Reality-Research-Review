@@ -1,0 +1,2 @@
+The complete 400-row runs.csv is retained in GitHub Actions artifact 11328322863 with SHA-256 43b93425906983e0c9b3305ec08233e3749c8a08c128d1f5f3c0c605e282d37e.
+It is not reconstructed from summary statistics. The paper-writing register records the immutable artifact ID/digest and hashes.
