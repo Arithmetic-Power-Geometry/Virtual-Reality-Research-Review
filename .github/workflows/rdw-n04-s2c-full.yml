@@ -1,0 +1,32 @@
+name: RDW N04-FULL S2C comparator
+on:
+  push:
+    paths:
+      - '.github/workflows/rdw-n04-s2c-full.yml'
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    defaults: {run: {working-directory: benchmarks/redirected_walking}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install pytest
+      - run: pytest -q
+      - run: python n04_s2c_full.py --seed-start 901 --seed-count 2 --target-m 20 --outdir artifacts/n04_full_preflight
+  full:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    defaults: {run: {working-directory: benchmarks/redirected_walking}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - name: Run exact 100-seed x 4-scene x 350m S2C comparator
+        run: python n04_s2c_full.py --seed-start 1001 --seed-count 100 --target-m 350 --outdir artifacts/n04_s2c_full
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n04-full-s2c-results
+          retention-days: 90
+          path: benchmarks/redirected_walking/artifacts/n04_s2c_full/
