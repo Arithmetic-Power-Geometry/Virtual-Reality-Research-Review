@@ -1,0 +1,7 @@
+method,year,adaptation_basis,selects_or_modifies,primary_optimization_focus,failure_first_class,cost_first_class,held_out_geometry_required_by_our_gate
+Adaptive Redirection,2022,context partitions learned from empirical strategy performance,selects strategy,redirection performance across contexts,not established in current extraction,no,no
+SRC,2024,physical and virtual environment with reinforcement learning,selects S2C/TAPF/ARC/SRL,reduce resets,not established in abstract,no,no
+F-RDW,2025,predicted future virtual position from spatial and eye-tracking data,modifies existing controllers,reduce resets and increase distance between resets,not established in abstract,no,no
+APF-S2T,2024,walkable area target score from APF plus distance,modifies steering target,reduce resets and increase distance between resets,not established in abstract,no,no
+DGM-RDW,2026,dense dynamic geometric mapping,modifies alignment/mapping,reduce resets,not established in abstract,no,no
+Proposed-gap-only,NA,geometry regime with uncertainty,select among executable controllers,joint failure probability + conditional reset burden + decision cost,yes,yes,yes
