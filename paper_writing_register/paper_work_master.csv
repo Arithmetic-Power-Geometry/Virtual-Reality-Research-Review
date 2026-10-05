@@ -1,0 +1,27 @@
+paper_id,work_id,category,status,repository_path,key_commit,paper_use,writing_role,claim_status
+P1,W01,Review protocol,Completed,protocol/REVIEW_PROTOCOL.md,,P1,Methods/Protocol,usable
+P1,W02,Review architecture,Completed,protocol/AGENT_WORKSTREAMS.md,,P1,Methods,usable
+P1,W03,Review universe,Completed,protocol/G01_REVIEW_UNIVERSE.md,,P1,Methods,usable
+P1-P3,W04,Gap evidence rules,Completed,protocol/GAP_EVIDENCE_RULES.md,,P1/P2/P3,Methods/claim control,usable
+P1,W05,Seed reviews,Completed-expanding,data/seed_reviews.csv,,P1,Evidence base,verify before final
+P1,W06,Preliminary findings,Completed,analysis/G01_PRELIMINARY_FINDINGS.md,,P1,Results/Discussion,source verification required
+P1-P2,W07,Technical mining,Completed,protocol/G02_TECHNICAL_MINING.md,,P1/P2,Methods,usable
+P1-P2,W08,Technical landscape,Completed,analysis/G02_TECHNICAL_LANDSCAPE_PASS1.md,,P1/P2,Results/internal rationale,usable
+P2,W10,RDW controller registry,Completed,data/G03_PUBLISHED_CONTROLLERS.csv,cb447ce,P2,Related work/baselines,usable
+P2,W11,Controller provenance,Completed,data/G03_CONTROLLER_SOURCE_PROVENANCE.csv,73721f0,P2,Reproducibility,usable
+P2,W12,Vis-Poly extraction,Completed,data/G03_METHOD_EXTRACTION.csv,0bb72b4,P2,Methods,usable
+P2,W13,Vis-Poly parameters,Completed,data/G03_VISPOLY_PARAMETERS.csv,cbd8b94,P2,Methods,usable
+P2,W14,ARC reset parameters,Completed,data/G03_ARC_RESET_PARAMETERS.csv,8056582,P2,Methods,usable
+P2,W15,ARC reset selector,CI green,benchmarks/redirected_walking/arc_reset.py,dea1158,P2,Software/Methods,software evidence only
+P2,W16,Geometry engine,CI green,benchmarks/redirected_walking/geometry2d.py,f82972a,P2,Software/Methods,support layer
+P2,W17,Vis-Poly primitives,CI green,benchmarks/redirected_walking/vispoly_controller.py,a51d11a,P2,Software/Methods,component validated
+P2,W18,RDW motion semantics,CI green,benchmarks/redirected_walking/rdw_motion.py,57ceddb,P2,Software/Methods,explicit convention
+P2,W19,End-to-end simulator,CI green,benchmarks/redirected_walking/vispoly_sim.py,1026434,P2,Software/Methods,not numerical replication
+P2,W20,Seeded waypoint timing,CI green,benchmarks/redirected_walking/waypoint_paths.py,5e2078f,P2,Experiment,protocol-compatible
+P2,W21,ARC reset continuation,CI green,benchmarks/redirected_walking/arc_reset_execute.py,f579765,P2,Experiment,endpoint invariant
+P2,W22,Batch experiment harness,CI green,benchmarks/redirected_walking/batch_vispoly.py,f526bc0,P2,Experiment,engineering scene
+P2,W23,Published protocol ledger,Completed,data/G03_VISPOLY_PUBLISHED_PROTOCOL.csv,11fb70b,P2,Methods/limitations,usable
+P2,W24,Reproduction tiers,Completed,data/G03_REPRODUCTION_TIERS.csv,487a1a8,P2,Methods/limitations,usable
+P2,W25,R1 geometry registry,Completed,benchmarks/redirected_walking/r1_geometry_sensitivity.csv,7af7012,P2,Experiment design,declared substitutes
+P2-P3,W26,R1 paired sensitivity harness,Implemented,benchmarks/redirected_walking/r1_geometry_sensitivity.py,49e4cb6,P2/P3,Results pending,do not claim effect yet
+P1-P3,W27,Paper readiness gate,Completed,protocol/PAPER_READINESS_GATE.md,64982a9,P1/P2/P3,Writing gate,usable
