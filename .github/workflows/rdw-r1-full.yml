@@ -1,5 +1,10 @@
 name: RDW R1 full geometry sensitivity
 on:
+  push:
+    paths:
+      - 'benchmarks/redirected_walking/r1_full_experiment.py'
+      - 'benchmarks/redirected_walking/test_r1_full_experiment.py'
+      - '.github/workflows/rdw-r1-full.yml'
   workflow_dispatch:
     inputs:
       seed_count:
