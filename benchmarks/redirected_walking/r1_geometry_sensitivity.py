@@ -2,7 +2,7 @@
 from __future__ import annotations
 import csv,hashlib,json,math,os,statistics
 from geometry2d import rectangle_segments,nearest_segment_clearance
-from vispoly_sim import State,needs_reset,step_walk,controller_gains
+from vispoly_sim import State,needs_reset,step_walk,controller_gains,swept_segment_safe
 from arc_reset_execute import execute_arc_reset
 from waypoint_paths import timed_motion
 from rdw_motion import turning_step
@@ -41,7 +41,15 @@ def run(seed,sid,target_m=35.0,max_resets=100,diagnostics=None):
     if s.resets>=max_resets:return row(seed,sid,s,distance,steps,"reset_cap")
     s,_=execute_arc_reset(s,p,v); reset_armed=False
    elif not trig: reset_armed=True
-   try:s,_=step_walk(s,dv,p,v)
+   try:
+    candidate,_=step_walk(s,dv,p,v)
+    if not swept_segment_safe((s.px,s.py),(candidate.px,candidate.py),p,0.2):
+     if s.resets>=max_resets:return row(seed,sid,s,distance,steps,"reset_cap")
+     s,_=execute_arc_reset(s,p,v); reset_armed=False
+     candidate,_=step_walk(s,dv,p,v)
+     if not swept_segment_safe((s.px,s.py),(candidate.px,candidate.py),p,0.2):
+      return failure(seed,sid,s,distance,steps,"geometry_failure",idx,"swept_walk","unsafe after reset",p,v,diagnostics)
+    s=candidate
    except ValueError as e:return failure(seed,sid,s,distance,steps,"geometry_failure",idx,"walk",str(e),p,v,diagnostics)
    distance+=dv;steps+=1
   for tv in turns:
