@@ -30,3 +30,6 @@ Steuer1992Telepresence,P1,A01;A08,"virtual-reality/telepresence conceptual found
 Sutherland1968Ultimate,P1,A01;A02,"historical head-mounted-display foundation",VERIFIED
 Zmuda2013FORCE,P1;P2,A05,"search/prediction-based constrained-environment RDW",VERIFIED
 Hodgson2011SpatialInterference,P1;P2,A05;A08,"spatial-interference and memory boundary for redirected walking",VERIFIED
+Messinger2019TrackingArea,P1;P2,A05,"tracking-area shape/size effects for APF-RDW and geometry-conditioned performance",VERIFIED
+Lee2019S2OT,P1;P2,A05;A11,"deep-Q predictive steering comparator stratum",VERIFIED
+Cha2018LSTMPath,P1;P2,A05;A11,"LSTM virtual-path prediction as predictive-RDW input",VERIFIED
