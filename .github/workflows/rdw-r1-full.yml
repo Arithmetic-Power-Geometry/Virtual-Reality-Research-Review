@@ -1,4 +1,5 @@
 name: RDW R1 full geometry sensitivity
+# Corrected navigation executor rerun gate: turn-to-edge then walk.
 on:
   push:
     paths:
