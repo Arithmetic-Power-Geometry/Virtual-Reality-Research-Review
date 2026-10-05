@@ -35,6 +35,14 @@ def run(seed,sid,target_m=35.0,max_resets=100,diagnostics=None):
   a,b=route[idx],route[idx+1]; d=math.dist(a,b); desired=math.atan2(b[1]-a[1],b[0]-a[0])
   turn=((desired-vh+math.pi)%(2*math.pi))-math.pi
   walks,turns=timed_motion(d,turn)
+  # Navigation routes are geometric node sequences: orient to the next edge,
+  # then traverse it. This differs intentionally from the separate stochastic
+  # Azmandian-style WALK-THEN-TURN model.
+  for tv in turns:
+   try:_,gr,_,_=controller_gains(s,p,v,1 if tv>=0 else -1)
+   except ValueError as e:return failure(seed,sid,s,distance,steps,"controller_failure",idx,"turn",str(e),p,v,diagnostics)
+   s.ph=turning_step(s.ph,tv,gr);s.vh+=tv;steps+=1
+  vh=desired
   for dv in walks:
    trig=needs_reset(s,p)
    if reset_armed and trig:
@@ -52,11 +60,6 @@ def run(seed,sid,target_m=35.0,max_resets=100,diagnostics=None):
     s=candidate
    except ValueError as e:return failure(seed,sid,s,distance,steps,"geometry_failure",idx,"walk",str(e),p,v,diagnostics)
    distance+=dv;steps+=1
-  for tv in turns:
-   try:_,gr,_,_=controller_gains(s,p,v,1 if tv>=0 else -1)
-   except ValueError as e:return failure(seed,sid,s,distance,steps,"controller_failure",idx,"turn",str(e),p,v,diagnostics)
-   s.ph=turning_step(s.ph,tv,gr);s.vh+=tv;steps+=1
-  vh=desired
  return row(seed,sid,s,distance,steps,"complete")
 
 def experiment(seeds=range(121,131),target_m=35.,diagnostics=None):
