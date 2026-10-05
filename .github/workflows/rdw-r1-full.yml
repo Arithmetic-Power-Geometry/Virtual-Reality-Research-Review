@@ -1,0 +1,52 @@
+name: RDW R1 full geometry sensitivity
+on:
+  workflow_dispatch:
+    inputs:
+      seed_count:
+        description: 'Number of paired seeds'
+        required: true
+        default: '100'
+      target_m:
+        description: 'Target virtual path length in metres'
+        required: true
+        default: '350'
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: benchmarks/redirected_walking
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install pytest
+      - name: Full repository test gate
+        run: pytest -q
+      - name: Dedicated long-driver preflight
+        run: python r1_full_experiment.py --seed-start 901 --seed-count 2 --target-m 20 --outdir artifacts/r1_full_preflight
+  full:
+    needs: preflight
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    defaults:
+      run:
+        working-directory: benchmarks/redirected_walking
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run 100-seed paired R1 experiment
+        run: python r1_full_experiment.py --seed-start 1001 --seed-count ${{ inputs.seed_count }} --target-m ${{ inputs.target_m }} --outdir artifacts/r1_full
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n02-full-r1-results
+          retention-days: 90
+          path: |
+            benchmarks/redirected_walking/artifacts/r1_full/runs.csv
+            benchmarks/redirected_walking/artifacts/r1_full/summary.csv
+            benchmarks/redirected_walking/artifacts/r1_full/failures.json
+            benchmarks/redirected_walking/artifacts/r1_full/manifest.json
+            benchmarks/redirected_walking/artifacts/r1_full/SHA256SUMS.json
