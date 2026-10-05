@@ -1,6 +1,6 @@
 sequence,status,task,gate,next_output
 N01,PASS,Pre-R1 semantic correctness audit + adversarial reviewer gate,BLOCKER,frozen: run 37263870923; 46 tests passed
-N02,NEXT,Run and freeze R1 geometry sensitivity after reviewer PASS,BLOCKER,raw CSV + summary + manifest + hashes + provenance
+N02,CORRECTION_REQUIRED,Run and freeze R1 geometry sensitivity after reviewer PASS,BLOCKER,audit frame-level gain application; remove censoring bias; rerun short gate
 N03,PENDING,Analyze R1 results,REQUIRED,paired metrics + uncertainty + analysis
 N04,PENDING,Implement first faithful comparator,BLOCKER,parameter ledger + code + tests
 N05,PENDING,Implement additional compatible baselines,REQUIRED,4-6 compatible controller families where feasible
