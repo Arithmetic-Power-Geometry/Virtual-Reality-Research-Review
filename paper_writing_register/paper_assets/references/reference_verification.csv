@@ -36,3 +36,7 @@ Gandrud2016Destination,Predicting Destination Using Head Orientation and Gaze Di
 Bremer2021FuturePosition,Predicting Future Position From Natural Walking and Eye Movements with Machine Learning,2021,10.1109/AIVR52153.2021.00013,DBLP/University of Muenster,VERIFIED,P2 locomotion prediction
 Stein2022EyeLSTM,Eye Tracking-based LSTM for Locomotion Prediction in VR,2022,10.1109/VR51125.2022.00069,DBLP/Springer reference metadata,VERIFIED,P2 locomotion prediction
 You2022StrafingGain,Strafing Gain: Redirecting Users One Diagonal Step at a Time,2022,10.1109/ISMAR55827.2022.00077,University of Minnesota/DBLP,VERIFIED,P2 gain literature
+Suma2012Taxonomy,A Taxonomy for Deploying Redirection Techniques in Immersive Virtual Environments,2012,10.1109/VR.2012.6180877,Author lab/DOI metadata,VERIFIED,P1/P2 foundational taxonomy
+Suma2012ImpossibleSpaces,Impossible Spaces: Maximizing Natural Walking in Virtual Environments with Self-Overlapping Architecture,2012,10.1109/TVCG.2012.47,PubMed/University of Minnesota,VERIFIED,P1/P2 spatial redirection
+Suma2011ChangeBlindness,Leveraging Change Blindness for Redirection in Virtual Environments,2011,10.1109/VR.2011.5759455,Author lab/JCST survey metadata,VERIFIED,P1/P2 redirection
+Vasylevska2013FlexibleSpaces,Flexible Spaces: Dynamic Layout Generation for Infinite Walking in Virtual Environments,2013,10.1109/3DUI.2013.6550194,JCST survey DOI metadata,VERIFIED,P1/P2 dynamic layout
