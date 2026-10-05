@@ -1,5 +1,5 @@
 tier,label,requirements,current_status,allowed_claim
 R0,software regression,"component tests; deterministic integration; artifact hashes",passed,"implementation components execute deterministically"
-R1,protocol-compatible reproduction,"exact published parameters; declared substitute geometry/path inputs; sensitivity across substitutes",in_progress,"behavior under protocol-compatible conditions"
-R2,condition-faithful reproduction,"published geometry and path generator reconstructed sufficiently for comparison",blocked,"comparison with published behavioral patterns"
-R3,numerical replication,"original inputs/code/artifacts or fully specified equivalent",blocked,"direct numerical replication"
+R1,protocol-compatible sensitivity,"exact published controller parameters; declared substitute path inputs and/or geometries; sensitivity analysis",in_progress,"behavior under explicitly declared protocol-compatible sensitivity conditions"
+R2,condition-faithful reproduction,"published environment coordinates; cited static path model reconstructed; published start/path pairing protocol; compatible controller implementations",partially_unblocked,"comparison with published behavioral patterns after path-model gate passes"
+R3,numerical replication,"original exact path instances/seeds and implementation artifacts or fully specified equivalent",blocked,"direct numerical replication"
