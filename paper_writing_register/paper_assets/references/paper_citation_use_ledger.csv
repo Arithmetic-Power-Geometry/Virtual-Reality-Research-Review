@@ -11,3 +11,7 @@ Tseng2022DarkSide,P1,A08;A09,"ethical/perceptual manipulation context",VERIFIED
 Williams2021VisPoly,P2,A05,"primary Vis.-Poly method and evaluation",VERIFIED
 Williams2021ARC,P2,A05,"ARC reset primary method",VERIFIED
 Azmandian2016NavMesh,P2,A05,"navigation-aware path design precedent",VERIFIED
+Langbehn2017RoomScale,P1;P2,A05,"room-scale RDW and physical-space constraints",VERIFIED
+Lutfallah2024Unknown,P1;P2,A05,"unknown-environment/exploration extension of RDW",VERIFIED
+Ri2025Interaction,P1;P2,A05;A12,"multi-user interaction-aware RDW",VERIFIED
+Lee2025SequentialCurvature,P1;P2,A05,"sequential curvature-gain threshold evidence",VERIFIED
