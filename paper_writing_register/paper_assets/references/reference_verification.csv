@@ -28,3 +28,7 @@ OjedaDeOcampo2026Presence,Presence Assessment in Virtual Reality: A Systematic L
 Erbas2024HealthcarePresence,The Effects of Virtual Reality Used in Healthcare Education on Cybersickness and Sense of Presence: A Systematic Review,2024,10.1162/pres_a_00414,MIT Press/DBLP,VERIFIED,P1 A18/A09/A08
 Azmandian2016NavMesh,Automated Path Prediction for Redirected Walking Using Navigation Meshes,2016,10.1109/3DUI.2016.7460032,USC ICT/DBLP,VERIFIED,P2 navigation-aware path design
 Azmandian2022SimulationValidation,Validating Simulation-Based Evaluation of Redirected Walking Systems,2022,10.1109/TVCG.2022.3150466,PubMed/DBLP/University of Minnesota,VERIFIED,P2 simulation validity
+Thomas2022IKPaths,Inverse Kinematics Assistance for the Creation of Redirected Walking Paths,2022,10.1109/ISMAR55827.2022.00076,University of Minnesota/ISMAR,VERIFIED,P2 path authoring/prediction
+Zank2016EyeTracking,Eye Tracking for Locomotion Prediction in Redirected Walking,2016,10.1109/3DUI.2016.7460030,3DUI metadata/ETH,VERIFIED,P2 locomotion prediction
+Azmandian2017TwoUser,An Evaluation of Strategies for Two User Redirected Walking in Shared Physical Spaces,2017,10.1109/VR.2017.7892235,University of Minnesota/DBLP,VERIFIED,P1/P2 multi-user RDW
+Zhang2023OutOfPlaceReset,One-Step Out-of-Place Resetting for Redirected Walking in VR,2023,10.1109/TVCG.2022.3158609,PubMed/University of Otago,VERIFIED,P2 reset methods
