@@ -9,7 +9,7 @@ N06,CORRECTED,Three-controller paired benchmark matrix,COMPLETE,Raw workflow cor
 N07,PASS,Paired controller analysis,COMPLETE,Corrected raw-row paired effects and completion discordance frozen; no universal controller winner
 N08,PASS,Confirmatory statistics,COMPLETE,Wilcoxon plus Holm/BH plus exact completion tests and Friedman omnibus frozen
 N09,PASS,Computational-cost analysis,COMPLETE,Controller microbenchmark and structural complexity frozen; wall-clock claim limited to common runner
-N10,C3_STRONG_C4_PENDING,Novelty/C4 gate,REQUIRED,Generic geometry-conditioned switching ruled out by Adaptive Redirection and SRC; sharper joint failure-reset-cost regime gap under literature exhaustion
+N10,C3_STRONG_C4_PENDING,Novelty/C4 gate,REQUIRED,Full-text priority audit confirms adaptive selector prior art; candidate gap narrowed to joint failure-reset-cost regime model with uncertainty and held-out generalization
 N11,CONDITIONAL,Novel method only if C4 passes,CONDITIONAL,algorithm specification + implementation
 N12,CONDITIONAL,Novel-method evaluation,CONDITIONAL,baselines + ablation + robustness + cost
 N13,PENDING,Finish A01-A21 study extraction,PAPER 1 GATE,final evidence tables
@@ -18,4 +18,4 @@ N15,PENDING,Reference and reporting freeze,PAPER 1 GATE,frozen bibliography + ev
 N16,PENDING,Final artifact freeze,WRITING GATE,release-ready artifact set
 N17,PENDING,Start manuscript writing,FINAL,submission-ready TVCG manuscript(s)
 A01-A21,IN_PROGRESS,Broad VR evidence mining,REQUIRED,154 verified references; remaining major gaps concentrated in A02 A06 A07 A13 A17; formal review pipeline now active
-REVIEW-PIPELINE,IN_PROGRESS,Formal systematic-review chain,REQUIRED,154 ingested; 153 canonical; title/abstract screening complete; full-text tracker initialized for all canonical records; full-text assessment now active
+REVIEW-PIPELINE,IN_PROGRESS,Formal systematic-review chain,REQUIRED,Full-text priority batch 7/153 assessed eligible; next expand to A02 A06 A07 A13 A17 and ingest 4 newest references
