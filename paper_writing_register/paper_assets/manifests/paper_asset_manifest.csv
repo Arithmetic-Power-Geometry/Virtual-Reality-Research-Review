@@ -14,3 +14,8 @@ PA-011,P3,algorithm,Novel method specification,conditional,, ,N11,"only if C4 pa
 PA-012,P3,table,Novel method ablation and robustness,conditional,, ,N12,"only if C4 passes"
 PA-013,P1,table,Cross-workstream evidence synthesis,pending,, ,N13-N14,"review result"
 PA-014,P1,figure,Contradiction and reproducibility map,pending,, ,N14,"review result"
+PA-016,P2,provenance,N02-FULL run-1 rejection audit,validated,paper_writing_register/paper_assets/provenance/N02_FULL_RUN1_REJECTION.md,48adeef9d353f64471afd9c6705e3f279d551789,N02-FULL,"rejected diagnostic; never scientific result"
+PA-017,P2,results,N02-FULL run-1 rejected summary,rejected,paper_writing_register/paper_assets/results/rejected/N02_FULL_RUN1_REJECTED_summary.csv,57ebfa8e4e15b64df51d7324a7cf79380d4c324b,N02-FULL,"retained negative diagnostic"
+PA-018,P2,provenance,N02 corrected navigation short PASS,validated,paper_writing_register/paper_assets/provenance/N02_CORRECTED_NAVIGATION_SHORT_PASS.md,e88cc6943b742f3c16bdff39a02ef1b9fa990848,N02,"40/40 complete; route tracking regressions pass"
+PA-019,P2,results,N02 corrected navigation short summary,validated,paper_writing_register/paper_assets/results/N02_corrected_navigation_short_summary.csv,d118094c41627b23af1080d071162be5c3fc6934,N02,"diagnostic only; full rerun pending"
+PA-020,P1;P2,references,Paper citation-use ledger,validated,paper_writing_register/paper_assets/references/paper_citation_use_ledger.csv,595139e1012f67470425be3f728eeb080f3b4ee3,REF,"maps verified sources to manuscript uses"
