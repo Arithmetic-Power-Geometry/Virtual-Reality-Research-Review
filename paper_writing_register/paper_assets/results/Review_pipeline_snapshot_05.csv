@@ -1,0 +1,10 @@
+stage,count,status,notes
+verified_candidate_library,158,COMPLETE,"All verified bibliography records represented in formal register"
+records_after_deduplication,157,COMPLETE,"One exact DOI duplicate retained in audit trail"
+title_abstract_include_or_supporting,157,COMPLETE,"Canonical records screened; no unresolved title/abstract cases"
+full_text_eligible_assessed,17,IN_PROGRESS,"N10 prior-art + A02/A06/A07/A13/A17 priority evidence assessed"
+full_text_supporting_assessed,1,IN_PROGRESS,"General QoE streaming infrastructure review"
+full_text_remaining,139,IN_PROGRESS,"Pending staged assessment"
+study_families_resolved,0,PENDING,"Next after broader full-text batches"
+citation_chasing_complete,0,PENDING,"Not yet complete"
+final_included_studies,NA,PENDING,"Not valid until corpus freeze"
