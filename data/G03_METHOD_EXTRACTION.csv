@@ -10,3 +10,7 @@ LIT-RDW-004,objective,"match proximity to obstacles in physical and virtual envi
 LIT-RDW-004,complexity metric,"Complexity Ratio characterizes relative navigational complexity","exact formula pending extraction",partial,"Williams et al. 2021 ARC"
 LIT-RDW-007,objective,"optimization-driven alignment plus APF and integrated variants","single-variable objective optimizes physical/virtual alignment",partial,"Wu et al. 2023"
 LIT-RDW-008,objective,"sample walkable space and select target using APF-value/distance score","target direction determines RDW gains",partial,"APF-S2T 2024"
+LIT-RDW-001,scope,"reactive artificial-potential-function steering for complex/irregular physical spaces","single- and multi-user evaluation; compared with Steer-to-Center",verified,"Thomas & Suma Rosenberg 2019 primary conference record"
+LIT-RDW-001,admission,"N05 first extraction target","implementation blocked until equations/parameters/gain mapping/reset semantics are frozen",pending,"N05 comparator admission gate"
+LIT-RDW-002,scope,"artificial potential field redirection and resetting with multi-user support","single-user effect reported plus live multi-user evaluation",verified,"Bachmann et al. 2019 primary paper"
+LIT-RDW-FORCE,stratum,"tracking-space map + obstacles + multistep probabilistic virtual-path prediction + search optimization","predictive/search controller; not directly pooled with reactive R1 set yet",verified,"Zmuda et al. 2013 primary record"
