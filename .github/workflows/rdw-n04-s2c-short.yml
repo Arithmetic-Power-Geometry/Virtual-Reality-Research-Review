@@ -1,0 +1,46 @@
+name: RDW N04 S2C short comparator
+on:
+  push:
+    paths:
+      - '.github/workflows/rdw-n04-s2c-short.yml'
+jobs:
+  comparator:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: benchmarks/redirected_walking
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install pytest
+      - run: pytest -q
+      - name: Run 10-seed x 4-scene x 2-controller short gate
+        run: |
+          python - <<'PY'
+          import csv,json,statistics,os
+          from n04_s2c_short import experiment
+          rows=experiment()
+          os.makedirs("artifacts/n04_s2c_short",exist_ok=True)
+          with open("artifacts/n04_s2c_short/runs.csv","w",newline="") as f:
+            w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+          out=[]
+          for controller in ("Vis-Poly","S2C"):
+            for sid in ("R1-G01","R1-G02","R1-G03","R1-G04"):
+              x=[r for r in rows if r["controller"]==controller and r["scene_id"]==sid]
+              ok=[r for r in x if r["status"]=="complete"]
+              rates=[r["resets_per_100m"] for r in ok]
+              out.append({"controller":controller,"scene_id":sid,"n":len(x),"n_complete":len(ok),
+                "mean_resets_per_100m":statistics.mean(rates) if rates else None,
+                "sd":statistics.stdev(rates) if len(rates)>1 else 0})
+          with open("artifacts/n04_s2c_short/summary.csv","w",newline="") as f:
+            w=csv.DictWriter(f,fieldnames=list(out[0]));w.writeheader();w.writerows(out)
+          assert len(rows)==80
+          assert all(r["status"]=="complete" for r in rows)
+          print(json.dumps(out,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n04-s2c-short
+          retention-days: 90
+          path: benchmarks/redirected_walking/artifacts/n04_s2c_short/
