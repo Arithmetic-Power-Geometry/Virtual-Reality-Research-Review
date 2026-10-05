@@ -23,7 +23,7 @@ def start_for(scene_id):
 
 def run(seed,scene_id,waypoints=8,max_resets=100):
     p=scenes()[scene_id]; v=virtual_scene(); x,y,h=start_for(scene_id)
-    s=State(x,y,h,7,7,0,0); distance=0.; steps=0
+    s=State(x,y,h,7,7,0,0); distance=0.; steps=0; reset_armed=True
     for d,turn in generate_relative_waypoints(seed,waypoints):
         walks,turns=timed_motion(d,turn)
         for tv in turns:
@@ -33,9 +33,13 @@ def run(seed,scene_id,waypoints=8,max_resets=100):
                 return row(seed,scene_id,s,distance,steps,"controller_failure")
             s.ph=turning_step(s.ph,tv,gr); s.vh+=tv; steps+=1
         for dv in walks:
-            if needs_reset(s,p):
+            in_trigger=needs_reset(s,p)
+            if reset_armed and in_trigger:
                 if s.resets>=max_resets: return row(seed,scene_id,s,distance,steps,"reset_cap")
                 s,_=execute_arc_reset(s,p,v)
+                reset_armed=False
+            elif not in_trigger:
+                reset_armed=True
             try: s,_=step_walk(s,dv,p,v)
             except ValueError: return row(seed,scene_id,s,distance,steps,"geometry_failure")
             distance+=dv; steps+=1
