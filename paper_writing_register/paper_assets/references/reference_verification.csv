@@ -20,3 +20,9 @@ Steinicke2008Sensitivity,Analyses of Human Sensitivity to Redirected Walking,200
 Bolling2019ShrinkingCircles,Shrinking Circles: Adaptation to Increased Curvature Gain in Redirected Walking,2019,10.1109/TVCG.2019.2899228,PubMed/University Hamburg,VERIFIED,P1/P2 curvature evidence
 Liu2024SpatialConstraints,Overcoming Spatial Constraints in VR: A Survey of Redirected Walking Techniques,2024,10.1007/s11390-024-4585-3,JCST/SciOpen,VERIFIED,P1/P2 newest RDW survey
 MayorMarquez2025MTRW,A Virtual Reality Perceptual Study of Multi-Technique Redirected Walking Method,2025,10.1109/TETC.2024.3471249,IEEE Xplore/UPM,VERIFIED,P1/P2 perceptual evaluation
+Azmandian2015PhysicalSpace,Physical Space Requirements for Redirected Walking: How Size and Shape Affect Performance,2015,10.2312/egve.20151315,Eurographics Digital Library,VERIFIED,P2 path model/benchmark
+Azmandian2016RDWToolkit,The Redirected Walking Toolkit: A Unified Development Platform for Exploring Large Virtual Environments,2016,10.1109/WEVR.2016.7859537,University of Minnesota/GitHub source,VERIFIED,P2 reproducibility/path implementation
+Bareisyte2024Questionnaires,Questionnaires for Evaluating Virtual Reality: A Systematic Scoping Review,2024,10.1016/j.chbr.2024.100505,University of Twente/Durham repository,VERIFIED,P1 A16 evaluation
+Caserman2021Cybersickness,Cybersickness in Current-Generation Virtual Reality Head-Mounted Displays: Systematic Review and Outlook,2021,10.1007/s10055-021-00513-6,Springer Nature,VERIFIED,P1 A09 cybersickness
+OjedaDeOcampo2026Presence,Presence Assessment in Virtual Reality: A Systematic Literature Review,2026,10.3390/app16063102,MDPI Applied Sciences,VERIFIED,P1 A08/A16 presence
+Erbas2024HealthcarePresence,The Effects of Virtual Reality Used in Healthcare Education on Cybersickness and Sense of Presence: A Systematic Review,2024,10.1162/pres_a_00414,MIT Press/DBLP,VERIFIED,P1 A18/A09/A08
