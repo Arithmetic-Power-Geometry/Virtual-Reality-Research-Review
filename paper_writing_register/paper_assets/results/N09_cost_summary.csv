@@ -1,0 +1,4 @@
+controller,n_states,median_of_state_medians_ns,mean_of_state_medians_ns,min_state_median_ns,max_state_median_ns
+Vis-Poly,12,251448.0346,254607.57063333332,199548.0532,319350.904
+S2C,12,2021.5648,1985.6270666666667,1473.3552,2237.6858
+P2R,12,3938.2893,3903.92585,2742.129,4716.5188
