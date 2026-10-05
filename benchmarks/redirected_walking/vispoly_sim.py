@@ -8,6 +8,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass
 from geometry2d import visibility_polygon, nearest_hit, nearest_segment_clearance, Segment
+from r1_path_admission import segment_is_valid
 from vispoly_controller import build_slices, active_slice, most_similar_slice, gain_selection
 from rdw_motion import walking_step
 from arc_reset import reset_triggered
