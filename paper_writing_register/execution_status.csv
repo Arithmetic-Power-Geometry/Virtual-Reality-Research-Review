@@ -8,8 +8,8 @@ N05,PASS,Faithful comparator-set construction,COMPLETE,Vis-Poly S2C P2R executab
 N06,CORRECTED,Three-controller paired benchmark matrix,COMPLETE,Raw workflow correction propagated; authoritative complete counts Vis-Poly 384 S2C 378 P2R 381
 N07,PASS,Paired controller analysis,COMPLETE,Corrected raw-row paired effects and completion discordance frozen; no universal controller winner
 N08,PASS,Confirmatory statistics,COMPLETE,Wilcoxon plus Holm/BH plus exact completion tests and Friedman omnibus frozen
-N09,PENDING,Computational-cost analysis,REQUIRED,cost artifact + table
-N10,PENDING,C4 gap decision,NOVELTY GATE,gap decision record
+N09,PASS,Computational-cost analysis,COMPLETE,Controller microbenchmark and structural complexity frozen; wall-clock claim limited to common runner
+N10,C3_STRONG_C4_PENDING,Novelty/C4 gate,REQUIRED,Empirical controller-by-geometry separation established but controller switching/adaptation has prior art; sharper joint failure-reset-cost gap required
 N11,CONDITIONAL,Novel method only if C4 passes,CONDITIONAL,algorithm specification + implementation
 N12,CONDITIONAL,Novel-method evaluation,CONDITIONAL,baselines + ablation + robustness + cost
 N13,PENDING,Finish A01-A21 study extraction,PAPER 1 GATE,final evidence tables
