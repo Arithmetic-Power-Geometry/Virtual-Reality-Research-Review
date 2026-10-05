@@ -1,0 +1,43 @@
+name: RDW N05 P2R short gate
+on:
+  push:
+    paths:
+      - '.github/workflows/rdw-n05-p2r-short.yml'
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    defaults: {run: {working-directory: benchmarks/redirected_walking}}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: python -m pip install pytest
+      - run: pytest -q
+      - name: Run 10-seed x 4-scene P2R short gate
+        run: |
+          python - <<'PY'
+          import csv,json,statistics,os
+          from n05_p2r_short import experiment
+          rows=experiment()
+          os.makedirs("artifacts/n05_p2r_short",exist_ok=True)
+          with open("artifacts/n05_p2r_short/runs.csv","w",newline="") as f:
+            w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+          out=[]
+          for sid in ("R1-G01","R1-G02","R1-G03","R1-G04"):
+            x=[r for r in rows if r["scene_id"]==sid];ok=[r for r in x if r["status"]=="complete"]
+            rates=[r["resets_per_100m"] for r in ok]
+            out.append({"controller":"P2R","scene_id":sid,"n":len(x),"n_complete":len(ok),
+              "mean_resets_per_100m":statistics.mean(rates) if rates else None,
+              "sd":statistics.stdev(rates) if len(rates)>1 else 0,
+              "status_counts":json.dumps({z:sum(r["status"]==z for r in x) for z in sorted({r["status"] for r in x})},sort_keys=True)})
+          with open("artifacts/n05_p2r_short/summary.csv","w",newline="") as f:
+            w=csv.DictWriter(f,fieldnames=list(out[0]));w.writeheader();w.writerows(out)
+          with open("artifacts/n05_p2r_short/failures.json","w") as f:json.dump([r for r in rows if r["status"]!="complete"],f,indent=2)
+          assert len(rows)==40
+          print(json.dumps(out,sort_keys=True))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: n05-p2r-short
+          retention-days: 90
+          path: benchmarks/redirected_walking/artifacts/n05_p2r_short/
