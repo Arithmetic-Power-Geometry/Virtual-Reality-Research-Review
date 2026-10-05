@@ -1,0 +1,9 @@
+stage,count,status,notes
+verified_candidate_library,154,COMPLETE,"All verified bibliography records ingested with stable record IDs"
+records_after_deduplication,153,COMPLETE,"One exact DOI duplicate linked to canonical record"
+duplicate_records,1,COMPLETE,"VRR-0060 duplicates VRR-0021 by DOI 10.1109/TETC.2024.3471249"
+title_abstract_screened,0,PENDING,"No screening decisions fabricated"
+full_text_assessed,0,PENDING,"Begins after title/abstract screening"
+study_families_resolved,0,PENDING,"Begins after full-text assessment"
+citation_chasing_complete,0,PENDING,"Backward/forward chasing not yet complete"
+final_included_studies,NA,PENDING,"Cannot be stated until corpus freeze"
