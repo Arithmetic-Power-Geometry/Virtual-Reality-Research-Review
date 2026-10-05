@@ -28,6 +28,8 @@ jobs:
         run: python summarize.py results.csv --out summary.json
       - name: Hash generated files
         run: sha256sum results.csv summary.json > SHA256SUMS.txt
+      - name: Generate R1 paired geometry sensitivity artifacts
+        run: python r1_geometry_sensitivity.py
       - uses: actions/upload-artifact@v4
         with:
           name: rdw-baseline-results
@@ -35,3 +37,7 @@ jobs:
             benchmarks/redirected_walking/results.csv
             benchmarks/redirected_walking/summary.json
             benchmarks/redirected_walking/SHA256SUMS.txt
+            benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_geometry_runs.csv
+            benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_geometry_summary.csv
+            benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/r1_manifest.json
+            benchmarks/redirected_walking/artifacts/r1_geometry_sensitivity/SHA256SUMS.json
