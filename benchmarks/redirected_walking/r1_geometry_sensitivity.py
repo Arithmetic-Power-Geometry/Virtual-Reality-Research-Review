@@ -87,7 +87,9 @@ def write(outdir):
         p=os.path.join(outdir,name); files.append(p)
         with open(p,"w",newline="") as f:
             w=csv.DictWriter(f,fieldnames=fields); w.writeheader(); w.writerows(data)
-    dp=os.path.join(outdir,"r1_failures.json"); files.append(dp)\n    with open(dp,"w") as f: json.dump(diagnostics,f,indent=2,sort_keys=True)\n    manifest={"seeds":[121,122,123,124,125,126,127,128,129,130],"waypoints_per_seed":8,
+    dp=os.path.join(outdir,"r1_failures.json"); files.append(dp)
+    with open(dp,"w") as f: json.dump(diagnostics,f,indent=2,sort_keys=True)
+    manifest={"seeds":[121,122,123,124,125,126,127,128,129,130],"waypoints_per_seed":8,
               "paired_design":True,"scenes":list(scenes()),"common_physical_start":[2,2,0],"interpretation":"R1 protocol-compatible short geometry sensitivity; not published-scale and not direct numerical replication"}
     mp=os.path.join(outdir,"r1_manifest.json"); files.append(mp)
     with open(mp,"w") as f: json.dump(manifest,f,indent=2,sort_keys=True)
