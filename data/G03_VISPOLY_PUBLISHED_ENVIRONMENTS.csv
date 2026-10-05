@@ -1,0 +1,30 @@
+experiment,space,boundary_or_obstacle,vertices,source_status
+1,physical,boundary,"(-6,-6);(6,-6);(6,6);(-6,6)",exact_supplement
+1,physical,obstacle_1,"(-4,-4);(-1,-4);(-1,-1);(-4,-1)",exact_supplement
+1,physical,obstacle_2,"(1,-4);(4,-4);(4,-1);(1,-1)",exact_supplement
+1,physical,obstacle_3,"(1,1);(4,1);(4,4);(1,4)",exact_supplement
+1,physical,obstacle_4,"(-4,1);(-1,1);(-1,4);(-4,4)",exact_supplement
+1,virtual,boundary,"(-11,-6);(6,-6);(6,6);(-11,6)",exact_supplement
+1,virtual,obstacle_1,"(-4,-4);(-1,-4);(-1,-1);(-4,-1)",exact_supplement
+1,virtual,obstacle_2,"(1,-4);(4,-4);(4,-1);(1,-1)",exact_supplement
+1,virtual,obstacle_3,"(1,1);(4,1);(4,4);(1,4)",exact_supplement
+1,virtual,obstacle_4,"(-4,1);(-1,1);(-1,4);(-4,4)",exact_supplement
+1,virtual,obstacle_5,"(-9,1);(-6,1);(-6,4);(-9,4)",exact_supplement
+1,virtual,obstacle_6,"(-9,-4);(-6,-4);(-6,-1);(-9,-1)",exact_supplement
+2,physical,boundary,"(-5,-5);(5,-5);(5,5);(-5,5)",exact_supplement
+2,physical,obstacle_1,"(-4.5,-4.5);(-2.5,-4.5);(-2.5,-2.5);(-4.5,-2.5)",exact_supplement
+2,physical,obstacle_2,"(-2,-1);(2,-1);(2,1);(-2,1)",exact_supplement
+2,physical,obstacle_3,"(-2,4);(2,4);(2,5);(-2,5)",exact_supplement
+2,virtual,boundary,"(10,-10);(10,10);(-10,10);(-10,-10)",exact_supplement
+2,virtual,obstacle_1,"(-4.5,-4.5);(-2.5,-4.5);(-3.5,-2.5)",exact_supplement
+2,virtual,obstacle_2,"(0,2);(2,1);(1,-2);(-1,-2);(-2,1)",exact_supplement
+2,virtual,obstacle_3,"(-2,4);(2,4);(2,5);(-2,5)",exact_supplement
+2,virtual,obstacle_4,"(-8.5,8.5);(-8.5,2.5);(-6.5,2.5);(-7,7);(-2.5,6.5);(-2.5,8.5)",exact_supplement
+2,virtual,obstacle_5,"(-8,-1);(-8,-2);(-7,-2);(-7,-1)",exact_supplement
+2,virtual,obstacle_6,"(-7,-3);(-7,-4);(-6,-4);(-6,-3)",exact_supplement
+2,virtual,obstacle_7,"(-9,-5);(-9,-7);(-8,-7);(-8,-5)",exact_supplement
+2,virtual,obstacle_8,"(-6,-9);(-3,-7);(-3,-6);(-7,-8)",exact_supplement
+2,virtual,obstacle_9,"(3,-4);(3,-8);(7,-8);(7,-4)",exact_supplement
+2,virtual,obstacle_10,"(5,9);(4,8);(8,4);(8,8)",exact_supplement
+3,physical,definition,"same as Experiment 1 physical",exact_supplement
+3,virtual,definition,"same as Experiment 2 virtual",exact_supplement
