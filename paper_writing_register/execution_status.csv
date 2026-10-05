@@ -1,0 +1,18 @@
+sequence,status,task,gate,next_output
+N01,NEXT,Pre-R1 semantic correctness audit,BLOCKER,semantic audit + patches/tests
+N02,PENDING,Run and freeze R1 geometry sensitivity,BLOCKER,raw CSV + summary + manifest + hashes + provenance
+N03,PENDING,Analyze R1 results,REQUIRED,paired metrics + uncertainty + analysis
+N04,PENDING,Implement first faithful comparator,BLOCKER,parameter ledger + code + tests
+N05,PENDING,Implement additional compatible baselines,REQUIRED,4-6 compatible controller families where feasible
+N06,PENDING,Controller x geometry x seed experiment,CORE RESULT,paired experiment matrix + hashes
+N07,PENDING,Ranking and failure-regime analysis,CORE RESULT,crossover/stability/failure artifacts
+N08,PENDING,Statistical analysis,CORE RESULT,paired effects + CI/uncertainty + tests
+N09,PENDING,Computational-cost analysis,REQUIRED,cost artifact + table
+N10,PENDING,C4 gap decision,NOVELTY GATE,gap decision record
+N11,CONDITIONAL,Novel method only if C4 passes,CONDITIONAL,algorithm specification + implementation
+N12,CONDITIONAL,Novel-method evaluation,CONDITIONAL,baselines + ablation + robustness + cost
+N13,PENDING,Finish A01-A21 study extraction,PAPER 1 GATE,final evidence tables
+N14,PENDING,Complete contradiction/reproducibility/gap maps,PAPER 1 GATE,final maps + generated figures
+N15,PENDING,Reference and reporting freeze,PAPER 1 GATE,frozen bibliography + evidence matrix
+N16,PENDING,Final artifact freeze,WRITING GATE,release-ready artifact set
+N17,PENDING,Start manuscript writing,FINAL,submission-ready TVCG manuscript(s)
