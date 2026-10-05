@@ -31,6 +31,24 @@ def nearest_hit(origin:Point,theta:float,segments:list[Segment]):
     hits=[h for s in segments if (h:=ray_segment_intersection(origin,theta,s)) is not None]
     return min(hits,key=lambda x:x[2]) if hits else None
 
+def point_segment_distance(p:Point,seg:Segment):
+    """Euclidean distance and closest point from p to a finite segment."""
+    a,b=seg; vx=b[0]-a[0]; vy=b[1]-a[1]
+    den=vx*vx+vy*vy
+    if den<=EPS:
+        q=a
+    else:
+        t=max(0.0,min(1.0,((p[0]-a[0])*vx+(p[1]-a[1])*vy)/den))
+        q=(a[0]+t*vx,a[1]+t*vy)
+    return math.hypot(p[0]-q[0],p[1]-q[1]),q
+
+def nearest_segment_clearance(p:Point,segments:list[Segment]):
+    """Return (distance, segment, closest_point) for the nearest obstacle face."""
+    if not segments: return float("inf"),None,None
+    vals=[(*point_segment_distance(p,s),s) for s in segments]
+    d,q,s=min(vals,key=lambda x:x[0])
+    return d,s,q
+
 def visibility_polygon(origin:Point,segments:list[Segment],angle_eps:float=1e-7):
     angles=[]
     for a,b in segments:
