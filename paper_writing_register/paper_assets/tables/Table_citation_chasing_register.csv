@@ -1,0 +1,5 @@
+chase_id,source_family,source_citation_key,direction,candidate_citation_key,status,reason
+CC-001,SF-010,Thomsen2026OpenSourceVR,backward,OnlineVR2026,ADMITTED,"direct reproducibility/toolbox relation"
+CC-002,SF-008,Topliss2025ModularHaptics,backward,Terenti2024Vibrotactile,ADMITTED,"haptics interaction/UX evidence"
+CC-003,SF-010,EfficientVRRendering2025,backward,Xu2023VRStreaming,ADMITTED,"edge-assisted foveated VR streaming"
+CC-004,SF-006,Khanna2025PerspectiveTaking,backward,Khanna2025PerspectiveTaking,ADMITTED,"systematic review added to presence/avatar/social-method synthesis"
