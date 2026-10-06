@@ -1,0 +1,4 @@
+comparison,G01_mean_diff,G02_mean_diff,G03_mean_diff,G04_mean_diff,min_diff,max_diff,sign_reversal,completion_diff_G01_pp,completion_diff_G02_pp,completion_diff_G03_pp,completion_diff_G04_pp,regime_conclusion
+Vis-Poly_minus_S2C,2.643270,0.680007,-1.004496,0.572369,-1.004496,2.643270,YES,-8,2,8,4,"Reset-burden ordering reverses in G03; completion advantage also changes direction relative to G01"
+Vis-Poly_minus_P2R,1.394889,-0.180418,-0.741675,-0.209762,-0.741675,1.394889,YES,-8,-1,13,-1,"Reset-burden ordering reverses after G01; G03 uniquely shows a large Vis-Poly completion advantage"
+S2C_minus_P2R,-1.272303,-0.834205,0.161816,-0.725521,-1.272303,0.161816,YES,0,-3,5,-5,"S2C burden advantage in G01/G02/G04 disappears/reverses descriptively in G03"
