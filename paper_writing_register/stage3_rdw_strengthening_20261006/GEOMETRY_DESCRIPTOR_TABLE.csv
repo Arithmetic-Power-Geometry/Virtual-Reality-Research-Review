@@ -1,0 +1,5 @@
+scene,width_m,height_m,boundary_area_m2,boundary_perimeter_m,aspect_ratio,internal_segments,internal_segment_total_length_m,total_segments,structural_description
+R1-G01,10,10,100,40,1.00,0,0,4,"open convex square"
+R1-G02,10,10,100,40,1.00,1,5,5,"square with one vertical occluding segment from (4,1) to (4,6)"
+R1-G03,10,10,100,40,1.00,2,10,6,"square with two vertical occluding segments: (4,1)-(4,6) and (6,4)-(6,9)"
+R1-G04,12,8,96,40,1.50,1,4,5,"asymmetric rectangle with one vertical occluding segment from (6,2) to (6,6)"
