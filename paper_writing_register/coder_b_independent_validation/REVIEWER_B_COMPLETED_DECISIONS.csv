@@ -1,0 +1,9 @@
+Claim ID,Domain,Coder A P,Coder A I,Coder A O,Coder A D,Coder A C,Coder A M,Coder A V,Coder A Gamma,Coder A Classification,Reviewer B P,Reviewer B I,Reviewer B O,Reviewer B D,Reviewer B C,Reviewer B M,Reviewer B V,Reviewer B Gamma,Reviewer B Classification,Reviewed,APPROVED,Reviewer Name,Reviewer Initials,Review Date,Adjudication Required
+CM01,A04 interaction,1,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,1,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM02,A08 embodiment,1,U,0,U,U,0,0,0,COMPARABILITY_LIMITED,1,U,0,U,U,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM03,A10 avatars,U,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,U,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM04,A14 security,U,0,0,U,0,0,0,0,COMPARABILITY_LIMITED,U,0,0,U,0,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM05,A16/A19 evaluation,0,0,0,0,0,0,0,0,COMPARABILITY_LIMITED,0,0,0,0,0,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM06,A17/A21 reproducibility,U,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,U,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM07,A18 health,0,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,0,0,0,U,U,0,0,0,COMPARABILITY_LIMITED,done,yes,Anand Nayyar,Anand Nayyar,,No
+CM08,A05 RDW,1,1,1,1,1,1,1,1,GENUINE_REGIME_EFFECT,1,1,1,1,1,1,1,1,GENUINE_REGIME_EFFECT,done,yes,Anand Nayyar,Anand Nayyar,,No
