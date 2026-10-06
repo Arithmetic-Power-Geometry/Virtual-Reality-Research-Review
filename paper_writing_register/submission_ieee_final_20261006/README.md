@@ -32,3 +32,27 @@ concept and evidence architecture -> software implementation -> versioned workfl
 The repository is the code/data/provenance record supporting the research, not a manuscript-generation mechanism.
 
 The compiled submission ZIP and PDF are supplied with the final deliverable; this repository folder preserves the exact authoritative source evidence and benchmark implementation used by that package.
+
+
+## Build
+
+From this folder:
+
+1. Run `python make_figures.py`.
+2. Run `pdflatex -interaction=nonstopmode -halt-on-error main.tex`.
+3. Run the same `pdflatex` command a second time to resolve cross-references.
+
+Required LaTeX packages are standard IEEE/TeX Live packages: `IEEEtran`, `graphicx`, `booktabs`, `array`, `multirow`, `amsmath`, `amssymb`, `algorithm`, `algpseudocode`, `float`, `microtype`, `hyperref`, `xurl`, and `balance`.
+
+## Final mechanical audit
+
+The compiled submission package was checked for:
+- 65/65 manuscript citation keys resolving;
+- every declared table, figure, and algorithm cited in prose;
+- 6 tables, 4 figures, and 1 algorithm using `[H]`;
+- no undefined cross-references;
+- no undefined citations;
+- no overfull horizontal boxes;
+- corrected N07--N09 values only in final RDW tables/figures.
+
+The complete verified 174-entry bibliography remains available as `master_references_174.bib`; the manuscript itself cites the 65 references materially used by its prose.
