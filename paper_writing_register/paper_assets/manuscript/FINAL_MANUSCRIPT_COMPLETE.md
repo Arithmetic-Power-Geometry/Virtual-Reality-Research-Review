@@ -403,11 +403,13 @@ Fifth, controller fidelity is asymmetric. Vis.-Poly, S2C, and P2R are executable
 
 Sixth, wall-clock microbenchmarks depend on software and hardware. The N09 timings quantify relative decision overhead under one common runner and are accompanied by structural-complexity analysis; they should not be interpreted as universal latency values.
 
+Seventh, independent inter-rater agreement for the present author-led framework coding was not measured. The operational protocol defines compatible, incompatible, and uncertain decisions for all seven comparability dimensions and pre-specifies an independent-coder procedure, but no artificial second-coder dataset or agreement statistic is introduced. The framework is therefore described as operationalized and auditable rather than as independently reliability-validated.
+
 Finally, the pre-inference artifact audit revealed that earlier manuscript-facing N02 and N05 summaries disagreed with the immutable workflow artifacts. The analysis was corrected before confirmatory inference and the discrepancy was preserved in provenance. This episode strengthens the case for raw-artifact checking, but it also demonstrates that reproducibility pipelines require continuous internal consistency audits rather than assuming that a generated summary is automatically authoritative.
 
 ## 10. Reproducibility and Data/Code Availability
 
-The project repository is organized so that manuscript claims can be traced to machine-readable evidence, analysis outputs, and provenance records. The review pipeline retains the master bibliography, citation-use ledger, screening and full-text tables, study-family mappings, citation-chasing register, workstream coverage audits, contradiction/comparability maps, and dated pipeline snapshots.
+The study proceeded from the conceptual comparison problem to software and benchmark implementation, repository execution, immutable workflow artifacts, forensic and statistical analysis, and only then to manuscript evidence. The project repository is organized so that manuscript claims can be traced to machine-readable evidence, analysis outputs, and provenance records. The review pipeline retains the master bibliography, citation-use ledger, screening and full-text tables, study-family mappings, citation-chasing register, workstream coverage audits, contradiction/comparability maps, and dated pipeline snapshots.
 
 The RDW case study retains executable controller code, benchmark logic, algorithm specifications, workflow provenance, raw-artifact audit records, corrected descriptive tables, paired-effect files, completion-discordance files, confirmatory statistical outputs, and computational-cost results. The principal N07 paired bootstrap used 10,000 deterministic resamples with seed 2601, while controller timing used deterministic state/geometry combinations and a fixed measurement protocol.
 
