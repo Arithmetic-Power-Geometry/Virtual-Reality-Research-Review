@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "If you use this software, data, or research artifacts, please cite the archived study below."
+title: "Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking"
+type: software
+version: "V1"
+date-released: 2026-10-06
+authors:
+  - family-names: "Akhtar"
+    given-names: "Mohammad Amir Khusru"
+    orcid: "https://orcid.org/0000-0002-3432-4199"
+  - family-names: "Nayyar"
+    given-names: "Anand"
+repository-code: "https://github.com/Arithmetic-Power-Geometry/Virtual-Reality-Research-Review"
+license: "Apache-2.0"
+preferred-citation:
+  type: generic
+  title: "Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking"
+  authors:
+    - family-names: "Akhtar"
+      given-names: "Mohammad Amir Khusru"
+  year: 2026
+  version: "V1"
+  publisher:
+    name: "Zenodo"
+  doi: "10.5281/zenodo.23193145"
+  url: "https://doi.org/10.5281/zenodo.23193145"
