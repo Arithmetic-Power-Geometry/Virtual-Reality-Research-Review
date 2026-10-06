@@ -41,7 +41,7 @@ The review is partitioned into 21 workstreams (A01–A21) to reduce the risk tha
 
 ### 2.2 Search, verification, and provenance
 
-Searches cover scholarly indexes and publisher libraries appropriate to VR, including IEEE Xplore, the ACM Digital Library, Scopus and/or Web of Science where accessible, ScienceDirect, SpringerLink, PubMed for health-related evidence, and backward/forward citation chasing. Search strings are versioned and are intended to retain database, query, execution date, result count, export identity, deduplication outcome, and inclusion stage.
+Evidence discovery drew on scholarly indexes and publisher libraries appropriate to VR, including IEEE Xplore, the ACM Digital Library, Scopus and/or Web of Science where accessible, ScienceDirect, SpringerLink, PubMed for health-related evidence, and backward/forward citation chasing. The registered review ledger preserves the verified evidence library and downstream screening and provenance decisions. Raw yield counts from every earliest exploratory database query were not preserved, and those historical identification counts are not reconstructed retrospectively.
 
 Bibliographic records are verified before manuscript use. DOI, title, year, venue, and author metadata are checked against authoritative publisher or bibliographic records, and each retained reference is assigned a manuscript evidence role. The master bibliography, verification ledger, citation-use ledger, screening tables, analysis outputs, and provenance notes are maintained as machine-readable repository artifacts. The final registered evidence library contains 174 verified records. After one exact DOI duplicate, 173 canonical reports were sought; 171 were retrieved and assessed, yielding 165 direct eligible VR/XR reports and six supporting/context reports, while two reports were not retrieved.
 
@@ -382,7 +382,7 @@ The final registered evidence-library flow contains 174 verified records, one ex
 
 A further limitation concerns identification provenance. The repository preserves the verified evidence library and its subsequent formal screening, but it does not preserve reliable raw yield counts for every database query used during the earlier discovery phase. We therefore do not reconstruct database-specific counts retrospectively. The reported flow is a reproducible accounting of the registered curated evidence library, not a claim that the original database-identification stage can be recreated record-for-record. This distinction should remain visible in submission.
 
-Finally, the RDW benchmark is simulation-based, uses four geometries, and evaluates three executable controllers under one common implementation environment. The observed regime effect is internally controlled but requires live-user and broader-geometry validation before being generalized to deployed VR systems.
+Finally, the RDW benchmark is simulation-based, uses four geometries, and evaluates three executable controllers under one common implementation environment. The observed regime effect is internally controlled but is not generalized to deployed VR systems. Live-user validation is outside the design of this paper, and broader-geometry generalization is not claimed.
 
 ## 9. Threats to Validity
 
@@ -392,7 +392,7 @@ Second, broad VR evidence is heterogeneous. Hardware, tracking volume, interacti
 
 Third, study-family dependence can inflate apparent evidence volume when reviews, toolkits, follow-up analyses, and empirical studies stem from closely related projects. Family resolution is therefore part of the corpus freeze, but residual dependence may remain when publications do not clearly disclose lineage.
 
-Fourth, the RDW benchmark is simulation-based and uses four selected physical geometries under a common runner. The observed controller-by-geometry interaction is internally interpretable because seeds, paths, reset policy, and evaluation rules are paired, but it does not imply the same ordering for all room layouts, path distributions, walking behavior, HMDs, or live-user conditions. Simulator-to-user transfer remains an external-validity question even where prior work supports simulation as a useful evaluation tool.
+Fourth, the RDW benchmark is simulation-based and uses four selected physical geometries under a common runner. The observed controller-by-geometry regime dependence is internally interpretable because seeds, paths, reset policy, and evaluation rules are paired, but it does not imply the same ordering for all room layouts, path distributions, walking behavior, HMDs, or live-user conditions. Simulator-to-user transfer is outside the evidential scope of this paper even where prior work supports simulation as a useful evaluation tool.
 
 Fifth, controller fidelity is asymmetric. Vis.-Poly, S2C, and P2R are executable under the common benchmark, whereas APF-S2T was withheld from numerical comparison because the exact discretization needed for a faithful reconstruction was unresolved. This conservative admission rule reduces implementation-speculation risk but narrows the executable comparator set.
 
