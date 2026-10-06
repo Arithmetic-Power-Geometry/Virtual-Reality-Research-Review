@@ -1,0 +1,18 @@
+claim_id,manuscript_fact,authoritative_value,source_asset,status
+N01,verified_records,174,PRISMA_FINAL_COUNTS.csv,PASS
+N02,duplicate_records_removed,1,PRISMA_FINAL_COUNTS.csv,PASS
+N03,canonical_reports,173,PRISMA_FINAL_COUNTS.csv,PASS
+N04,reports_assessed,171,PRISMA_FINAL_COUNTS.csv,PASS
+N05,direct_eligible,165,PRISMA_FINAL_COUNTS.csv,PASS
+N06,supporting_context,6,PRISMA_FINAL_COUNTS.csv,PASS
+N07,reports_not_retrieved,2,PRISMA_FINAL_COUNTS.csv,PASS
+N08,rdw_planned_cells,1200,N07/N08 benchmark design,PASS
+N09,vispoly_completion,384/400,Table_N07_corrected_controller_summary.csv,PASS
+N10,s2c_completion,378/400,Table_N07_corrected_controller_summary.csv,PASS
+N11,p2r_completion,381/400,Table_N07_corrected_controller_summary.csv,PASS
+N12,vispoly_cost_us,251.448,N09_COMPUTATIONAL_COST_PASS.md,PASS
+N13,s2c_cost_us,2.022,N09_COMPUTATIONAL_COST_PASS.md,PASS
+N14,p2r_cost_us,3.938,N09_COMPUTATIONAL_COST_PASS.md,PASS
+N15,audited_comparability_limited,7/8,N14_FINAL_NUMERICAL_SYNTHESIS.md,PASS_BOUNDED
+N16,audited_genuine_regime,1/8,N14_FINAL_NUMERICAL_SYNTHESIS.md,PASS_BOUNDED
+N17,controller_pairs_with_sign_reversal,3/3,CONTROLLER_GEOMETRY_REGIME_REVERSAL.csv,PASS
