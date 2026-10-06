@@ -1,0 +1,9 @@
+Claim ID,Domain,Evidence A,Evidence B,Coder A Gamma,Coder A Classification,Reviewer B Gamma,Reviewer B Classification,Reviewed,APPROVED,Reviewer Name,Review Date,Validation Status
+CM01,A04 interaction,Monteiro2021HandsFree,SteedLai2025HandTracking,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2026,PENDING_REVIEWER_B_DECISIONS
+CM02,A08 embodiment,EmbodimentEEG2025,Khanna2025PerspectiveTaking,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2027,PENDING_REVIEWER_B_DECISIONS
+CM03,A10 avatars,Ouhnni2025AvatarReview,HumanlikeAvatars2024,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2028,PENDING_REVIEWER_B_DECISIONS
+CM04,A14 security,Giaretta2025VRSecurity,Heruatmadja2023VRBiometricAuth,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2029,PENDING_REVIEWER_B_DECISIONS
+CM05,A16/A19 evaluation,Lawson2024Confounded,Karcher2025QualityMethods,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2030,PENDING_REVIEWER_B_DECISIONS
+CM06,A17/A21 reproducibility,Thomsen2026OpenSourceVR,OnlineVR2026,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2031,PENDING_REVIEWER_B_DECISIONS
+CM07,A18 health,HealthSciencesVR2025,Woon2021NursingVR,0,COMPARABILITY_LIMITED,,,Yes,,Anand Nayyar,10.06.2032,PENDING_REVIEWER_B_DECISIONS
+CM08,A05 RDW,N07_corrected_paired_controller_effects,N08_confirmatory_pairwise_statistics,1,GENUINE_REGIME_EFFECT,,,Yes,,Anand Nayyar,10.06.2033,PENDING_REVIEWER_B_DECISIONS
