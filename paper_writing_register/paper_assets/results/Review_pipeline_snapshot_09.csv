@@ -1,0 +1,10 @@
+metric,value,interpretation
+verified_reference_records,169,DOI/title/year verified in master verification ledger
+canonical_review_records,168,one exact DOI duplicate remains linked to canonical record
+eligible_full_text_records,66,assessed eligible for principal synthesis
+supporting_assessed_records,1,assessed supporting/context record
+pending_full_text_records,101,canonical records still awaiting staged full-text assessment
+records_closed_this_snapshot,10,nine existing pending records plus one newly admitted TVCG review
+bibliography_missing_author_records_after_fix,18,down from 27; metadata-completeness audit remains active
+contradiction_map_rows,8,first paper-facing comparability/contradiction synthesis
+prisma_status,NOT_FROZEN,final PRISMA invalid until formal-source execution and all canonical decisions close
