@@ -16,6 +16,6 @@ N13,IN_PROGRESS,Finish A01-A21 study extraction,PAPER 1 GATE,66 eligible records
 N14,IN_PROGRESS,Complete contradiction/reproducibility/gap maps,PAPER 1 GATE,first 8-row contradiction/comparability map frozen; expand after full-text closure
 N15,PENDING,Reference and reporting freeze,PAPER 1 GATE,frozen bibliography + evidence matrix
 N16,PENDING,Final artifact freeze,WRITING GATE,release-ready artifact set
-N17,IN_PROGRESS,Start manuscript writing,FINAL,stable sections authorized via STABLE_MANUSCRIPT_SKELETON_01; final freeze waits on corpus/N10
+N17,IN_PROGRESS,Start manuscript writing,FINAL,Sections 1-3 actual prose committed; next stable block Sections 5-6 and 9-10; final freeze waits on corpus/N10
 A01-A21,IN_PROGRESS,Broad VR evidence mining,REQUIRED,174 verified references; priority saturation remains A17 A13 A07
 REVIEW-PIPELINE,IN_PROGRESS,Formal systematic-review chain,REQUIRED,174 verified; 173 canonical; 70 eligible + 2 supporting assessed; 101 older pending; manuscript stable sections started
