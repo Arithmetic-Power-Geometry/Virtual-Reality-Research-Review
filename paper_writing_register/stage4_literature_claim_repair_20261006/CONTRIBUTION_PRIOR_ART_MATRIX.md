@@ -1,0 +1,19 @@
+# Stage 4 Contribution-to-Prior-Art Matrix
+
+## Purpose
+This matrix separates what prior literature already establishes from what the present paper can legitimately contribute. It prevents novelty inflation and makes the paper's value cumulative rather than competitive with adjacent reviews and RDW methods.
+
+| Present contribution | Closest prior evidence | Already established | Present paper adds | Claim boundary |
+|---|---|---|---|---|
+| 21-workstream evidence architecture | broad/domain reviews across locomotion, cybersickness, education, haptics, security, accessibility, streaming | domain taxonomies and domain-specific evidence syntheses | one registered cross-domain architecture connecting evidence roles, comparability, contradiction, reproducibility and testable gaps | not "first comprehensive VR review" |
+| Six-field semantic comparability rule | evaluation-quality/confounding reviews and task-dependent interface syntheses | heterogeneous tasks, metrics and controls can invalidate naive comparison | explicit operational comparison gate: problem, input, output, environment/data, constraints, metric | not a universal theory of evidence |
+| Eight-family contradiction audit | heterogeneous findings across interaction, embodiment, avatars, security, evaluation, reproducibility, health | apparent disagreement often accompanies construct/protocol differences | pre-specified audit that classifies seven families as comparability-limited and one as a controlled regime effect | 7/8 is not prevalence across VR |
+| Six-level reproducibility taxonomy | open-source/toolbox/reproducibility literature | artifacts and tools improve access but do not guarantee reproducibility | separates specification, artifact, execution, regeneration, semantic and independent-result failure | operational taxonomy, not claimed exhaustive |
+| RDW geometry-regime case study | constrained-environment, tracking-area, Vis-Poly, adaptive/predictive RDW literature | environment and context can matter; adaptive/predictive control already exists | common-runner paired demonstration that all three tested controller pairs reverse reset-burden ordering across four declared geometries, with completion analyzed separately | no new controller and no universal geometry law |
+| Failure-aware RDW comparison | simulation/RDW evaluations | resets and completion are common technical outcomes | two-part estimand that refuses to convert failed runs into artificial reset scores | not a human-experience metric |
+| Computational-cost comparison | algorithm implementations and RDW method descriptions | controller complexity differs structurally | same-runner controller-decision microbenchmark plus explicit complexity interpretation | not end-to-end latency or device-independent timing |
+| Provenance-first correction | reproducibility/open-science literature | immutable artifacts enable audit | concrete case where raw workflow artifacts overturn stale manuscript summaries before inference | not evidence that all published VR results contain such errors |
+| Negative algorithm-novelty result | Adaptive Redirection, SRC, F-RDW, APF-S2T, predictive/learned methods | adaptive, predictive, learned and switching RDW territory is occupied | explicit refusal to manufacture novelty; identifies a narrower future multi-objective certification question | future question is not a present contribution |
+
+## Positioning sentence for the paper
+The paper does not seek novelty from reviewing more topics or from proposing another redirected-walking controller. Its contribution is methodological and evidential: it makes comparability obligations explicit across a broad VR evidence library, tests those obligations through contradiction auditing, and demonstrates in a controlled RDW benchmark why completion, conditional reset burden, geometry and computational cost cannot be reduced to a context-free controller ranking.
