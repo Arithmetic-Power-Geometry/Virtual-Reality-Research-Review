@@ -43,7 +43,7 @@ The review is partitioned into 21 workstreams (A01–A21) to reduce the risk tha
 
 Searches cover scholarly indexes and publisher libraries appropriate to VR, including IEEE Xplore, the ACM Digital Library, Scopus and/or Web of Science where accessible, ScienceDirect, SpringerLink, PubMed for health-related evidence, and backward/forward citation chasing. Search strings are versioned and are intended to retain database, query, execution date, result count, export identity, deduplication outcome, and inclusion stage.
 
-Bibliographic records are verified before manuscript use. DOI, title, year, venue, and author metadata are checked against authoritative publisher or bibliographic records, and each retained reference is assigned a manuscript evidence role. The master bibliography, verification ledger, citation-use ledger, screening tables, analysis outputs, and provenance notes are maintained as machine-readable repository artifacts. The working bibliography is still expanding toward evidence saturation; therefore, counts in this draft are deliberately not presented as final PRISMA values.
+Bibliographic records are verified before manuscript use. DOI, title, year, venue, and author metadata are checked against authoritative publisher or bibliographic records, and each retained reference is assigned a manuscript evidence role. The master bibliography, verification ledger, citation-use ledger, screening tables, analysis outputs, and provenance notes are maintained as machine-readable repository artifacts. The final registered evidence library contains 174 verified records. After one exact DOI duplicate, 173 canonical reports were sought; 171 were retrieved and assessed, yielding 165 direct eligible VR/XR reports and six supporting/context reports, while two reports were not retrieved.
 
 ### 2.3 Screening and study-family resolution
 
@@ -59,7 +59,7 @@ Quality is represented dimensionally rather than collapsed into a single opaque 
 
 ### 2.5 Citation chasing and corpus freeze
 
-Backward and forward citation chasing is performed from high-value family hubs and from records that expose unresolved comparisons or methodological gaps. Citation-chased records are tracked separately from the formal source-query stream so that the final flow can distinguish how each record entered the corpus. The corpus will be frozen only after formal source execution, deduplication, all canonical full-text decisions, study-family resolution, and citation-chasing closure. Final PRISMA counts and final included-study totals are therefore intentionally withheld from this draft.
+Backward and forward citation chasing is performed from high-value family hubs and from records that expose unresolved comparisons or methodological gaps. Citation-chased records are tracked separately from the formal source-query stream so that the final flow can distinguish how each record entered the corpus. The registered evidence-library corpus was frozen after deduplication, canonical full-text decisions, study-family resolution, and citation-chasing closure. The final flow contains 174 verified records, one duplicate, 173 canonical reports, 171 assessed reports, 165 direct eligible reports, six supporting/context reports, and two reports not retrieved. Raw per-database yields from the earliest exploratory discovery stage were not preserved and are not reconstructed retrospectively.
 
 ### 2.6 Reproducibility assessment
 
@@ -334,7 +334,7 @@ A failure regime is therefore defined here as a region of the input, environment
 
 The C0-C5 ladder is used to prevent speculative gaps from becoming manuscript claims. A C0 observation is only a suspected absence. C1 requires explicit support in the literature; C2 requires independent corroboration; C3 requires a testable formulation with identifiable comparators and metrics; C4 requires a benchmark-ready gap after prior-art checking; and C5 requires an executed method and evaluation.
 
-The current RDW candidate is deliberately held below C4 completion because adaptive selection and predictive control already have prior art. Likewise, under-saturated review lanes such as networking/streaming, spatial audio, and reproducibility should not generate strong prevalence or absence claims until their evidence base is closed.
+The RDW novelty gate is closed for this paper: adaptive selection and predictive control already have prior art, so no new controller or selector is claimed. Cross-domain prevalence claims remain bounded by the frozen registered evidence library and by semantic comparability rather than inferred from raw citation counts.
 
 ### 7.13 Synthesis
 
@@ -342,7 +342,7 @@ The current contradiction map supports three broad conclusions. First, many appa
 
 These conclusions motivate the review's final synthesis strategy. Evidence should be compared only after semantic compatibility is established; negative and failed outcomes should remain visible; reproducibility claims should identify the level actually demonstrated; and open problems should be formulated as testable regime, mechanism, or evidence obligations rather than as unsupported statements that no prior work exists.
 
-This Section 7 remains extensible. The eight audited contradiction families are sufficient to establish the framework and the controlled RDW regime example, but the final count and distribution of contradiction and reproducibility patterns will be frozen only after N14 expands across the closed systematic corpus.
+The final N14 audit contains eight pre-specified contradiction families: seven are comparability-limited and one is a genuine controlled regime effect. These proportions characterize the audited families and are not presented as corpus-wide prevalence.
 
 ## 8. Discussion
 
@@ -386,7 +386,7 @@ Finally, the RDW benchmark is simulation-based, uses four geometries, and evalua
 
 ## 9. Threats to Validity
 
-The review and case study have several distinct validity boundaries. First, the systematic-review corpus is not yet frozen. The current verified bibliography and staged full-text decisions are sufficient for drafting stable methodological sections, but final PRISMA counts, final included-study totals, and prevalence claims must wait for completion of all canonical full-text decisions, formal-source execution, study-family resolution, and citation-chasing closure.
+The review and case study have several distinct validity boundaries. First, the frozen registered evidence-library flow is curated rather than reconstructible from raw per-database discovery exports. It contains 174 verified records, one exact duplicate, 173 canonical reports, 171 retrieved and assessed reports, 165 direct eligible reports, six supporting/context reports, and two reports not retrieved. Because raw per-database discovery yields from the earliest exploratory stage were not preserved, database-specific identification counts are not reconstructed retrospectively.
 
 Second, broad VR evidence is heterogeneous. Hardware, tracking volume, interaction method, task, virtual environment, population, exposure duration, questionnaires, objective measures, and statistical procedures vary across studies. The comparability framework reduces the risk of invalid numerical synthesis, but it cannot eliminate publication bias or missing methodological detail in the primary literature.
 
@@ -412,7 +412,7 @@ Machine-readable tables and figure-source files are kept separate from prose so 
 
 Open code and stored artifacts improve executability, but they are not treated as proof of independent reproducibility. Independent reproduction would require a separate execution or validation under sufficiently documented conditions. The repository therefore distinguishes code availability, protocol completeness, deterministic regeneration, and independent reproduction as separate evidence states.
 
-At the current manuscript stage, Sections 1–3 and 5–6 and 9–10 are draftable from frozen evidence. Final Abstract, final contribution claims, Discussion headline, Conclusion, final PRISMA flow, and any C4/C5 novelty claim remain gated by corpus closure and the N10 novelty decision.
+All manuscript sections, the numerical Abstract, final contribution statements, evidence-library flow, N14 synthesis, reference freeze, and N10 novelty boundary are now frozen. The paper makes no C4/C5 algorithmic novelty claim.
 
 ## 11. Conclusion
 
