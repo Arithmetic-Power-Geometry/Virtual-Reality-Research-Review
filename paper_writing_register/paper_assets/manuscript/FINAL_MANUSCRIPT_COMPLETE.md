@@ -4,12 +4,12 @@
 
 Virtual-reality (VR) research spans tightly coupled technical and human factors, making cross-study comparison difficult when hardware, tasks, populations, environments, metrics, and validation procedures differ. This systematic evidence review organizes a verified library of 174 records into 173 canonical reports; 171 complete reports were retrieved and assessed, yielding 165 direct eligible VR/XR reports and six supporting/context reports, with two reports not retrieved. We introduce a comparability framework that separates genuine contradiction from semantic incompatibility and a six-level reproducibility taxonomy spanning specification, artifact, execution, regeneration, semantic, and independent-result failure. Among eight pre-specified contradiction families, seven (87.5%) were limited by construct or protocol incompatibility, whereas one (12.5%) represented a controlled regime effect. A redirected-walking case study evaluated Visibility-Polygon, Steer-to-Center, and Potential-to-Redirect controllers across four geometries and 1,200 planned controller-condition cells. Completion was 384/400, 378/400, and 381/400, respectively; paired analyses showed geometry-dependent rank changes rather than a universal winner. Controller-decision medians were 251.448, 2.022, and 3.938 microseconds on the common runner. The synthesis argues that VR evidence should be interpreted through operating regimes, explicit comparability obligations, failure-aware outcomes, and reproducible provenance rather than universal rankings derived from heterogeneous experiments.
 
-**Keywords:** virtual reality; systematic evidence review; reproducibility; redirected walking; comparability; contradiction analysis; cybersickness; presence; interaction.
+**Keywords:** virtual reality; evidence synthesis; reproducibility; redirected walking; comparability; evaluation.
 
 ## Final Contributions
 
 1. A 21-workstream VR evidence architecture linking methods, applications, evaluation, reproducibility, contradictions, and testable gaps.
-2. A semantic comparability rule based on problem, input, output, environment/data, constraints, and metric, preventing invalid cross-study rankings.
+2. An operational seven-dimension comparability rule, E=(P,I,O,D,C,M,V), covering problem/population, intervention/input, outcome, data/environment, constraints, metric/measurement, and validation design.
 3. A contradiction framework that distinguishes genuine disagreement from differences caused by task, construct, population, intervention, or validation level.
 4. A six-level reproducibility taxonomy separating missing specification/artifacts from execution, regeneration, semantic, and independent-result failures.
 5. A failure-aware RDW benchmark in which completion is separated from reset burden and unsuccessful runs are not assigned synthetic performance scores.
