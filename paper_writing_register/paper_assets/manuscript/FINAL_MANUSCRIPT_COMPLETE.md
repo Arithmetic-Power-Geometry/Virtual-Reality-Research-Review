@@ -10,12 +10,13 @@ Virtual-reality (VR) evidence is difficult to compare when studies differ in pro
 
 1. A 21-workstream VR evidence architecture linking methods, applications, evaluation, reproducibility, contradictions, and testable gaps.
 2. An operational seven-dimension comparability rule, E=(P,I,O,D,C,M,V), covering problem/population, intervention/input, outcome, data/environment, constraints, metric/measurement, and validation design.
-3. A contradiction framework that distinguishes genuine disagreement from differences caused by task, construct, population, intervention, or validation level.
+3. An eight-family contradiction audit in which seven pre-specified families are comparability-limited and the RDW family is a controlled regime effect; the 7/8 split is not treated as corpus-wide prevalence.
 4. A six-level reproducibility taxonomy separating missing specification/artifacts from execution, regeneration, semantic, and independent-result failures.
 5. A failure-aware RDW benchmark in which completion is separated from reset burden and unsuccessful runs are not assigned synthetic performance scores.
-6. Controlled evidence that RDW controller ordering changes with geometry, supported by paired inference across four geometries rather than a universal-controller claim.
-7. A provenance-first workflow in which immutable workflow artifacts corrected stale summary results before confirmatory inference.
-8. A negative novelty result: generic geometry-aware/adaptive controller selection is already occupied by prior art, so the paper does not claim a new RDW controller.
+6. Controlled evidence that all three tested controller pairs reverse conditional reset-burden ordering across the four declared geometries, while completion behavior also changes.
+7. A common-runner controller-decision cost comparison explicitly separated from end-to-end VR latency.
+8. A provenance-first workflow in which immutable execution artifacts superseded stale summary values before confirmatory inference.
+9. A negative algorithm-novelty decision: the paper claims no new RDW controller, adaptive selector, or predictive switching mechanism.
 
 ## 1. Introduction
 
