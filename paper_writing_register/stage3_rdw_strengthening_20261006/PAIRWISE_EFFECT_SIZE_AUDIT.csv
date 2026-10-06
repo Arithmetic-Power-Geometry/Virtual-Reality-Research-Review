@@ -1,0 +1,13 @@
+scene,comparison,n_complete_pairs,mean_diff_resets_per_100m,sd_paired_difference,cohen_dz,bootstrap95_lo,bootstrap95_hi,completion_difference_percentage_points,holm_p_reset_burden,exact_p_completion,interpretation
+R1-G01,Vis-Poly_minus_S2C,92,2.643270,1.883684,1.403,2.258103,3.024935,-8,6.137431e-14,0.007812,"S2C lower reset burden and higher completion"
+R1-G01,Vis-Poly_minus_P2R,92,1.394889,1.804498,0.773,1.032827,1.760219,-8,2.169238e-08,0.007812,"P2R lower reset burden and higher completion"
+R1-G01,S2C_minus_P2R,100,-1.272303,1.302360,-0.977,-1.532149,-1.020839,0,3.020714e-12,1.000000,"S2C lower reset burden; equal completion"
+R1-G02,Vis-Poly_minus_S2C,96,0.680007,1.687347,0.403,0.334160,1.011322,2,1.428104e-03,0.625000,"S2C lower reset burden; completion difference unsupported"
+R1-G02,Vis-Poly_minus_P2R,99,-0.180418,1.985558,-0.091,-0.575072,0.204192,-1,9.046772e-01,1.000000,"reset burden indistinguishable; completion difference unsupported"
+R1-G02,S2C_minus_P2R,97,-0.834205,2.019437,-0.413,-1.230218,-0.433509,-3,1.795223e-03,0.250000,"S2C lower reset burden; completion difference unsupported"
+R1-G03,Vis-Poly_minus_S2C,80,-1.004496,2.668916,-0.376,-1.588426,-0.417245,8,9.450625e-03,0.115318,"Vis-Poly lower conditional reset burden; completion difference unsupported"
+R1-G03,Vis-Poly_minus_P2R,76,-0.741675,2.646705,-0.280,-1.344945,-0.136274,13,9.795379e-02,0.010622,"conditional burden favors Vis-Poly descriptively; Holm reset test not significant; Vis-Poly completion higher"
+R1-G03,S2C_minus_P2R,67,0.161816,2.636762,0.061,-0.451925,0.787997,5,9.046772e-01,0.486850,"no supported conditional reset-burden or completion difference"
+R1-G04,Vis-Poly_minus_S2C,94,0.572369,1.928851,0.297,0.190292,0.962806,4,9.795379e-02,0.218750,"descriptive burden difference; Holm test not significant"
+R1-G04,Vis-Poly_minus_P2R,99,-0.209762,1.925358,-0.109,-0.591359,0.168383,-1,8.616251e-01,1.000000,"no supported difference"
+R1-G04,S2C_minus_P2R,95,-0.725521,2.026978,-0.358,-1.133936,-0.324089,-5,9.694033e-03,0.062500,"S2C lower reset burden; completion exact test above 0.05"
