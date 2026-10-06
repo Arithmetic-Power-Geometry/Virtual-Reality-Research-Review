@@ -1,0 +1,89 @@
+\section{Statistical Results}
+Paired complete-run comparisons show that controller ordering changes with geometry. In G01, Vis-Poly exceeds S2C by 2.643 resets/100 m (95\% bootstrap CI 2.258--3.025), while S2C is 1.272 lower than P2R. In G03, the sign reverses: Vis-Poly is 1.004 lower than S2C (CI $-1.588$ to $-0.417$) and 0.742 lower than P2R (CI $-1.345$ to $-0.136$). G02 and G04 again favor S2C over P2R. These are regime effects rather than a universal winner.
+
+Confirmatory Wilcoxon tests with Benjamini--Hochberg and Holm corrections support the principal pattern. All three G01 burden contrasts remain Holm-significant. In G02, S2C differs from both competitors after Holm correction, whereas Vis-Poly and P2R do not. In G03, Vis-Poly versus S2C remains Holm-significant ($p_{\mathrm{Holm}}=0.00945$); Vis-Poly versus P2R survives FDR control but not Holm family-wise control. G04 retains a Holm-significant S2C--P2R difference. Friedman omnibus tests are significant in all geometries, with the weakest separation in G03 ($\chi^2=6.06$, $p=0.0483$).
+
+Completion tells a different but complementary story. Vis-Poly is worse than S2C and P2R in G01 (exact paired $p=0.007812$ for both), yet better than P2R in G03 ($p=0.010622$). Thus robustness and conditional burden cannot be collapsed into one scalar without changing the estimand. The principal paired effects and multiplicity-aware conclusions are summarized in Table~\ref{tab:paired}.
+
+\begin{table}[H]
+\caption{Selected Paired Reset-Burden Effects}
+\label{tab:paired}
+\centering
+\scriptsize
+\begin{tabular}{llrr}
+\toprule
+Geom. & Contrast & Mean diff. & 95\% CI\\
+\midrule
+G01 & VP--S2C & 2.643 & [2.258, 3.025]\\
+G01 & S2C--P2R & -1.272 & [-1.532, -1.021]\\
+G02 & VP--S2C & 0.680 & [0.334, 1.011]\\
+G02 & S2C--P2R & -0.834 & [-1.230, -0.434]\\
+G03 & VP--S2C & -1.004 & [-1.588, -0.417]\\
+G03 & VP--P2R & -0.742 & [-1.345, -0.136]\\
+G04 & S2C--P2R & -0.726 & [-1.134, -0.324]\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Computational-Cost Protocol}
+Decision cost was measured on 12 deterministic state/geometry combinations using the actual controller decision functions. Each state used 500 warm-up calls followed by nine timing samples of 5,000 calls, measured with a nanosecond-resolution monotonic counter. We report the median of per-state medians. This isolates controller logic; rendering, path planning, reset execution, disk I/O, tracking, HMD latency, and networking are outside the timing boundary.
+
+Controller decision cost introduces a third axis. As cited in the text, Fig.~\ref{fig:cost} shows the common-runner microbenchmark.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{figures/controller_cost.pdf}
+\caption{Median controller-decision cost across 12 deterministic state/geometry combinations. Values measure controller logic only, not end-to-end VR latency.}
+\label{fig:cost}
+\end{figure}
+
+The median of per-state medians was 251.448 $\mu$s for Vis-Poly, 2.022 $\mu$s for S2C, and 3.938 $\mu$s for P2R. The code structure explains the order: S2C and P2R are $O(P)$ in the current implementation over physical segments, while Vis-Poly is dominated by visibility-polygon construction and slice matching. These measurements are runner-specific and should not be read as device-independent frame-time guarantees.
+
+\section{Contradictions, Reproducibility, and Failure Regimes}
+We audited eight contradiction/comparability families. Seven were limited primarily by task, construct, intervention, population, validation, or metric incompatibility; one---the RDW benchmark---was a genuine controlled regime effect. The 7/8 and 1/8 proportions describe this pre-specified audit, not prevalence over all 165 direct eligible reports. Table~\ref{tab:contradictions} summarizes the diagnostic outcome.
+
+\begin{table}[H]
+\caption{Contradiction/Comparability Audit}
+\label{tab:contradictions}
+\centering
+\scriptsize
+\begin{tabular}{p{0.23\columnwidth}p{0.65\columnwidth}}
+\toprule
+Domain & Diagnostic outcome\\
+\midrule
+Interaction & Task/interface/metric incompatibility\\
+Embodiment & Objective and subjective constructs differ\\
+Avatars & Realism/customization/fidelity are distinct\\
+Security & Proposal prevalence $\neq$ validated effectiveness\\
+Education & Media effects confounded by design/equivalence\\
+Reproducibility & Tool availability $\neq$ reproducibility\\
+Health & Population/intervention/outcome heterogeneity\\
+RDW & Genuine controlled geometry regime effect\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The six reproducibility levels used in the audit are made explicit in Table~\ref{tab:repro}. A later level implies a stronger empirical claim; artifact availability alone is intentionally not labeled reproduction success.
+
+\begin{table}[H]
+\caption{Reproducibility Failure Levels}
+\label{tab:repro}
+\centering
+\scriptsize
+\begin{tabular}{lp{0.68\columnwidth}}
+\toprule
+Level & Failure definition\\
+\midrule
+Specification & Essential protocol/parameter information missing\\
+Artifact & Required code, data, scene, model, or material missing\\
+Execution & Available artifact cannot run as documented\\
+Regeneration & Execution succeeds but reported outputs do not regenerate\\
+Semantic & Regenerated task/metric/comparator differs from claimed one\\
+Independent & Faithful independent reproduction materially disagrees\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Reproducibility was separated into six failure levels: specification, artifact, execution, regeneration, semantic, and independent-result failure. Missing code is therefore not itself a reproduction failure, and public code is not automatically proof of reproducibility. Contemporary VR tooling makes execution increasingly accessible, but deployment and protocol standardization remain separate concerns \cite{Hosseinzadeh2026VRToolboxes,OnlineVR2026}. This distinction matters because the benchmark itself exposed an internal provenance issue: earlier manuscript-facing summaries disagreed with immutable workflow artifacts. We corrected the completion values before confirmatory inference and retained the discrepancy in provenance rather than silently replacing history.
+
+This motivates a broader concept of a \emph{failure regime}: a region of environment, user, resource, or task space in which a method ceases to satisfy performance, safety, usability, fidelity, or reproducibility obligations. Examples include controller-rank reversals in RDW, latency boundaries in distributed rendering, susceptibility regimes for cybersickness, accessibility failures in interaction, or fidelity thresholds in social avatars.
