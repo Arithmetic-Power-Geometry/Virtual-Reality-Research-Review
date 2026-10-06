@@ -1,0 +1,87 @@
+\section{Cross-Domain Synthesis}
+\subsection{Foundations, Presence, and Embodiment}
+Foundational VR research separated technological immersion from the psychological experience of presence, and subsequent instruments formalized subjective measurement \cite{Slater2009PlaceIllusion,Witmer1998Presence,Cummings2016ImmersionPresence}. More recent work broadens embodiment assessment to behavioral and neurophysiological evidence \cite{EmbodimentEEG2025,Khanna2025PerspectiveTaking}. The important synthesis is not that one measure supersedes another, but that ownership, agency, self-location, perspective, and presence are related constructs with distinct operationalizations. Treating them as a single interchangeable outcome can create apparent disagreement where the studies actually measure different things.
+
+\subsection{Rendering, Tracking, and Sensing}
+Rendering research increasingly links perceptual models with gaze-contingent computation; foveated rendering reduces unnecessary visual work but introduces dependence on eye tracking, calibration, prediction, and display characteristics \cite{Wang2023FoveatedSurvey,Kim2024IndividualizedFoveated,EyeTrackingBroad2023}. Gaze has also been used as an input to locomotion prediction, alongside head direction and learned trajectory models \cite{Gandrud2016Destination,Bremer2021FuturePosition,Stein2022EyeLSTM}. These examples show why component-level improvements should be interpreted within an end-to-end sensing--rendering--interaction loop.
+
+\subsection{Interaction, Haptics, and Multisensory Design}
+Interaction evidence spans controllers, hand tracking, hands-free techniques, pseudo-haptics, wearable haptics, and novel sensing interfaces. Reviews of hands-free interaction and direct controller-versus-hand-tracking studies show strong task dependence \cite{Monteiro2021HandsFree,SteedLai2025HandTracking}. Haptic evidence is similarly heterogeneous in actuator location, modality, task, and realism target \cite{Frisoli2024WearableHaptics,Shi2024HapticSensing}. Spatial audio and multisensory cues broaden the design space further; rather than treating audio or haptics as decorative additions, the evidence supports evaluating them as task-specific information channels \cite{Almeida2024SpatialAudio}.
+
+\subsection{Avatars, Social VR, and Intelligent Agents}
+Avatar evidence distinguishes human likeness, animation fidelity, customization, identity, sociability, and behavioral expression. Reviews of avatar customization and virtual humans show that these dimensions have different psychological and social consequences \cite{Ouhnni2025AvatarReview,VirtualHumans2026,HumanlikeAvatars2024}. Embodied virtual agents can also alter prosocial and social outcomes, but transfer depends on scenario, role, and user expectations \cite{Yousefi2024ProsocialEVA}. These findings argue against a single monotonic ``more realistic is better'' hypothesis.
+
+\subsection{Networking, Security, Privacy, and Accessibility}
+Distributed VR introduces system-level trade-offs among quality, bandwidth, compute placement, prediction, and latency. Edge-assisted telepresence and streaming research illustrates that local rendering savings can be exchanged for communication or edge-compute dependencies \cite{Xu2023VRStreaming}. Security and privacy research adds biometric, gaze, motion, and identity risks; proposed authentication mechanisms must therefore be distinguished from independently validated security effectiveness \cite{Giaretta2025VRSecurity,Agarwal2024BiometricsXR,Heruatmadja2023VRBiometricAuth,EyeVEIL2019,Lin2022DigitalBodyPrivacy}. Accessibility research likewise shows that interaction and sensory design choices can systematically exclude users even when average performance is high \cite{Dudley2023InclusiveImmersion,Monteiro2026HapticAccessibility}.
+
+\subsection{Health, Education, and Transfer}
+Application evidence is strongest when intervention content, comparator, population, and outcome are controlled. Education meta-analyses and systematic reviews report promising effects but also substantial design heterogeneity \cite{Merchant2014VREducationMeta,Luo2021VREducation,DiNatale2020IVREducation,Lawson2024Confounded,Karcher2025QualityMethods}. Health-training evidence is similarly application-specific; nursing and broader health-sciences reviews caution against treating ``VR'' as a homogeneous intervention \cite{Woon2021NursingVR,HealthSciencesVR2025}. The same principle applies to transfer: effectiveness inside VR is not equivalent to verified real-world transfer.
+
+Across domains, the strongest recurring pattern is conditionality. Interaction performance depends on task and input modality; hands-free interaction cannot be reduced to a universal controller replacement \cite{Monteiro2021HandsFree}. Presence and embodiment depend on measurement choice, with subjective, behavioral, and neurophysiological measures observing related but non-identical constructs \cite{Cummings2016ImmersionPresence,EmbodimentEEG2025}. Avatar realism is likewise multidimensional: resemblance, animation quality, customization, identity, and social context need not move experience in the same direction \cite{HumanlikeAvatars2024}.
+
+Cybersickness evidence remains sensitive to locomotion, exposure, HMD characteristics, individual susceptibility, and instrument choice \cite{Caserman2021Cybersickness,Kennedy1993SSQ}. In education and health, positive effects require scrutiny of comparator equivalence, instructional content, population, and outcome measures rather than attributing benefit to ``VR'' as a single treatment \cite{Merchant2014VREducationMeta,Woon2021NursingVR,Lawson2024Confounded}. Accessibility and security add further regime dependence: a design can be technically effective yet exclusionary, and an authentication proposal can be abundant in the literature without equivalent practical validation \cite{Dudley2023InclusiveImmersion,Giaretta2025VRSecurity}.
+
+Rendering and streaming demonstrate another coupling: computational savings may move cost from local rendering to prediction, sensing, or communication. Foveated rendering and edge-assisted telepresence therefore need end-to-end interpretation rather than isolated GPU or bandwidth claims \cite{Wang2023FoveatedSurvey,Xu2023VRStreaming}. Haptic systems present a parallel issue, where actuator form, body location, task, and realism objectives shape outcomes \cite{Frisoli2024WearableHaptics}.
+
+\section{Redirected-Walking Benchmark}
+\subsection{From Redirection Primitives to Context-Aware Control}
+RDW began from the observation that perceptual gains can steer physical walking while maintaining a larger virtual trajectory \cite{Razzaque2001RedirectedWalking,Steinicke2010DetectionThresholds,Peck2010ImprovedRedirection,Grechkin2016Thresholds}. Subsequent work expanded steering, change-blindness, self-overlapping environments, dynamic layouts, and constrained-world evaluation \cite{Suma2012ImpossibleSpaces,Vasylevska2013FlexibleSpaces,Hodgson2014Constrained,Sun2018Saccadic}. The literature then moved toward artificial-potential, alignment, learned, adaptive, predictive, and geometry-aware controllers \cite{Thomas2019P2R,Bachmann2019APF,Strauss2020RL,Williams2021VisibilityPolygons,Azmandian2022Adaptive,Chen2024APFS2T,Wang2026DGMRDW}. This trajectory is precisely why a new controller cannot be justified merely by invoking geometry awareness or strategy switching.
+
+\subsection{Benchmark Construction}
+RDW is a particularly useful stress test because controller quality depends on physical geometry, virtual trajectory, gain limits, reset handling, and evaluation protocol \cite{Li2022RDWReview,Fan2023RDWReview}. We implemented three executable controller families under a common benchmark: Visibility-Polygon redirection based on slice construction and physical/virtual visibility matching \cite{Williams2021VisibilityPolygons}; Steer-to-Center (S2C), which targets the tracking-space center; and Potential-to-Redirect (P2R), which uses repulsive artificial-potential contributions from physical boundaries \cite{Thomas2019P2R,Bachmann2019APF}.
+
+The software separates virtual motion, physical geometry, controller decision, redirection application, reset logic, and metrics. We used four physical geometries, 100 paired seeds per geometry, and approximately 350 m target virtual distance per run, producing 1,200 planned controller-condition cells. Failed runs were retained as outcomes; reset burden was analyzed only among paired completed runs. This prevents a low-burden controller with selective failures from receiving an artificial advantage. For controller $c$ in geometry $g$, we report completion
+\begin{equation}
+q_{cg}=\frac{1}{N_g}\sum_{i=1}^{N_g}\mathbf{1}\{\mathrm{complete}_{cgi}\},
+\end{equation}
+and reset burden only among completed runs,
+\begin{equation}
+r_{cg}=\frac{1}{|S_{cg}|}\sum_{i\in S_{cg}}\frac{100\,R_{cgi}}{D_{cgi}},
+\end{equation}
+where $R$ is reset count, $D$ is virtual distance in metres, and $S_{cg}$ is the set of completed seeds. Pairwise burden effects use the intersection of completion sets so that controller $a$ and $b$ are compared on the same seeds:
+\begin{equation}
+\Delta_{abg}=\frac{1}{|S_{ag}\cap S_{bg}|}\sum_{i\in S_{ag}\cap S_{bg}}(r_{agi}-r_{bgi}).
+\end{equation}
+
+The authoritative completion and reset summaries are shown in Table~\ref{tab:controller}. These values come from the corrected raw-artifact audit and supersede earlier provisional summaries.
+
+\begin{table}[H]
+\caption{Controller Outcomes by Geometry}
+\label{tab:controller}
+\centering
+\scriptsize
+\begin{tabular}{llrr}
+\toprule
+Geometry & Controller & Complete & Resets/100 m\\
+\midrule
+G01 & Vis-Poly & 92/100 & 13.581\\
+    & S2C      & 100/100 & 10.895\\
+    & P2R      & 100/100 & 12.167\\
+G02 & Vis-Poly & 99/100 & 17.940\\
+    & S2C      & 97/100 & 17.275\\
+    & P2R      & 100/100 & 18.114\\
+G03 & Vis-Poly & 94/100 & 24.022\\
+    & S2C      & 86/100 & 25.021\\
+    & P2R      & 81/100 & 24.626\\
+G04 & Vis-Poly & 99/100 & 20.577\\
+    & S2C      & 95/100 & 20.071\\
+    & P2R      & 100/100 & 20.796\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The geometry dependence is visible in Figs.~\ref{fig:completion} and~\ref{fig:resets}. S2C is favorable in several easier geometries, whereas Vis-Poly becomes comparatively stronger in G03, the hardest geometry.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{figures/controller_completion.pdf}
+\caption{Corrected completion rates across the four benchmark geometries. Failures remain explicit outcomes rather than receiving synthetic performance values.}
+\label{fig:completion}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{figures/controller_reset_burden.pdf}
+\caption{Mean reset burden among completed runs. The controller ordering changes with geometry, motivating paired inferential analysis rather than a universal ranking.}
+\label{fig:resets}
+\end{figure}
