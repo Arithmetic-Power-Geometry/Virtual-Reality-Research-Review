@@ -1,94 +1,125 @@
-# Virtual Reality Research Review
+# Evidence in Virtual Reality Research
 
-A systematic and reproducible research program for analysing virtual reality (VR) methods, algorithms, evaluation practices, benchmarks, contradictions, reproducibility, and open research problems.
+This repository contains the software, frozen evidence records, reproducible workflows, benchmark outputs, statistical analyses, and provenance artifacts supporting the study **Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking**.
 
-## Research sequence
+## Study
 
-This repository follows an evidence-first workflow:
+Virtual-reality evidence is difficult to compare when studies differ in problem definition, intervention, outcome, environment, constraints, measurement, and validation design. The study addresses this problem with a seven-dimension comparability model, a six-level reproducibility taxonomy, an eight-family contradiction audit, and a controlled failure-aware redirected-walking benchmark.
 
-1. Define the review protocol and research questions.
-2. Mine historical and current VR literature.
-3. Extract claims, methods, algorithms, hardware, datasets, populations, metrics, and limitations.
-4. Audit methodological quality and reproducibility.
-5. Build cross-study comparison matrices.
-6. Detect contradictions, missing comparisons, condition gaps, replication gaps, and algorithmic gaps.
-7. Select only defensible, testable gaps.
-8. Reproduce or implement comparable baseline algorithms where feasible.
-9. Design a novel algorithm only when the evidence establishes a genuine missing mechanism.
-10. Run controlled benchmarks and statistical analyses.
-11. Generate figures, tables, algorithm listings, timelines, and machine-readable artifacts through reproducible workflows.
-12. Freeze results and only then prepare the research paper.
+The frozen evidence library contains 174 verified records, 173 canonical reports, 171 retrieved and assessed reports, 165 direct eligible VR/XR reports, six supporting/context reports, and two reports not retrieved. The earliest exploratory per-database yields were not preserved in reconstructible form and are not retroactively reconstructed.
 
-## Scope
+### Comparability model
 
-The review covers core VR research themes including:
+A study or claim is represented by:
 
-- displays, rendering, foveation, and visual quality
-- tracking, sensing, eye tracking, and body tracking
-- interaction, input, gesture, gaze, and hand interfaces
-- locomotion, navigation, redirected walking, and telepresence
-- haptics, audio, and multisensory interaction
-- presence, embodiment, agency, cognition, and perception
-- cybersickness, comfort, ergonomics, and human factors
-- avatars, virtual humans, embodied agents, and AI-driven VR
-- social and collaborative VR
-- accessibility and inclusive VR
-- privacy, security, safety, and ethics
-- networking, streaming, edge/cloud support, and distributed VR
-- software architectures, authoring systems, research toolkits, and reproducibility
-- healthcare, education, training, industry, digital twins, and other application domains
+`E = (P, I, O, D, C, M, V)`
 
-## Evidence model
+where:
 
-The unit of analysis is not only the paper. The project records:
+- **P** — problem or population
+- **I** — intervention or input
+- **O** — outcome
+- **D** — data or environment
+- **C** — constraints
+- **M** — metric or measurement
+- **V** — validation design
 
-- study
-- research claim
-- task and environment
-- method or algorithm
-- comparator or baseline
-- hardware and software stack
-- participant/sample characteristics
-- dataset
-- evaluation metric or questionnaire
-- statistical analysis
-- effect/result
-- code/data/artifact availability
-- replication status
-- limitations
-- contradiction links
-- gap classification
+For each dimension, pairwise compatibility is coded as compatible, incompatible, or uncertain. Direct comparison is supported only when all seven dimensions are compatible.
 
-No gap is treated as established merely because a paper lists it as future work.
+### Reproducibility taxonomy
 
-## Gap classes
+The project distinguishes six reproducibility states:
 
-A candidate gap must be supported by evidence and is classified as one or more of:
+- **R0 — Specified:** protocol and parameters are sufficiently specified.
+- **R1 — Artifact available:** required code, data, or materials are available.
+- **R2 — Executable:** the artifact runs in its documented environment.
+- **R3 — Regenerates:** execution regenerates the reported output.
+- **R4 — Semantic match:** regenerated output measures the claimed construct or estimand.
+- **R5 — Independent result:** an independent compatible implementation or study reproduces the substantive result.
 
-- evidence gap
-- comparison gap
-- condition/generalisation gap
-- contradiction gap
-- replication gap
-- measurement gap
-- dataset gap
-- reproducibility gap
-- population/accessibility gap
-- algorithmic or missing-mechanism gap
+## Evidence audit
 
-## Review-to-experiment gate
+Eight pre-specified contradiction families cover interaction, embodiment, avatars, security, evaluation/education, reproducibility, health, and redirected walking. Seven were classified as comparability-limited and one as a genuine controlled regime effect.
 
-Algorithm comparison begins only after the literature map identifies methods that can be compared under sufficiently compatible tasks, inputs, outputs, datasets, hardware assumptions, and metrics.
+An independent second coder recoded all seven comparability dimensions, overall Γ, and family classification for CM01–CM08. Agreement was 8/8 for every coded field, with Cohen's κ = 1.00 for P, I, O, D, C, M, V, overall Γ, and contradiction class. This reliability result applies to the eight pre-specified contradiction families and is not generalized to the complete evidence corpus.
 
-A proposed algorithm is introduced only if:
-1. the closest prior methods are identified;
-2. the missing capability is explicit and testable;
-3. suitable baselines exist;
-4. evaluation metrics are pre-specified;
-5. the experiment can generate reproducible artifacts.
+## Redirected-walking benchmark
 
-## Repository outputs
+The controlled benchmark evaluates three executable redirected-walking controllers:
 
-Planned reproducible outputs include structured evidence tables, search records, screening decisions, taxonomies, timelines, comparison matrices, contradiction maps, gap maps, benchmark results, statistical summaries, figures, tables, and algorithm listings.
+- **Vis.-Poly**
+- **S2C**
+- **P2R**
 
-The repository is research infrastructure. The eventual paper will report verified results produced from the completed workflow; manuscript drafting is intentionally deferred until evidence extraction, comparisons, tests, and artifacts are complete.
+Four declared physical geometries are evaluated with 100 paired seeds per geometry and approximately 350 m target virtual travel per run. Completion/failure is retained as a first-class outcome, while reset burden is analyzed only for paired runs in which both controllers complete.
+
+Authoritative completion totals are:
+
+| Controller | Completed runs |
+| --- | ---: |
+| Vis.-Poly | 384/400 |
+| S2C | 378/400 |
+| P2R | 381/400 |
+
+Every controller pair changes the sign of its conditional reset-burden difference at least once across the four declared geometries. The result demonstrates geometry-dependent ordering within the declared benchmark; it is not a universal ranking of redirected-walking controllers.
+
+Median controller-decision cost on the common runner was:
+
+| Controller | Median decision cost |
+| --- | ---: |
+| Vis.-Poly | 251.448 μs |
+| S2C | 2.022 μs |
+| P2R | 3.938 μs |
+
+These measurements are implementation-specific controller-decision microbenchmarks, not end-to-end VR frame times.
+
+## Research artifacts
+
+The repository preserves the research chain connecting software, configuration, workflow execution, immutable outputs, transformation scripts, and reported results. GitHub workflow artifacts and run-level outputs take precedence over stale derivative summaries when discrepancies occur.
+
+The repository contains:
+
+- frozen evidence-library and screening records
+- contradiction-audit and independent-coding artifacts
+- redirected-walking implementations and benchmark configurations
+- workflow and provenance records
+- corrected completion and paired-effect results
+- multiplicity-adjusted statistical analyses
+- controller-decision microbenchmarks
+- figures, tables, and machine-readable research outputs
+
+The redirected-walking experiment is computational. It does not claim live-user evidence for cybersickness, presence, comfort, perceptual detectability, preference, workload, or usability. No new redirected-walking controller is claimed.
+
+## Data and code
+
+The software, data, evidence records, workflow outputs, and provenance artifacts are maintained in this repository:
+
+https://github.com/Arithmetic-Power-Geometry/Virtual-Reality-Research-Review
+
+## Citation
+
+Please cite the archived study as:
+
+> Akhtar, M. A. K. (2026). *Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking* (Version V1). Zenodo. https://doi.org/10.5281/zenodo.23193145
+
+### BibTeX
+
+```bibtex
+@misc{akhtar2026evidencevr,
+  author    = {Akhtar, Mohammad Amir Khusru},
+  title     = {Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking},
+  year      = {2026},
+  version   = {V1},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.23193145},
+  url       = {https://doi.org/10.5281/zenodo.23193145}
+}
+```
+
+## License
+
+Software and code in this repository are licensed under the **Apache License 2.0**. See [LICENSE](LICENSE).
+
+Research papers, manuscripts, and other scholarly text retain their respective publication or archive terms and are not relicensed merely by being referenced from this repository.
+
+Copyright © 2026 Mohammad Amir Khusru Akhtar
