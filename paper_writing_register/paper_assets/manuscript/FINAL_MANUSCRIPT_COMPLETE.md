@@ -190,6 +190,8 @@ The cross-domain synthesis is interpreted as a structured evidence map rather th
 
 The redirected-walking (RDW) case study was designed as a controlled demonstration of context-sensitive algorithm comparison rather than as a claim of universal controller superiority. Three executable controllers—Visibility-Polygon redirection (Vis.-Poly), Steer-to-Center (S2C), and Potential-to-Redirect (P2R)—were evaluated under the same benchmark runner, path-generation process, safety checks, reset policy, geometry set, and seed schedule. Four physical-environment geometries (R1-G01 to R1-G04) were used, with 100 paired seeds per geometry and a target virtual travel distance of approximately 350 m per run, yielding 1,200 planned controller-condition cells.
 
+The geometry set was deliberately explicit. G01 is an open 10 x 10 m square (100 m2); G02 uses the same boundary with one 5 m internal vertical segment; G03 uses the same boundary with two 5 m internal segments; and G04 is a 12 x 8 m rectangle (96 m2) with one 4 m internal segment. The set therefore moves from an open convex space to occluded and asymmetric tracked spaces while retaining common simulation semantics.
+
 The authoritative completion totals after the pre-inference raw-artifact audit are 384/400 for Vis.-Poly, 378/400 for S2C, and 381/400 for P2R. These values supersede earlier manuscript-facing summaries that had incorrectly reported complete execution for Vis.-Poly and P2R. The correction was made before inferential analysis by re-downloading the immutable GitHub Actions artifacts and job logs and was retained in the provenance record rather than silently overwritten.
 
 ### 5.2 Controller set and implementation boundaries
@@ -233,6 +235,8 @@ G02 showed a different pattern. S2C was lower than both comparators: Vis.-Poly m
 G03 reversed the G01 ordering. Vis.-Poly had lower reset burden than both S2C and P2R on complete pairs: Vis.-Poly minus S2C was -1.004 (-1.588 to -0.417), and Vis.-Poly minus P2R was -0.742 (-1.345 to -0.136). S2C and P2R were not distinguishable, with a mean difference of 0.162 (-0.452 to 0.788). Thus the geometry that most reduced completion also changed the burden ranking.
 
 In G04, S2C again had the lowest reset burden. S2C minus P2R was -0.726 (-1.134 to -0.324), while Vis.-Poly minus S2C was 0.572 (0.190 to 0.963). Vis.-Poly and P2R were again not clearly separated, with a mean difference of -0.210 (-0.591 to 0.168).
+
+Standardized paired effects reinforce the magnitude interpretation. In G01, d_z was 1.403 for Vis.-Poly minus S2C, 0.773 for Vis.-Poly minus P2R, and -0.977 for S2C minus P2R. Across G01-G04, every controller pair changed the sign of its conditional reset-burden contrast at least once. This sign-reversal criterion is the explicit controller-by-geometry regime result; it is not presented as a reconstructed factorial interaction test.
 
 ### 6.3 Confirmatory inference
 
