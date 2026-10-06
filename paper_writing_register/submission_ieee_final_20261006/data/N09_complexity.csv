@@ -1,0 +1,4 @@
+controller,dominant_structure,per_decision_complexity,count_surrogate
+S2C,tracking-center recomputation over physical segments,O(P),P physical segments
+P2R,nearest-point repulsive gradient over physical segments,O(P),P nearest-segment evaluations
+Vis-Poly,physical and virtual visibility polygons plus slice construction/matching,geometry-dependent; upstream visibility dominates,visibility-polygon work + slice comparisons
