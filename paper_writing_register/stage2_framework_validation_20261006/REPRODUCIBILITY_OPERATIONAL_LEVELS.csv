@@ -1,0 +1,7 @@
+level,question,positive_state,failure_state,not_failure_example
+R0,"Is the protocol/parameterization sufficiently specified?","SPECIFIED","SPECIFICATION_FAILURE","Paper omits code but fully specifies an analytic method"
+R1,"Are required artifacts available?","ARTIFACT_AVAILABLE","ARTIFACT_FAILURE","Artifact not shared where sharing was never required for a non-computational claim"
+R2,"Does the artifact execute in its documented environment?","EXECUTABLE","EXECUTION_FAILURE","No execution attempt has been made"
+R3,"Does execution regenerate the reported computational result?","REGENERATES","REGENERATION_FAILURE","Code is available but regeneration has not been attempted"
+R4,"Does regenerated output measure the claimed construct/estimand?","SEMANTIC_MATCH","SEMANTIC_FAILURE","Numerical mismatch caused by a declared alternative estimand rather than failed reproduction"
+R5,"Does independent implementation/study reproduce the substantive result under a compatible design?","INDEPENDENT_RESULT","INDEPENDENT_RESULT_FAILURE","No independent replication exists"
