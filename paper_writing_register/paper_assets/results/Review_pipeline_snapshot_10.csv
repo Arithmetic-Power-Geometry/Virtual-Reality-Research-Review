@@ -1,0 +1,10 @@
+metric,value,interpretation
+verified_reference_records,174,verified bibliography after five targeted additions
+canonical_review_records,173,one exact DOI duplicate remains linked to canonical record
+eligible_full_text_records,70,eligible assessed records
+supporting_assessed_records,2,supporting/context records
+pending_existing_canonical_records,101,older canonical records still awaiting staged assessment
+new_records_assessed_this_snapshot,5,four eligible and one supporting
+bibliography_missing_author_records,17,down from 18 after Xu author repair; continue metadata completion
+stable_manuscript_sections_draftable,7,"Introduction Methods framework RDW methods/results threats reproducibility"
+prisma_status,NOT_FROZEN,formal-source and full-text closure still required
