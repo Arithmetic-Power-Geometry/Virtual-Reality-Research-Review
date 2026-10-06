@@ -1,0 +1,5 @@
+candidate_id,candidate_gap,current_level,obligation_status,promotion_boundary
+GAP-RDW-01,"Universal RDW controller ranking across geometries",C5,"Evaluated under present 3-controller x 4-geometry paired benchmark; result rejects universal winner within tested regime","Do not generalize beyond tested controllers/geometries"
+GAP-RDW-02,"Joint failure-reset-cost regime model with uncertainty and held-out generalization",C3,"Operational/testable future hypothesis identified; not benchmark-evaluated as a new selector in Paper 1","Requires benchmark-ready protocol, held-out geometry family, baselines, uncertainty rule, then evaluation"
+GAP-REP-01,"Open tooling alone establishes reproducibility",C2,"Multiple evidence families distinguish tool availability from reproducibility; framework operationalized","Requires a predeclared empirical reproducibility audit to reach C3/C4"
+GAP-COMP-01,"Semantic incompatibility can masquerade as contradiction",C5,"Eight-family audit operationalized; seven are comparability-limited and one is a genuine controlled regime effect","Percentage is restricted to audited families, not 165-report prevalence"
