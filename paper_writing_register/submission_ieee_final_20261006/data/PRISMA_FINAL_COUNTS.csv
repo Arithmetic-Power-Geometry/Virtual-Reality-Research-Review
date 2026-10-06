@@ -1,0 +1,10 @@
+stage,count,note
+Verified evidence-library records,174,registered records entering formal review ledger
+Duplicate records removed,1,exact DOI duplicate
+Canonical records screened,173,title/abstract screening completed
+Reports sought for retrieval,173,all canonical reports
+Reports not retrieved,2,complete text unavailable after targeted retrieval
+Reports assessed for eligibility,171,complete reports assessed
+Direct eligible reports,165,main VR/XR evidence corpus
+Supporting/context reports,6,retained for theory/enabling context but excluded from direct-evidence denominator
+Full-text exclusions after retrieval,0,library was already relevance-filtered before formal ledger population
