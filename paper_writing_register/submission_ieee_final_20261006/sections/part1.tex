@@ -1,0 +1,91 @@
+\section{Introduction}
+VR research has matured into a dense collection of display, rendering, sensing, interaction, locomotion, haptic, audio, avatar, networking, artificial-intelligence, education, health, and industrial studies. Foundational work on presence and immersion established that system properties and psychological experience are related but not interchangeable \cite{Slater2009PlaceIllusion,Witmer1998Presence,Cummings2016ImmersionPresence}; later reviews show comparable heterogeneity in locomotion \cite{Li2022RDWReview,Fan2023RDWReview}, evaluation instruments \cite{Bareisyte2024Questionnaires}, cybersickness \cite{Caserman2021Cybersickness}, interaction \cite{Monteiro2021HandsFree}, accessibility \cite{Dudley2023InclusiveImmersion}, and education \cite{Merchant2014VREducationMeta}. The resulting literature is large, but size alone does not make numerical comparison valid.
+
+The central problem is semantic: a reported effect depends on the problem, input, output, environment, constraints, metrics, hardware, software, population, exposure, and validation protocol. Consequently, two studies can appear contradictory while evaluating different constructs, and two algorithms can appear rankable even when one is tested under a different physical regime. We therefore treat \emph{comparability} and \emph{reproducibility} as first-class evidence properties.
+
+Our contributions are fourfold. First, we organize the evidence into 21 coordinated workstreams and define a six-dimension comparability test. Second, we distinguish genuine contradiction from methodological incompatibility and separate six reproducibility failure levels. Third, we operationalize these ideas in software and a controlled RDW benchmark using three executable controllers drawn from established method families \cite{Williams2021VisibilityPolygons,Thomas2019P2R}. Fourth, we preserve failures, raw-artifact provenance, multiplicity-corrected inference, and controller cost rather than compressing all outcomes into a single ranking. The resulting claim is deliberately narrower than algorithm novelty: adaptive and predictive RDW already occupy that space \cite{Azmandian2022Adaptive,Strauss2020RL,Chen2024APFS2T,Wang2026DGMRDW}.
+
+\section{Review Design and Evidence Architecture}
+The review combines systematic reporting, scoping synthesis, structured evidence mapping, contradiction analysis, reproducibility auditing, and benchmark-oriented gap validation. Records were verified against publisher or authoritative bibliographic metadata, deduplicated, screened, assessed at full text where retrievable, grouped by study family, and mapped to evidence roles. The registered evidence-library flow is summarized in Table~\ref{tab:prisma}.
+
+\begin{table}[H]
+\caption{Frozen Evidence-Library Flow}
+\label{tab:prisma}
+\centering
+\footnotesize
+\begin{tabular}{lr}
+\toprule
+Stage & Count\\
+\midrule
+Verified records & 174\\
+Duplicate records removed & 1\\
+Canonical reports screened & 173\\
+Reports sought for retrieval & 173\\
+Reports not retrieved & 2\\
+Reports assessed for eligibility & 171\\
+Direct eligible reports & 165\\
+Supporting/context reports & 6\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The same frozen accounting is shown graphically in Fig.~\ref{fig:flow}.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\columnwidth]{figures/evidence_flow.pdf}
+\caption{Registered evidence-library flow. Two reports were not retrieved; no database-specific discovery counts are reconstructed retrospectively.}
+\label{fig:flow}
+\end{figure}
+
+The flow is a reproducible accounting of the registered curated evidence library. Raw per-database discovery yields from the earliest exploratory stage were not preserved and are therefore not reconstructed retrospectively. This limitation is preferable to presenting invented database-specific counts.
+
+The evidence model uses six comparability dimensions: Problem, Input, Output, Dataset/Environment, Constraints, and Metric. A numerical comparison is admitted only when differences along these dimensions do not invalidate the interpretation. This rule is essential in VR because questionnaires, embodiment constructs, cybersickness measures, physical tracking spaces, avatar interventions, and rendering/network conditions can differ materially \cite{Kennedy1993SSQ,EmbodimentEEG2025,HumanlikeAvatars2024,Wang2023FoveatedSurvey,Xu2023VRStreaming}.
+
+\subsection{Research Questions and Workstreams}
+We organized the review around ten questions: how VR methods have evolved; which algorithm and system families dominate; how evaluation is performed; which comparisons are genuinely direct; where robustness and generalization fail; which findings are contradictory; what level of reproducibility is demonstrated; which gaps are corroborated; which gaps are benchmarkable; and whether any algorithmic opportunity survives prior-art checking. To prevent locomotion from dominating the corpus, we partitioned the evidence into 21 coordinated workstreams spanning foundations, rendering, tracking, interaction, locomotion, haptics, audio, presence, cybersickness, avatars, intelligent agents, social VR, networking, security, accessibility, evaluation, reproducibility, health, education, industrial applications, and cross-cutting contradiction auditing. The workstreams are overlapping by design: a study can contribute simultaneously to sensing, interaction, embodiment, and accessibility.
+
+\subsection{Screening, Study Families, and Evidence Roles}
+Primary algorithms and experiments, measurement studies, reviews, toolkits, datasets, and application studies were not treated as interchangeable evidence units. Related reports were grouped into study families so that a review, toolkit, follow-up analysis, and empirical experiment from one lineage could not be counted as independent replications. Secondary reviews were used to structure landscapes and support citation chasing; performance claims were anchored preferentially in primary studies. This distinction is particularly important in RDW, where surveys and taxonomies coexist with controller papers, user studies, toolkit papers, and simulation-validation work \cite{Nilsson2018FifteenYears,Suma2012Taxonomy,Prinz2023Taxonomies,Azmandian2016RDWToolkit,Azmandian2022SimulationValidation}.
+
+\subsection{Evidence Obligations and Gap Progression}
+We used a six-stage evidence ladder to prevent a stated ``future work'' sentence from becoming a novelty claim. Table~\ref{tab:gapladder} shows the progression. Only corroborated gaps entered the principal gap synthesis, and only benchmark-ready gaps could justify new algorithm design.
+
+\begin{table}[H]
+\caption{Gap-Evidence Ladder}
+\label{tab:gapladder}
+\centering
+\scriptsize
+\begin{tabular}{clp{0.55\columnwidth}}
+\toprule
+Level & State & Evidence obligation\\
+\midrule
+C0 & Mentioned & Future work or suspected absence\\
+C1 & Candidate & Supported by verified secondary evidence\\
+C2 & Corroborated & Multiple independent sources / updated search\\
+C3 & Testable & Explicit problem, outcome, comparator, metric\\
+C4 & Benchmark-ready & Compatible baseline, environment, protocol\\
+C5 & Evaluated & Reproducible experiment directly addresses gap\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The complete pipeline is summarized in Algorithm~\ref{alg:pipeline}. It reflects the actual research sequence: evidence framework first, software implementation second, workflow execution third, and manuscript interpretation only after artifacts and inferential gates were frozen.
+
+\begin{algorithm}[H]
+\caption{Evidence-to-Benchmark Research Pipeline}
+\label{alg:pipeline}
+\begin{algorithmic}[1]
+\State Verify and deduplicate bibliographic records.
+\State Screen reports and resolve study families.
+\State For each claim, test semantic comparability across six dimensions.
+\State Classify disagreements as incompatibility, candidate moderator, or genuine contradiction.
+\State Promote only corroborated gaps to testable/benchmark-ready states.
+\State Implement executable benchmark components with common reset, path, and safety logic.
+\State Run paired controller experiments using identical seeds and geometries.
+\State Preserve completion/failure separately from performance conditional on completion.
+\State Audit raw workflow artifacts before confirmatory statistics.
+\State Apply paired inference, multiplicity correction, omnibus tests, and cost analysis.
+\State Interpret only claims supported by frozen artifacts and prior-art boundaries.
+\end{algorithmic}
+\end{algorithm}
