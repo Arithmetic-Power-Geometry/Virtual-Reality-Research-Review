@@ -67,7 +67,37 @@ Reproducibility is evaluated independently of whether a reported result is posit
 
 For computational artifacts generated in this project, derived results are frozen in machine-readable form with workflow and provenance records. Tables and statistics are generated from these frozen outputs rather than manually retyped. This policy is particularly important for the RDW case study, where a pre-inference forensic audit identified and corrected earlier summary inconsistencies before confirmatory analysis.
 
+## 3. Evidence and Comparability Framework
 
+### 3.1 Semantic comparability
+
+Numerical comparison is admitted only when studies are sufficiently compatible along six dimensions: **Problem**, **Input**, **Output**, **Dataset/Environment**, **Constraints**, and **Metric**. Compatibility does not require identical implementations, but the compared systems must answer materially comparable questions under assumptions that do not invalidate the interpretation of their numerical difference.
+
+When compatibility is insufficient, methods remain in the taxonomy and qualitative synthesis but are not placed in a common numerical ranking. This rule is especially important across VR studies because differences in hardware, tracking volume, field of view, interaction technique, virtual scene, exposure duration, population, locomotion constraints, questionnaires, and application content can alter outcomes independently of the method nominally being compared.
+
+### 3.2 Contradiction versus incompatibility
+
+A contradiction is recorded only when studies address sufficiently comparable constructs or problems. Otherwise, differences are first treated as candidate moderators. For example, evidence concerning avatar customization, animation fidelity, human likeness, and identity expression should not be reduced to a single axis of “avatar realism.” Likewise, objective physiological markers of embodiment and subjective embodiment questionnaires measure related but non-interchangeable constructs.
+
+The same principle applies to application evidence. A positive learning or health outcome under one VR intervention does not establish a generic media effect when instructional content, exposure, comparator equivalence, participant population, or outcome measures differ. Apparent disagreement is therefore decomposed into genuine result tension, methodological incompatibility, or a plausible regime/moderator effect.
+
+### 3.3 Gap-evidence ladder
+
+Candidate research gaps progress through six evidence states. **C0 (Mentioned)** denotes future work stated by one or more sources. **C1 (Candidate)** indicates an apparent unresolved issue in verified secondary evidence. **C2 (Corroborated)** requires multiple independent sources and/or an updated primary-study search. **C3 (Testable)** requires an explicit problem formulation, observable outcome, and feasible comparison. **C4 (Benchmark-ready)** additionally requires compatible baselines, data or environment, metrics, and evaluation protocol. **C5 (Experimentally evaluated)** requires reproducible results that directly address the gap.
+
+Only C2 or stronger gaps enter the principal research-gap synthesis. Only C4 gaps can motivate a new benchmark or algorithm. Novelty is never inferred from keyword absence; exact terminology, synonyms, historical terminology, closest algorithm families, backward and forward citations, and current literature must be checked first.
+
+### 3.4 Negative evidence and failure regimes
+
+Null and negative findings are retained. In computational comparisons, failed runs are not assigned artificial performance values merely to preserve a ranking. Completion or failure is analyzed separately from conditional performance among completed runs. This distinction prevents a method with selective failures from appearing artificially strong or weak because its unsuccessful runs were numerically imputed.
+
+The RDW case study illustrates the distinction. Complete-pair reset burden favors different controllers in different geometries, while completion ordering also changes in the difficult geometry. Because the controllers are evaluated with common geometries and paired seeds, this pattern is interpretable as a controlled regime effect rather than a cross-study incompatibility. It supports the hypothesis that geometry modifies controller performance and robustness, but does not by itself establish that a new adaptive controller is novel or superior.
+
+### 3.5 From evidence synthesis to algorithmic opportunity
+
+The final algorithmic-opportunity decision is downstream of the review, not an assumption built into it. A proposed mechanism must survive comparison with the closest adaptive, predictive, learned, geometry-aware, and switching approaches; have an explicit problem formulation; identify compatible baselines; specify primary metrics; include ablation and robustness checks; quantify computational cost; and provide a reproducible implementation. If those obligations cannot be met, the review retains the empirical separation or gap result without forcing an algorithmic contribution.
+
+This separation between evidence synthesis and algorithm invention is central to the study design. It permits a publishable outcome even when the strongest conclusion is that performance is conditional, existing evidence is incomparable, or a purported gap has already been partially addressed.
 
 ## 4. Cross-Domain Evidence Synthesis
 
@@ -219,7 +249,100 @@ The structural analysis explains the broad direction of this difference. S2C is 
 
 These measurements are not end-to-end frame times and do not establish device-independent real-time guarantees. They show that the controller choice can introduce a nontrivial computational-overhead dimension that should be considered together with completion and reset burden.
 
+## 7. Contradictions, Reproducibility, and Failure Regimes
 
+### 7.1 Apparent contradiction versus valid contradiction
+
+A central objective of the review is to avoid labeling heterogeneous results as contradictions merely because their conclusions differ. Two claims constitute a strong contradiction only when they address sufficiently compatible problems, inputs, outputs, environments, constraints, metrics, populations, and validation conditions. If one or more of these dimensions changes materially, the correct diagnosis may be incompatibility, conditionality, or a regime boundary.
+
+The current contradiction map contains eight audited claim families. Seven primarily illustrate cross-study heterogeneity, whereas the RDW case study provides a controlled within-benchmark reversal. This distinction is important because the evidential meaning is different: cross-study disagreement often identifies missing comparability, while a reversal under paired conditions is direct evidence that performance depends on an experimental factor.
+
+### 7.2 Interaction: task dependence rather than a universal interface
+
+Hands-free interaction reviews and direct hand-tracking/controller comparisons can appear to disagree about which interface is preferable. The underlying tasks, interfaces, performance measures, and evaluation goals differ. The safe synthesis is therefore not that one result invalidates the other, but that interaction performance is task- and metric-dependent. A universal interface ranking is unsupported without a common benchmark that preserves task requirements and outcome definitions.
+
+This pattern generalizes to multimodal input: directness, precision, fatigue, accessibility, feedback, and learnability can trade off. Contradiction analysis should expose the optimized dimension rather than collapse those dimensions into a single notion of performance.
+
+### 7.3 Embodiment: measurement constructs are not interchangeable
+
+Embodiment research combines subjective ownership and agency reports with behavioral, physiological, and neurophysiological measures. An EEG-associated marker and a self-report affordance measure can both be valid while answering different questions. Treating disagreement between them as replication failure would conflate construct validity with result direction.
+
+The reproducibility obligation is therefore twofold: the technical protocol must be repeatable, and the construct being measured must be explicitly defined. Reusing the same hardware or avatar does not reproduce an embodiment result if the outcome construct changes.
+
+### 7.4 Avatars: realism is a bundle of interventions
+
+Evidence on avatar customization, identity, human likeness, animation fidelity, and social behavior can produce apparently inconsistent conclusions about realism. The inconsistency weakens when realism is decomposed. Increased human likeness is not the same intervention as personalization, expressive animation, behavioral contingency, or identity congruence.
+
+A failure regime emerges when a study or system treats visual resemblance as a sufficient proxy for social effectiveness. Future comparisons should manipulate and report realism dimensions separately whenever the research question permits.
+
+### 7.5 Security: proposal volume is not validation strength
+
+VR security and biometric-authentication literature contains many mechanisms, but evidence strength varies from conceptual threat analysis to small controlled studies and practical attack evaluation. A large literature therefore does not imply that authentication effectiveness is well established under realistic adversarial conditions.
+
+The failure regime here is evidential: mechanisms may appear mature because they are numerous, while practical validation remains sparse or heterogeneous. Reproducibility requires more than code availability; threat model, sensor configuration, enrollment protocol, attack assumptions, population, and evaluation metric must also be recoverable.
+
+### 7.6 Education and evaluation: positive outcomes can coexist with methodological confounding
+
+Immersive-learning studies frequently report positive outcomes, while methodological reviews identify comparator inequivalence, confounding, inconsistent quality criteria, and limited repeated validation. These findings are not inherently contradictory. A positive result can be genuine within a study while the causal attribution to immersion remains uncertain.
+
+This produces a recurring failure regime: the VR condition and control condition differ simultaneously in medium, content, feedback, interaction, duration, or novelty. Under such designs, the study may establish effectiveness of the complete treatment package but not the isolated effect of immersion. Cross-study synthesis should therefore distinguish treatment effectiveness from medium-specific causality.
+
+### 7.7 Tool availability versus reproducibility
+
+Open-source toolkits, online experiment frameworks, datasets, and standardized components lower the cost of executing VR studies. However, tool availability alone does not guarantee reproducibility. Experiments may still depend on undocumented engine versions, hardware, calibration, scene assets, timing assumptions, parameter defaults, data-cleaning rules, or proprietary services.
+
+The current A17 evidence therefore supports a layered model. **Availability** asks whether code, data, and materials can be accessed. **Executability** asks whether they can be run. **Regenerability** asks whether the published outputs can be recreated from the supplied artifacts. **Independent reproducibility** asks whether a separate team can obtain sufficiently compatible results under documented conditions. These states should not be collapsed.
+
+The project's own RDW artifact correction illustrates this distinction. Executable workflows and stored summaries existed, yet a later raw-artifact audit found that two manuscript-facing summaries disagreed with immutable workflow outputs. Reproducibility consequently requires provenance and consistency checking in addition to source-code release.
+
+### 7.8 Healthcare: application heterogeneity limits broad claims
+
+Healthcare VR evidence spans education, rehabilitation, assessment, procedural practice, mental health, and professional training. Populations, interventions, outcome measures, exposure schedules, and clinical relevance differ substantially. Promising results in one application therefore do not establish a domain-wide treatment effect.
+
+The corresponding failure regime is overgeneralization across incompatible clinical or educational contexts. Synthesis should preserve the population-intervention-comparator-outcome structure and distinguish clinical outcomes, learning outcomes, usability, presence, and feasibility.
+
+### 7.9 RDW: a genuine controlled regime reversal
+
+The RDW case differs from the preceding examples because controller comparisons were performed under the same benchmark infrastructure with paired seeds, common geometries, a common reset policy, and common outcome definitions. Controller ordering nevertheless changed across geometry.
+
+In G01, S2C had lower reset burden than P2R and Vis.-Poly among complete pairs. In G03, Vis.-Poly had lower reset burden than both S2C and P2R, while completion also separated the controllers. Because the benchmark and pairing are held constant, this is not readily explained by cross-study incompatibility. It is evidence of a genuine controller-by-geometry regime effect within the declared benchmark.
+
+The result also illustrates why failures and successful-run burden must remain separate. A controller can look favorable on conditional reset burden while completing fewer seeds. Any future selector or regime model must therefore reason jointly about failure risk, reset burden, computational cost, and uncertainty rather than optimize only the mean reset count of successful runs.
+
+This does not itself establish a novel algorithm. Adaptive, predictive, and strategy-switching RDW methods already exist. The remaining N10 question is narrower: whether the literature lacks a method that explicitly models the joint failure-reset-cost regime with uncertainty and demonstrates held-out generalization under compatible evaluation.
+
+### 7.10 Reproducibility failure taxonomy
+
+Across domains, reproducibility problems can be organized into at least six failure classes:
+
+1. **Specification failure:** essential parameters, hardware, software versions, calibration, preprocessing, or procedural details are absent.
+2. **Artifact failure:** code, data, scenes, models, or study materials are unavailable or incomplete.
+3. **Execution failure:** artifacts exist but cannot be executed under the documented environment.
+4. **Regeneration failure:** execution succeeds but the reported tables, figures, or statistics cannot be regenerated.
+5. **Semantic failure:** regenerated outputs use a different task, metric, construct, or comparator than the claimed result.
+6. **Independent-result failure:** a sufficiently faithful independent reproduction produces materially different findings.
+
+These classes should not be assigned when evidence is merely unavailable. For example, lack of public code is an availability limitation, not proof that the original result is irreproducible. Conversely, public code is not proof that the paper's numerical claims regenerate.
+
+### 7.11 Failure regimes as research objects
+
+The contradiction analysis suggests that many important VR research questions concern boundaries rather than average effects. Examples include the geometry at which an RDW controller changes rank, the latency or bandwidth at which distributed rendering becomes unacceptable, the exposure regime at which cybersickness offsets task benefit, the fidelity at which avatar realism ceases to improve experience, or the user characteristics under which an interaction technique becomes inaccessible.
+
+A failure regime is therefore defined here as a region of the input, environment, population, or resource space in which a method ceases to satisfy its intended performance, safety, usability, fidelity, or reproducibility obligations. This definition turns limitations into testable objects. Instead of asking only whether method A outperforms method B on average, a stronger experiment asks where their ordering changes and whether that boundary generalizes.
+
+### 7.12 Evidence-backed gap progression
+
+The C0-C5 ladder is used to prevent speculative gaps from becoming manuscript claims. A C0 observation is only a suspected absence. C1 requires explicit support in the literature; C2 requires independent corroboration; C3 requires a testable formulation with identifiable comparators and metrics; C4 requires a benchmark-ready gap after prior-art checking; and C5 requires an executed method and evaluation.
+
+The current RDW candidate is deliberately held below C4 completion because adaptive selection and predictive control already have prior art. Likewise, under-saturated review lanes such as networking/streaming, spatial audio, and reproducibility should not generate strong prevalence or absence claims until their evidence base is closed.
+
+### 7.13 Synthesis
+
+The current contradiction map supports three broad conclusions. First, many apparent contradictions in VR are produced by incompatible tasks, constructs, populations, interventions, or metrics rather than by direct replication failure. Second, reproducibility is multidimensional: availability, executability, regeneration, semantic fidelity, and independent reproduction are distinct states. Third, genuine regime effects can be scientifically valuable because they reveal where universal rankings fail.
+
+These conclusions motivate the review's final synthesis strategy. Evidence should be compared only after semantic compatibility is established; negative and failed outcomes should remain visible; reproducibility claims should identify the level actually demonstrated; and open problems should be formulated as testable regime, mechanism, or evidence obligations rather than as unsupported statements that no prior work exists.
+
+This Section 7 remains extensible. The eight audited contradiction families are sufficient to establish the framework and the controlled RDW regime example, but the final count and distribution of contradiction and reproducibility patterns will be frozen only after N14 expands across the closed systematic corpus.
 
 ## 8. Discussion
 
@@ -277,9 +400,27 @@ Sixth, wall-clock microbenchmarks depend on software and hardware. The N09 timin
 
 Finally, the pre-inference artifact audit revealed that earlier manuscript-facing N02 and N05 summaries disagreed with the immutable workflow artifacts. The analysis was corrected before confirmatory inference and the discrepancy was preserved in provenance. This episode strengthens the case for raw-artifact checking, but it also demonstrates that reproducibility pipelines require continuous internal consistency audits rather than assuming that a generated summary is automatically authoritative.
 
+## 10. Reproducibility and Data/Code Availability
 
+The project repository is organized so that manuscript claims can be traced to machine-readable evidence, analysis outputs, and provenance records. The review pipeline retains the master bibliography, citation-use ledger, screening and full-text tables, study-family mappings, citation-chasing register, workstream coverage audits, contradiction/comparability maps, and dated pipeline snapshots.
 
+The RDW case study retains executable controller code, benchmark logic, algorithm specifications, workflow provenance, raw-artifact audit records, corrected descriptive tables, paired-effect files, completion-discordance files, confirmatory statistical outputs, and computational-cost results. The principal N07 paired bootstrap used 10,000 deterministic resamples with seed 2601, while controller timing used deterministic state/geometry combinations and a fixed measurement protocol.
 
+For the three controller families, the authoritative post-forensic completion data are derived from original GitHub Actions artifacts and job logs rather than from superseded manuscript summaries. The correction record identifies the relevant workflow and artifact identifiers and preserves the historical inconsistency. This provenance rule is deliberate: a reproducibility record should show how a correction was obtained, not merely replace the earlier result.
+
+Machine-readable tables and figure-source files are kept separate from prose so that manuscript values can be regenerated rather than manually re-entered. Likewise, failed RDW runs remain explicit outcomes, and no synthetic reset value is inserted to force complete numerical matrices.
+
+Open code and stored artifacts improve executability, but they are not treated as proof of independent reproducibility. Independent reproduction would require a separate execution or validation under sufficiently documented conditions. The repository therefore distinguishes code availability, protocol completeness, deterministic regeneration, and independent reproduction as separate evidence states.
+
+At the current manuscript stage, Sections 1–3 and 5–6 and 9–10 are draftable from frozen evidence. Final Abstract, final contribution claims, Discussion headline, Conclusion, final PRISMA flow, and any C4/C5 novelty claim remain gated by corpus closure and the N10 novelty decision.
+
+## 11. Conclusion
+
+VR evidence is most informative when the conditions under which a result holds are treated as part of the result itself. Across the reviewed domains, many apparent contradictions arise because studies use different tasks, constructs, populations, interventions, hardware, metrics, or validation levels. The eight-family contradiction audit demonstrates this directly: seven families were comparability-limited, while the controlled RDW family exposed a genuine regime effect.
+
+The redirected-walking benchmark reinforces the same conclusion experimentally. Visibility-Polygon, S2C, and P2R controllers showed different completion, reset-burden, and computational-cost profiles, and their ordering changed with geometry. No controller was universally best. The paper therefore rejects a new-controller novelty claim and instead contributes a failure-aware, provenance-backed way to reason about conditional performance.
+
+The broader methodological implication is that VR reviews should move beyond inventories of techniques toward explicit evidence obligations. Comparability should precede ranking; failure should remain distinct from conditional performance; reproducibility should identify the level actually demonstrated; and research gaps should progress from observation to corroboration, testability, benchmark readiness, and experimental evaluation. Under this view, the most useful open problems are not unsupported absences in the literature but reproducible boundaries where existing methods change behavior, fail, or cease to generalize.
 
 ## Final Corpus Statement
 
