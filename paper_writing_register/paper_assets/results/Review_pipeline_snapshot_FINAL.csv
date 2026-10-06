@@ -1,0 +1,11 @@
+metric,value,interpretation
+verified_reference_records,174,verified evidence-library records
+duplicate_records,1,exact DOI duplicate removed before canonical screening
+canonical_records,173,unique canonical reports sought
+reports_retrieved,171,complete reports retrieved and assessed
+reports_not_retrieved,2,Erbas2024HealthcarePresence and Zank2016EyeTracking
+eligible_direct_records,165,direct VR/XR evidence included in synthesis
+supporting_context_records,6,contextual evidence retained outside direct-evidence denominator
+not_assessed_records,0,no unresolved screening decisions remain
+bibliography_missing_author_records,0,all 174 BibTeX entries contain author metadata
+prisma_status,FROZEN_EVIDENCE_LIBRARY_FLOW,flow is valid for the registered curated evidence library; raw per-database discovery yields were not retrospectively invented
