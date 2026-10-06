@@ -71,7 +71,7 @@ For computational artifacts generated in this project, derived results are froze
 
 ### 3.1 Semantic comparability
 
-Numerical comparison is admitted only when studies are sufficiently compatible along six dimensions: **Problem**, **Input**, **Output**, **Dataset/Environment**, **Constraints**, and **Metric**. Compatibility does not require identical implementations, but the compared systems must answer materially comparable questions under assumptions that do not invalidate the interpretation of their numerical difference.
+Numerical comparison is admitted only when studies are sufficiently compatible along seven dimensions, represented as E=(P,I,O,D,C,M,V): **Problem/population**, **Intervention/input**, **Outcome**, **Data/environment**, **Constraints**, **Metric/measurement**, and **Validation design**. Each dimension is coded compatible (1), incompatible (0), or uncertain (U). Pair-level Gamma is 1 only when all seven dimensions are compatible, 0 when any dimension is incompatible, and U when no dimension is incompatible but at least one remains uncertain. Compatibility does not require identical implementations, but the compared systems must answer materially comparable questions under assumptions that preserve the intended comparison.
 
 When compatibility is insufficient, methods remain in the taxonomy and qualitative synthesis but are not placed in a common numerical ranking. This rule is especially important across VR studies because differences in hardware, tracking volume, field of view, interaction technique, virtual scene, exposure duration, population, locomotion constraints, questionnaires, and application content can alter outcomes independently of the method nominally being compared.
 
@@ -181,7 +181,7 @@ Across the workstreams, the most consistent cross-domain finding is methodologic
 
 The evidence therefore supports a minimum comparison description comprising the problem, input, output, environment or dataset, constraints, metric, population where applicable, hardware/software context, and uncertainty. Without these fields, numerical results may be individually valid yet unsuitable for synthesis.
 
-The current cross-domain synthesis should be interpreted as a structured evidence map, not as a final prevalence analysis. The final corpus size, workstream proportions, and frequency of specific gaps remain intentionally unfrozen until full-text assessment, study-family resolution, formal-source execution, and citation-chasing closure are complete.
+The cross-domain synthesis is interpreted as a structured evidence map rather than a prevalence analysis. The registered evidence library is frozen at 174 verified records, 173 canonical reports, 171 retrieved and assessed reports, 165 direct eligible reports, six supporting/context reports, and two reports not retrieved. Workstream overlap and the deliberately selected contradiction families prevent simple frequency counts from being interpreted as population prevalence.
 
 ## 5. Redirected-Walking Case-Study Methods
 
