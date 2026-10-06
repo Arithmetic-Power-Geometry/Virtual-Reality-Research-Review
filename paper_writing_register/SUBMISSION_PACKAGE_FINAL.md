@@ -3,7 +3,7 @@
 ## Paper
 **Virtual Reality Research: A Systematic Review of Methods, Algorithms, Evaluation, and Open Research Problems**
 
-The submission assembly consists of the four manuscript blocks in `paper_assets/manuscript/`, with the final closing block overriding provisional corpus/freeze statements in earlier drafts.
+The authoritative submission manuscript is `paper_assets/manuscript/FINAL_MANUSCRIPT_COMPLETE.md`. The earlier section blocks are retained only as drafting/provenance history.
 
 ## Frozen evidence
 - 174 verified records
