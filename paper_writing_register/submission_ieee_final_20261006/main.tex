@@ -1,0 +1,33 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsmath,amssymb}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{float}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+\usepackage{balance}
+\newcommand{\repo}{\href{https://github.com/Arithmetic-Power-Geometry/Virtual-Reality-Research-Review}{Virtual-Reality-Research-Review}}
+\title{Virtual Reality Research: A Systematic Review of Methods, Algorithms, Evaluation, and Open Research Problems}
+\author{Mohammad Amir Khusru Akhtar\\
+\IEEEauthorblockA{Faculty of Computing and Information Technology, Usha Martin University, Ranchi, India\\
+Email: amir@umu.ac.in}}
+\begin{document}
+\maketitle
+\begin{abstract}
+Virtual-reality (VR) research couples hardware, sensing, rendering, interaction, locomotion, perception, networking, and human factors, so results that share a label may still answer different questions. We organize a verified evidence library of 174 records into 173 canonical reports; 171 complete reports were retrieved and assessed, yielding 165 direct eligible VR/XR reports and six supporting/context reports, with two reports not retrieved. We introduce a semantic-comparability framework and a six-level reproducibility taxonomy, then test the framework through a controlled redirected-walking (RDW) benchmark implemented as reproducible software and executed through versioned workflows. Among eight pre-specified contradiction families, seven were comparability-limited, while one was a genuine controlled regime effect. In 1,200 planned controller-condition cells across four geometries, Visibility-Polygon, Steer-to-Center, and Potential-to-Redirect completed 384/400, 378/400, and 381/400 runs, respectively. Paired inference showed geometry-dependent rank changes rather than a universal winner. Median controller-decision costs were 251.448, 2.022, and 3.938 $\mu$s on the common runner. The results argue for regime-aware comparison, explicit evidence obligations, failure-aware outcomes, and provenance-preserving computational evaluation in VR research.
+\end{abstract}
+\begin{IEEEkeywords}
+virtual reality, systematic review, reproducibility, redirected walking, comparability, contradiction analysis, cybersickness, presence, interaction
+\end{IEEEkeywords}
+\input{sections/part1}
+\input{sections/part2}
+\input{sections/part3}
+\input{sections/part4}
+\balance
+\input{references}
+\end{document}
