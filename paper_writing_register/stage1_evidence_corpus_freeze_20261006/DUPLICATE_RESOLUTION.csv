@@ -1,0 +1,2 @@
+duplicate_record_id,canonical_record_id,doi,duplicate_citation_key,canonical_citation_key,resolution,reason
+VRR-0060,VRR-0021,10.1109/TETC.2024.3471249,MayorMarquez2025PerceptualMTRW,MayorMarquez2025MTRW,EXCLUDE_BEFORE_CANONICAL_CORPUS,DOI_EXACT
