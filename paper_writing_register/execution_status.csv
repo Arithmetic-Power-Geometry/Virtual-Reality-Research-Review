@@ -12,10 +12,10 @@ N09,PASS,Computational-cost analysis,COMPLETE,Controller microbenchmark and stru
 N10,PASS_PAPER1_NO_ALGORITHM_CLAIM,Close C4 novelty gate,PAPER 1 GATE,prior art occupies generic adaptive/predictive/switching novelty; Paper 1 claims empirical regime/reproducibility findings only; joint failure-reset-cost candidate moved to future work
 N11,CONDITIONAL,Novel method only if C4 passes,CONDITIONAL,algorithm specification + implementation
 N12,CONDITIONAL,Novel-method evaluation,CONDITIONAL,baselines + ablation + robustness + cost
-N13,IN_PROGRESS,Finish A01-A21 study extraction,PAPER 1 GATE,70 eligible + 2 supporting assessed; 101 canonical full texts pending
-N14,PARTIAL_FREEZE,Complete contradiction/reproducibility/gap maps,PAPER 1 GATE,framework and 8 audited families synthesized; final numerical prevalence blocked by N13 corpus closure
-N15,BLOCKED_BY_N13_N14,Freeze references/reporting,PAPER 1 GATE,freeze rules documented; final citation and metadata freeze requires closed corpus and N14
-N16,BLOCKED_BY_N13_N14_N15,Freeze release artifacts,PAPER 1 GATE,release checklist frozen; final package requires corpus PRISMA synthesis references Discussion Conclusion Abstract
-N17,IN_PROGRESS,Manuscript writing,FINAL,Sections 1-7 and 9-10 substantive prose committed; Section 8 headline Abstract final contributions and Section 11 wait on corpus/N14/N10
-A01-A21,IN_PROGRESS,Broad VR evidence mining,REQUIRED,174 verified references; priority saturation remains A17 A13 A07
-REVIEW-PIPELINE,IN_PROGRESS,Formal systematic-review chain,REQUIRED,174 verified; 173 canonical; 70 eligible + 2 supporting assessed; 101 older pending; manuscript stable sections started
+N13,PASS_CORPUS_FROZEN,Finish A01-A21 study extraction,PAPER 1 GATE,174 verified; 173 canonical; 171 retrieved and assessed; 165 direct eligible; 6 supporting; 2 not retrieved; 0 unassessed
+N14,PASS_NUMERICAL_FREEZE,Complete contradiction/reproducibility/gap maps,PAPER 1 GATE,8 audited families frozen: 7 comparability-limited and 1 controlled regime effect; no corpus-wide prevalence overclaim
+N15,PASS,Freeze references/reporting,PAPER 1 GATE,174 BibTeX entries; zero missing author fields; final corpus and reporting counts frozen
+N16,PASS_WITH_SEARCH_PROVENANCE_LIMITATION,Freeze release artifacts,PAPER 1 GATE,submission handoff assembled; raw per-database discovery yields unavailable and not invented
+N17,PASS_MANUSCRIPT_CONTENT,Manuscript writing,FINAL,Sections 1-11 substantive content complete; final numerical Abstract and contribution statements committed
+A01-A21,PASS_FROZEN_LIBRARY,Broad VR evidence mining,REQUIRED,165 direct eligible reports plus 6 supporting/context reports frozen
+REVIEW-PIPELINE,PASS_EVIDENCE_LIBRARY_FLOW,Formal systematic-review chain,REQUIRED,174 verified; 1 duplicate; 173 canonical; 171 assessed; 165 direct eligible; 6 supporting; 2 not retrieved
