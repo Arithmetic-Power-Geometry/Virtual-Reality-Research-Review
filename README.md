@@ -96,25 +96,6 @@ The software, data, evidence records, workflow outputs, and provenance artifacts
 
 https://github.com/Arithmetic-Power-Geometry/Virtual-Reality-Research-Review
 
-## Citation
-
-Please cite the archived study as:
-
-> Akhtar, M. A. K. (2026). *Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking* (Version V1). Zenodo. https://doi.org/10.5281/zenodo.23193145
-
-### BibTeX
-
-```bibtex
-@misc{akhtar2026evidencevr,
-  author    = {Akhtar, Mohammad Amir Khusru},
-  title     = {Evidence in Virtual Reality Research: Comparability, Reproducibility, and Geometry-Dependent Redirected Walking},
-  year      = {2026},
-  version   = {V1},
-  publisher = {Zenodo},
-  doi       = {10.5281/zenodo.23193145},
-  url       = {https://doi.org/10.5281/zenodo.23193145}
-}
-```
 
 ## License
 
