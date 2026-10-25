@@ -92,15 +92,8 @@ The redirected-walking experiment is computational. It does not claim live-user 
 
 ## Data and code
 
-The software, data, evidence records, workflow outputs, and provenance artifacts are maintained in this repository:
+The supporting code, selected evidence records, benchmark outputs, and statistical results are available in this repository:
 
 https://github.com/Arithmetic-Power-Geometry/Virtual-Reality-Research-Review
 
 
-## License
-
-Software and code in this repository are licensed under the **Apache License 2.0**. See [LICENSE](LICENSE).
-
-Research papers, manuscripts, and other scholarly text retain their respective publication or archive terms and are not relicensed merely by being referenced from this repository.
-
-Copyright © 2026 Mohammad Amir Khusru Akhtar
